@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../../index.html"><img class="logo small" src="../../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../../download.html">Download</a></li>
+            <li ><a href="../../../../demos.html">Demos</a></li>
+            <li ><a href="../../../../license.html">License</a></li>
+            <li ><a href="../../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../../support.html">Support</a></li>
+            <li ><a href="../../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../../docs.html">Home</a></li>
+        <li><a href="../../ui/stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="../../ui/stencil.html#installation">Installation</a>
+                <li><a href="../../ui/stencil.html#loading">Loading with elements</a>
+                <li><a href="../../ui/stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="../../ui/stencil.html#searchable">Searchable stencil</a>
+                <li><a href="../../ui/stencil.html#methods">Other methods</a>
+                <li><a href="../../ui/stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="../../ui/halo.html#installation">Installation</a>
+                <li><a href="../../ui/halo.html#create">Creating a Halo</a>
+                <li><a href="../../ui/halo.html#configuration">Configuration</a>
+                <li><a href="../../ui/halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="../../ui/halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="../../ui/halo.html#customize">Customizing Halo tools</a>
+                <li><a href="../../ui/halo.html#halo-api">Halo API</a>
+                <li><a href="../../ui/halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="../../ui/freeTransform.html#installation">Installation</a>
+                <li><a href="../../ui/freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="../../ui/inspector.html#installation">Installation</a>
+                <li><a href="../../ui/inspector.html#create">Creating an Inspector</a>
+                <li><a href="../../ui/inspector.html#configuration">Configuration</a>
+                <li><a href="../../ui/inspector.html#expressions">Expressions</a>
+                <li><a href="../../ui/inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="../../ui/inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="../../ui/inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="../../ui/paperScroller.html#installation">Installation</a>
+                <li><a href="../../ui/paperScroller.html#center">Centering the paper content</a>
+                <li><a href="../../ui/paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="../../ui/paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="../../ui/selectionView.html#installation">Installation</a>
+                <li><a href="../../ui/selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="../../ui/selectionView.html#changes">Reacting on changes</a>
+                <li><a href="../../ui/selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="../../ui/selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="../../ui/selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="../../ui/selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="../../ui/selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="../../ui/selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="../../ui/clipboard.html#installation">Installation</a>
+                <li><a href="../../ui/clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="../../ui/tooltip.html#installation">Installation</a>
+                <li><a href="../../ui/tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="../../ui/snaplines.html#installation">Installation</a>
+                <li><a href="../../ui/snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../../dia/validator.html#installation">Installation</a>
+                <li><a href="../../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../../com/channel.html#installation">Installation</a>
+                <li><a href="../../com/channel.html#use">Usage</a>
+                <li><a href="../../com/channel.html#rooms">Rooms</a>
+                <li><a href="../../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../bpmn.html#installation">Installation</a>
+                <li><a href="../bpmn.html#activity">Activity</a>
+                <li><a href="../bpmn.html#annotation">Annotation</a>
+                <li><a href="../bpmn.html#choreography">Choreography</a>
+                <li><a href="../bpmn.html#conversation">Conversation</a>
+                <li><a href="../bpmn.html#data-object">Data Object</a>
+                <li><a href="../bpmn.html#event">Event</a>
+                <li><a href="../bpmn.html#flow">Flow</a>
+                <li><a href="../bpmn.html#gateway">Gateway</a>
+                <li><a href="../bpmn.html#group">Group</a>
+                <li><a href="../bpmn.html#message">Message</a>
+                <li><a href="../bpmn.html#pool">Pool</a>
+                <li><a href="../bpmn.html#icons">Icons</a>
+                <li><a href="../bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../chart.html#installation">Installation</a>
+                <li><a href="../chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="plot.html#create">Basic Chart</a>
+              <li><a href="plot.html#series-style">Series Styling</a>
+              <li><a href="plot.html#multiple-series">Multiple Series</a>
+              <li><a href="plot.html#markings">Markings</a>
+              <li><a href="plot.html#guidelines">Guidelines</a>
+              <li><a href="plot.html#tooltips">Tooltips</a>
+              <li><a href="plot.html#legend">Legend</a>
+              <li><a href="plot.html#rt">Real-time Data</a>
+              <li><a href="plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="plot.html#time-series">Time Series</a>
+              <li><a href="plot.html#bar-series">Bar Series</a>
+              <li><a href="plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="plot.html#chart-options">Chart Options</a>
+              <li><a href="plot.html#chart-api">Chart API</a>
+              <li><a href="plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="pie.html#create">Basic Chart</a>
+              <li><a href="pie.html#slices-style">Styling Slices</a>
+              <li><a href="pie.html#multiple-series">Multiple Series</a>
+              <li><a href="pie.html#exploding">Exploding Slices</a>
+              <li><a href="pie.html#donut">Donut Chart</a>
+              <li><a href="pie.html#tooltips">Tooltips</a>
+              <li><a href="pie.html#legend">Legend</a>
+              <li><a href="pie.html#animation">Animation</a>
+              <li><a href="pie.html#effects">Effects</a>
+              <li><a href="pie.html#chart-options">Chart Options</a>
+              <li><a href="pie.html#chart-api">Chart API</a>
+              <li><a href="pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="knob.html#create">Basic Knob</a>
+              <li><a href="knob.html#knob-style">Styling the Knob</a>
+              <li><a href="knob.html#multiple-series">Multiple Values</a>
+              <li><a href="knob.html#tooltips">Tooltips</a>
+              <li><a href="knob.html#animation">Animation</a>
+              <li><a href="knob.html#knob-options">Knob Options</a>
+              <li><a href="knob.html#knob-api">Knob API</a>
+              <li><a href="knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../../format/svg.html#installation">Installation</a>
+                <li><a href="../../format/svg.html#use">Usage</a>
+                <li><a href="../../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../../format/raster.html#installation">Installation</a>
+                <li><a href="../../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../../format/gexf.html#installation">Installation</a>
+                <li><a href="../../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../../format/print.html#installation">Installation</a>
+                <li><a href="../../format/print.html#use">Usage</a>
+                <li><a href="../../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../../css/joint.all.min.css" />
+            <script src="../../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../../images/plugins/chart.png"/>shapes.chart.Pie</h2>
+
+<script src="../../../../bower_components/randomColor/randomColor.js"></script>
+
+<p>
+  <b>chart.Pie</b> is a great chart type for displaying numerical proportions. 
+  Donut charts, multiple series, animation, changing look &amp; feel of any part of the chart, 
+  drop shadows and other filters and gradients are all supported.
+</p>
+
+<h2 id="create">Create a basic Pie chart</h2>
+
+<p>The code snippet below creates a basic Pie chart. The pie chart contains
+only one serie and its legend is displayed by default.</p>
+
+<pre><code>
+var graph = new joint.dia.Graph;
+var paper = new joint.dia.Paper({ el: $('#paper'), width: 500, height: 500, model: graph });
+
+var chart = new joint.shapes.chart.Pie({
+    position: { x: 50, y: 10 },
+    size: { width: 100, height: 100 },
+    series: [ { data: [
+        { value: 40, label: 'Organic', fill: '#8bce5d' },
+        { value: 20, label: 'Email', fill: '#53abdd' },
+        { value: 20, label: 'Social', fill: '#c377b1' },
+        { value: 20, label: 'Referral', fill: '#ffe891' }
+    ]}]
+});
+graph.addCell(chart);
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-create" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/create.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/create.js"></script>
+
+<h2 id="slices-style">Styling Pie Slices</h2>
+
+<p>
+  Normally, you can just pass a color of each slice in the <code>fill</code> property of the slice
+  object as you can see in the example above. However, as it is common in JointJS/Rappid,
+  you can style any graphical element of the chart shape. For example, you might want to change
+  the font family or other font properties of the slice labels, or the legend. For this,
+  you can customize the chart using the usual JointJS approach, via the
+  <code>attrs</code> object or the <a href="../../../../api.html#joint.dia.Element:attr">attr()</a> method. This means that by just knowing the structure of the
+  <a href="pie.html#chart-structure">SVG elements the chart is built from</a>, you have full flexibility in styling your chart. Only SVG and 
+  CSS standards are your limits. Following the JointJS
+  philosophy, we don't try to invent special parameters. Instead, we try to follow SVG and CSS standards
+  as much as we can.
+</p>
+
+<p>Let's have a look at one snippet of the SVG structure of the charts that is used to render a slice.
+For the full SVG structure of charts, please see the section <a href="pie.html#chart-structure">Chart SVG Structure</a>
+in this document. Once you know the structure, it is easy to make CSS selectors referencing the SVG elements 
+that you want to style. We'll show an example of that below. the SVG structure of one serie is the following:</p>
+
+<pre><code>
+&lt;g class="slice serie-[index of the serie] slice-[index of the slice]"&gt;
+    &lt;path class="slice-fill"/&gt;
+    &lt;path class="slice-border"/&gt;
+    &lt;text class="slice-inner-label"/&gt;
+&lt;/g&gt;
+</code></pre>
+
+<p>Knowing that, we can, for example, change color and size of the text label of the first slice:</p>
+<pre><code>
+var chart = new joint.shapes.chart.Pie({
+    ... /* the same as before */ ...
+    attrs: {
+        '.slice-0 .slice-inner-label': { fill: 'black', 'font-size': 20 }
+    }
+});
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-slice-style-intro" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/slice-style-intro.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/slice-style-intro.js"></script>
+
+<p>In the example above, we showed how to pass styling in the <code>attrs</code> object when 
+  creating a new chart but you can also change attributes
+  of an existing chart: </p>
+<pre><code>
+chart.attr('.slice-0 .slice-inner-label/fill', 'blue')
+</code></pre>
+
+<p>Note that you can use not only <code>fill</code> but a whole range of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">other SVG attributes</a>
+  to style your charts. Moreover, JointJS provides a facility to use <a href="../../../../tutorial/filters-gradients.html">gradients and filters</a>. 
+  You can take advantage of them to make your charts even prettier:</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-slice-gradients" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/slice-style-gradients.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/slice-style-gradients.js"></script>
+
+<pre><code>
+var chart = new joint.shapes.chart.Pie({
+    ...
+    series: [ { data: [
+        { value: 40, label: 'Organic', fill: {
+            type: 'linearGradient', stops: [
+                { offset: '0%', color: '#b4f200' }, 
+		{ offset: '80%', color: '#759d00' } 
+	    ],
+            attrs: { x1: '0%', y1: '0%', x2: '0%', y2: '100%' } 
+	} },
+        ...
+    ]}],
+    ...
+});
+</code></pre>
+
+<h2 id="multiple-series">Multiple series</h2>
+
+<p>The Pie chart supports multiple series. Simply add more series to the <code>series</code> 
+array. This is useful for creating pie charts that, for example, compare data (from different sources, periods, ...).</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-multiple-series" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/multiple-series.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/multiple-series.js"></script>
+
+<pre><code>
+var chart = new joint.shapes.chart.Pie({
+    ...
+    series: [
+        { label: '2014', data: [
+		{ value: 20.3, label: 'IE', fill: '#4CC3D9' },
+		{ value: 18.3, label: 'Firefox', fill: '#F16745' },
+		{ value: 34.2, label: 'Chrome', fill: '#7BC8A4' }
+        ]},
+        { label: '2013', data: [
+		{ value: 27.5, label: 'IE', fill: '#4CC3D9' },
+		{ value: 20, label: 'Firefox', fill: '#F16745' },
+		{ value: 30, label: 'Chrome', fill: '#7BC8A4' }
+        ]},
+        ...
+    ],
+    ...
+});
+</code></pre>
+
+<p>All series have automatically generated legends. This <b>legend is interactive</b>. Based on the
+<a href="http://www.jointjs.com/rappid/docs/shapes/chart/effects">effect</a> you defined, the user can either hover or click
+on the labels in the legend and offset (or enlarge) the associated slices in the chart.</p>
+
+<h2 id="exploding">Exploding a Slice</h2>
+
+<p>Slices in the Pie chart can be separated from the rest (exploded) by setting the
+  <code>offset</code> property of the slice object:</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-exploding" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/exploding.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/exploding.js"></script>
+
+<h2 id="donut">Donut Charts</h2>
+
+<p>The difference between Donut and Pie charts is very small, the only thing that differs
+  is the hole inside the pie. While there is no hole for Pie chart, Donut charts have
+  a hole that can be set arbitrarily. The <code>pieHole</code> property can
+  either be a floating point number between <code>0</code> and <code>1</code>, in which case
+  the size of the hole is proportional to the radius of the pie chart. If the <code>pieHole</code>
+  property is bigger than <code>1</code>, it is considered to be an absolute size of the
+  hole in pixels:
+</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-donut" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/donut.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/donut.js"></script>
+
+<h2 id="tooltips">Tooltips</h2>
+
+<p>Tooltips are a great way to show contextual information in your charts. The following
+  demo shows how to use the <b>ui.Tooltip</b> plugin with combination with Pie chart:
+  </p>
+
+<p><b>IMPORTANT</b>: For tooltips to work, you must have the <a href="../../ui/tooltip.html">ui.Tooltip</a>
+plugin installed.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-tooltips" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/tooltips.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/tooltips.js"></script>
+
+<p>When setting up tooltips, we no longer work with the chart model. Instead, we request the paper
+    for the view that represents the chart. This view triggeres <code>mousemove</code>, and <code>mouseout</code>
+    events that we use to hide and show our tooltip. The <code>mousemove</code> event handler gets passed
+    two important arguments: <code>slice</code> and <code>event</code>.
+    These two arguments mean the following:
+    <ul>
+        <li><code>slice</code> - an object with useful information about the slice the event was triggered on. This object
+	  contains the following properties: <code>sliceIndex</code>, <code>serieIndex</code>, <code>value</code>,
+	  <code>percentage</code>, <code>fill</code>, <code>offset</code>, <code>angle</code>,
+	  <code>startAngle</code>, <code>endAngle</code>, <code>outerRadius</code>, <code>innerRadius</code>,
+	  and <code>label</code>. Most of the time, for tooltips, the important ones are <code>value</code>
+	  and <code>label</code>.</li>
+        <li><code>event</code> - This is the DOM event object. For tooltips, the two 
+	  important properties are <code>clientX</code> and <code>clientY</code>. We 
+	  use these to render the tooltip at a particular position.</li>
+    </ul>
+</p>
+<p>
+    All these three arguments help us render our tooltip. Here is the relevant code snippet from the above demo:
+</p>
+<pre data-src="/js/docs/shapes/chart/pie/tooltips-snippet.js"></pre>
+
+<h2 id="legend">Legend</h2>
+
+<p>The chart legend is auto-generated and contains labels and colors of all the data series. The legend
+  is interactive by default and allows the user to highlight the slices displayed in the chart while
+  hovering the legend items.
+  This sections shows you how you can <b>customize the legend and its position</b>.</p>
+
+<p>The legend is rendered as an SVG group element with the class <code>legend</code>. Inside this group, 
+    we have <code>legend-item</code>s each containing an SVG circle and text elements. Please refer to the
+    <a href="pie.html#chart-structure">Chart SVG structure</a> section for the full SVG structure of the chart.
+    This is all you need to know to be able to style the legend. By default, the lenged is
+    positioned on the top right corner of the pie chart.
+</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-legend" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/legend.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/legend.js"></script>
+
+
+<p>The styling of the legend item text (name of the associated slice) and the legend item circle
+can be done the usual JointJS way, through standard SVG attributes as you can see below. Another
+  useful properties for styling the legend items are <code>legendLabelLineHeight</code>,
+  <code>legendLabelMargin</code> and <code>labelLineHeight</code>. The first two
+  can be defined in the <a href="pie.html#options-slice">slice objects</a> (or in the <code>sliceDefaults</code> for all slices)
+  while the third one is specific to the legend item for the serie and therefore
+  is defined in the <a href="pie.html#options-serie">serie object</a> (or in <code>serieDefaults</code>).</p>
+
+<pre><code>
+// Positioning to the top (80px above the chart and centered).
+chart3.attr('.legend/ref-y', -80);
+chart3.attr('.legend/ref-x', .5);
+chart3.attr('.legend/x-alignment', -.5);
+
+// Styling of the legend text and circle.
+chart3.prop('sliceDefaults/legendLabel', '{label} is {value}%');
+chart3.prop('sliceDefaults/legendLabelLineHeight', 8);
+chart3.prop('sliceDefaults/legendLabelMargin', 25);
+chart3.attr('.legend-slice text/fill', '#336699');
+chart3.attr('.legend-slice text/font-weight', 'bold');
+chart3.attr('.legend-slice text/text-decoration', 'underline');
+chart3.attr('.legend-slice text/font-size', 13);
+chart3.attr('.legend-slice circle/r', 7);
+chart3.attr('.legend-slice circle/stroke', 'black');
+chart3.attr('.legend-slice circle/stroke-width', 1);
+</code></pre>
+
+
+<h2 id="animation">Animation</h2>
+
+<p>In general, you can animate any property of the Pie chart (change its value 
+over a certain period of time). In the following demo, we will show how to animate 
+some properties of the Pie chart. Using the same technique, you can animate an
+arbitrary property.
+</p>
+
+<pre><code>
+chart.transition('pieHole', .6, { duration: 700 });
+chart.transition('series/0/data/0/offset', 50, { duration: 700 });
+chart.transition('attrs/.slice-inner-label/font-size', 30, { duration: 700 });
+chart.transition('series/0/data/0/fill', '#ff0000', {
+    duration: 700,
+    valueFunction: joint.util.interpolate.hexColor
+});
+</code></pre>
+
+<div class="docs-demo">
+
+    <button class="btn-animation-piehole">Animate pieHole</button>
+    <button class="btn-animation-offset">Animate slice offset</button>
+    <button class="btn-animation-font">Animate font</button>
+    <button class="btn-animation-degree">Animate pie degree</button>
+    <button class="btn-animation-fill">Animate fill</button>
+
+    <br/>
+    <br/>
+    <div id="paper-holder-animation" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/animation.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/animation.js"></script>
+
+<p>You can find more about JointJS transitions in the 
+  <a href="../../../../api.html#joint.dia.Element:transition">API reference</a>.</p>
+
+
+<h2 id="effects">Effects</h2>
+
+<p>The effect applied when the user either clicks or hover a slice in the pie can
+be customized. There are two actions that trigger an effect (<code>onClickEffect</code>
+and <code>onHoverEffect</code>) and two types of effects: <code>enlarge</code> and
+<code>offset</code>. Try to interact (hover/click slices) with the pie chart in the demo below to see 
+the different effects applied.
+</p>
+
+<pre><code>
+var chart = new joint.shapes.chart.Pie({
+    ...
+    sliceDefaults: {
+        onClickEffect: { type: 'offset', offset: 20 },
+        onHoverEffect: { type: 'enlarge', scale: 1.5 }
+    }
+});
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-effects" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/pie/effects.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/pie/effects.js"></script>
+
+
+<h2 id="chart-options">Chart Options</h2>
+
+<p>This is the full list of the options that you can pass to the chart constructor function.</p>
+
+<ul>
+    <li><code>series</code> - an array of <a href="pie.html#options-serie">series</a>.</li>
+    <li><code>pieHole</code> - the size of the hole in the center of the pie. If the number is in the <code>0..1</code> interval,
+      it is considered to be proportional to the pie radius. If it is bigger than <code>1</code>, it is considered to by the absolute radius in pixels.</li>
+    <li><code>serieDefaults</code> - an object with various properties specifying how series should be rendered. All properties of this object are
+      overruled by properties of the same names in the <a href="pie.html#options-serie">serie object</a>.</li>
+    <li><code>sliceDefaults</code> - an object with various properties specifying how slices should be rendered. All properties of this object are
+      overruled by properties of the same names in the <a href="pie.html#options-slice">slice object</a>.</li>
+</ul>
+
+<h3 id="options-serie">Serie</h3>
+
+<p>These are items of the <code>series</code> array.</p>
+
+<ul>
+    <li><code>name</code> - the name of the serie. This name is added as a CSS class to the serie SVG element. You can take advantage of this CSS class for further <a href="pie.html#slices-style">styling</a>.</li>
+    <li><code>label</code> - the serie label (used in the auto-generated legend)</li>
+    <li><code>data</code> - an array of <a href="pie.html#options-slice">slices</a></li>
+    <li><code>startAngle</code> - the angle in degrees the serie slices start to draw.</li>
+    <li><code>degree</code> - the total degre of the serie in the pie.</li>
+    <li><code>showLegend</code> - <code>true</code> if the legend for the serie should be shown, <code>false</code> otherwise.</li>
+    <li><code>labelLineHeight</code> - the line height of the serie label in the auto-generated legend</li>
+</ul>
+
+<p>When the above properties are defined in the <code>serieDefaults</code> options object,
+they will be applied to all the series unless overruled by properties in the serie object.</p>
+
+<h3 id="options-slice">Slice</h3>
+
+<p>These are items of the <code>data</code> array of the <a href="http://www.jointjs.com/rappid/docs/shapes/chart/options-serie">serie object</a>.</p>
+
+<ul>
+    <li><code>value</code> - a number specifying the value for the slice data point.</li>
+    <li><code>label</code> - the label for the slice. This lable is used in the legend.</li>
+    <li><code>fill</code> - the fill color (or <a href="../../../../tutorial/filters-gradients.html">gradient</a>) of the slice.</li>
+    <li><code>innerLabel</code> - the template for the label rendered inside the slice. The format for the template
+      is derived from the <a href="https://docs.python.org/2/library/functions.html#format">Python <code>format()</code> function</a>.
+      Properties are enclosed in curly brackets and formats can be specified using the
+      <a href="https://docs.python.org/2/library/string.html#formatspec">Python Format Specification Mini-Language</a>.
+      For example:
+      <pre><code>
+'{label}: {value:.2f}'  // 'My Slice: 2.26', i.e. value is rounded to two decimal numbers.
+      </code></pre>
+      See the <a href="http://jointjs.com/api#joint.util.format:number">API reference</a> for more 
+      examples on number formatting. You can use the following properties in your template:
+      <code>value</code>, <code>label</code>, <code>percentage</code>, <code>angle</code>,
+      <code>startAngle</code> and <code>endAngle</code>.
+    </li>
+    <li><code>innerLabelMargin</code> - the gap between the middle of the text label and the 
+      serie border in the pie. If value between <code>0...1</code> is used, it is considered
+      to be proportional to the outer radius. If the number is bigger than <code>1</code>, 
+      it is considered to be an absolute distance in pixels.</li>
+    <li><code>legendLabel</code> - the template for the label for the slice used in the legend. Uses the
+      same formatting as <code>innerLabel</code>.</li>
+    <li><code>legendLabelLineHeight</code> - the line height of the slice label in the legend.</li>
+    <li><code>legendLabelMargin</code> - the gap between the circle representing the slice color and the slice label in the legend.</li>
+    <li><code>offset</code> - the offset of the slice. This option is useful for <q>exploding</q> slices
+      and makes sense only for the outermost slices of the pie. If offset is between <code>0...1</code> is used, it is considered
+      to be proportional to the outer radius. If the number is bigger than <code>1</code>, 
+      it is considered to be an absolute distance in pixels.</li>
+    <li><code>onClickEffect</code> - the effect applied when the user clicks on the slice. This is an object with the property
+      <code>type</code> that can be either <code>'enlarge'</code> or <code>'offset'</code>. If
+      <code>'enlarge'</code> type is used, the object can have an additional property <code>scale</code> which is the scaling
+      factor for the slice enlargement. If <code>'offset'</code> type is used, the object can have an additional property <code>offset</code> which is the 
+      offset of the slice.</li>
+    <li><code>onHoverEffect</code> - the effect applied when the user hovers with his mouse cursor over the slice. This is an object with the property
+      <code>type</code> that can be either <code>'enlarge'</code> or <code>'offset'</code>. If
+      <code>'enlarge'</code> type is used, the object can have an additional property <code>scale</code> which is the scaling
+      factor for the slice enlargement. If <code>'offset'</code> type is used, the object can have an additional property <code>offset</code> which is the 
+      offset of the slice.</li>
+</ul>
+
+<p>When the above properties are defined in the <code>sliceDefaults</code> options object,
+they will be applied to all the slices unless overruled by properties in the slice object.</p>
+
+<h2 id="chart-api">Chart API</h2>
+
+<h3>chart.Pie</h3>
+
+<table>
+    <tr>
+        <th>addSlice(slice, serieIndex [, opt])</th>
+        <td>Append a slice <code>slice</code> to the serie identified by <code>serieIndex</code>. <code>opt</code>
+	  can be an arbitrary object that is passed to the <code>onchange</code> handlers of the JointJS element.
+        </td>
+    </tr>
+    <tr>
+        <th>editSlice(slice, sliceIndex, serieIndex [, opt])</th>
+        <td>Replace a slice in the pie by a new <code>slice</code>. The serie is identified by <code>serieIndex</code> in which
+	  the slice at index <code>sliceIndex</code> will be replaced. <code>opt</code>
+	  can be an arbitrary object that is passed to the <code>onchange</code> handlers of the JointJS element.
+        </td>
+    </tr>
+</table>
+
+<h3>chart.PieView</h3>
+
+<p>To access the view for a pie chart, use: <code>paper.findViewByModel(chart)</code>.</p>
+
+<table>
+    <tr>
+        <th>clickSlice(sliceIndex, serieIndex)</th>
+        <td>Simulate a click on the slice. Note that this triggers the effects that
+	  you defined in the <code>onClickEffect</code> in the <a href="pie.html#options-slice">slice object</a>.
+        </td>
+    </tr>
+    <tr>
+        <th>mouseOverSlice(sliceIndex, serieIndex)</th>
+        <td>Simulate a mouse over on the slice. Note that this triggers the effects that
+	  you defined in the <code>onHoverEffect</code> in the <a href="pie.html#options-slice">slice object</a>.
+        </td>
+    </tr>
+</table>
+
+<h3>chart.PieView events</h3>
+
+<p>To set a listener for the pie view events, use: <code>paper.findViewByModel(chart).on('mousemove', myFunction)</code>.</p>
+
+<table>
+    <tr>
+        <th>mousemove</th>
+        <td>Continuously triggered when the user hovers over a slice. The handler is
+	  passed <code>slice</code> and <code>event</code> objects.
+        </td>
+    </tr>
+    <tr>
+        <th>mouseover</th>
+        <td>Triggered when the user hovers over a slice. The handler is
+	  passed <code>slice</code> and <code>event</code> objects.
+        </td>
+    </tr>
+    <tr>
+        <th>mouseout</th>
+        <td>Triggered when the user leaves a slice. The handler is
+	  passed <code>slice</code> and <code>event</code> objects.
+        </td>
+    </tr>
+    <tr>
+        <th>click</th>
+        <td>Triggered when the user clicks a slice. The handler is
+	  passed <code>slice</code> and <code>event</code> objects.
+        </td>
+    </tr>
+</table>
+
+<h2 id="chart-structure">Chart SVG structure</h2>
+
+<p>The following is the chart SVG structure that you can take as a reference when styling chart elements.</p>
+
+<pre data-src="/html/docs/pie-chart-structure.html"></pre>
+
+<h3 id="selector-examples">Selector examples</h3>
+
+<pre><code>
+chart.attr('.legend-slice text/text-decoration' , 'underline')  // Underline a legend label.
+chart.attr('.legend-slice text/font-size' , 13)  // Set a font size of all the legend texts for slices.
+chart.attr('.slice-fill/stroke' , 'gray')  // Set a stroke color of a slice.
+chart.attr('.slice-fill/stroke-width' , 1)  // Set a stroke width of a slice.
+chart.attr('.slice-3 .slice-fill/filter', { name: 'dropShadow', args: { dx: 2, dy: 2, blur: 3 } })
+</code></pre>
+
+
+
+
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../../vendor/prism/prism.css">
+        <script src="../../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../../js/client-search.js"></script>
+        <script src="../../../../js/rappid-docs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      
+
+        <link rel="canonical" href="../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. Build modeling tools, visualize graphs, implement visual languages of various kinds." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, graphs" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+        <title>JointJS - the HTML 5 JavaScript diagramming library.</title>
+        
+        
+    </head>
+    <body>
+        <header>
+    <a href="http://jointjs.com"><h1><img class="logo" src="../images/logo-transparent.png" alt="Logo."/><span class="joint">Joint</span><span class="js">JS</span><em>JavaScript diagramming library</em></h1></a>
+    <nav>
+        <ul>
+            <li ><a href="../download.html">Download</a></li>
+            <li ><a href="../demos.html">Demos</a></li>
+            <li ><a href="../license.html">License</a></li>
+            <li ><a href="../tutorial.html">Tutorials</a></li>
+            <li ><a href="../api.html">JointJS API</a></li>
+            <li ><a href="../rappid/docs.html">Rappid API</a></li>
+            <li ><a href="../support.html">Support</a></li>
+            <li ><a href="../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+        
+        <article id="post">
+    <h1>Rappid v1.4 <q>Lisbon</q> Released  <span class="date">Sep 16th, 2014</span></h1>
+
+    <p>
+      <b>Rappid</b>, the new generation <b>JavaScript diagramming UI framework</b>, got better once again.
+      Leveraging the best of SVG and HTML 5, Rappid is becoming the choice number one
+      for applications that involve a diagramming component. Complicated systems increasingly
+      require <b>visual tooling for process, workflow and data management</b> accessible to
+      non-programmers. Rappid fills this need.
+    </p>
+
+    <p>
+      Rappid v1.4 <q>Lisbon</q> brings new components for data visualization, 
+      group manipulation with diagram elements, snaplines for helping users 
+      in aligning elements, full-text search in the element palette and many other
+      improvements to the existing components and widgets.
+    </p>
+
+    <p>Thanks go to our customers and clients for their extremelly valuable feedback
+      that constantly makes the framework better and to the JointJS community
+      and contributors for their input, support and contributions. Thank you!</p>
+
+
+    <h2>New features</h2>
+
+    <h3>Tools for manipulating group of elements</h3>
+
+    <p>Now it is possible to add tools for <a href="http://localhost:2005/rappid/docs/ui/selectionView#customize-tools">group manipulation of elements</a> to the selection the same way as you can do in
+      <a href="../rappid/docs/ui/halo.html">ui.Halo</a> control panel.
+
+        <br/>
+        <br/>
+        <img width="300" alt="Rappid group manipulation of elements in selection" title="Rappid group manipulation of elements in selection" src="../images/selection-view-tools.png" />
+        <br/>
+        <br/>
+
+	Adding new tools for manipulating group of elements in one go is now as easy as
+	adding an icon and binding functions that implement your custom actions.
+	By default, selections have a group remove tool and a rotation tool.
+	Moreover, a box below the selection can be filled with an arbitrary HTML
+	in order to show important information about the elements in the selection.
+    </p>
+
+    <h3>Snaplines</h3>
+
+    <p><a href="../rappid/docs/ui/snaplines.html">Snaplines</a> are great for helping the user in aligning elements in the diagram by showing alignment lines and snapping elements
+      if they are horizontaly or vertically close to other elements. Snaplines can be turned
+      on by a single line of code.
+
+        <br/>
+        <br/>
+        <img width="300" alt="Rappid Snaplines plugin" title="Rappid Snaplines plugin" src="../images/snaplines.png" />
+        <br/>
+        <br/>
+    </p>
+
+    <h3>Pie, Donut charts and Knobs</h3>
+
+    <p>Rappid is getting stronger in <b>data visualization</b> too. Next to the existing
+      <a href="../rappid/docs/shapes/chart/plot.html">Line, Area and Bar charts</a>, we're now bringing
+      to you also <a href="../rappid/docs/shapes/chart/pie.html">Pie, Donut charts</a> and <a href="../rappid/docs/shapes/chart/knob.html">Knobs</a>.
+
+        <br/>
+        <br/>
+        <img alt="Rappid Pie Charts" title="Rappid Pie Charts" src="../images/pie.png" />
+        <img width="300" alt="Rappid Donut Charts" title="Rappid Donut Charts" src="../images/donut-multilevel.png" />
+        <br/>
+        <br/>
+        <img width="300" alt="Rappid Knobs" title="Rappid Knobs" src="../images/knobs-pretty.png" style="margin-left: 150px" />
+        <br/>
+        <br/>
+
+	Both Pie and Donut charts can have multiple data series, can be animated and heavily customized.
+	Knobs are a great way to nicely display numerical values. Note that from the JointJS/Rappid perspective, a chart
+	is just another shape. This means that it can be added into your diagrams, manipulated
+	and edited with all the built-in control panels and widgets; transformed
+	(rotated, translated, resized, ...) and animated with standard JointJS functions.
+    </p>
+
+    <h3>Full-text search in Stencil</h3>
+
+    <p><a href="../rappid/docs/ui/stencil.html">Stencil</a>, the drag &amp; drop accordion-like element palette, is now extended
+      with full-text search. This is handy if you have a lot of elements in the palette
+      and you want to offer the user a quick way to filter them.
+
+        <br/>
+        <br/>
+        <img width="200" alt="Rappid Stencil search" title="Rappid Stencil search" src="../images/stencil-search.png" />
+        <br/>
+        <br/>
+
+	It's entirely on you what data properties of elements are used for full-text filtering.
+    </p>
+
+    <h3>... and much more!</h3>
+
+    <p>The built-in <a href="../api.html#g">Geometry library</a> library was extended by
+      another bunch of useful functions such as <a href="../api.html#g:point.bearing"><code>point.bearing()</code></a>,
+      <a href="../api.html#g:point.reflection"><code>point.reflection()</code></a>, <a href="../api.html#g:line.bearing"><code>line.bearing()</code></a>,
+      <a href="../api.html#g:line.pointAt"><code>line.pointAt()</code></a>, <a href="../api.html#g:rect.containsRect"><code>rect.containsRect()</code></a>,
+      <a href="../api.html#g:rect.normalize"><code>rect.normalize()</code></a> and <a href="../api.html#g:rect.bbox"><code>rect.bbox()</code></a>.
+        <br/>
+        <br/>
+	A new plugin, <a href="../rappid/docs/dia/graphUtils.html">dia.GraphUtils</a>, has been added that extends
+	graphs with additional function, <code>constructTree()</code>, for building tree structures from JSON objects.
+        <br/>
+        <br/>
+	<a href="../rappid/docs/ui/inspector.html">Inspector</a>, the widget for editing properties
+	of diagram elements, has been improved by <a href="../rappid/docs/ui/inspector.html#expressions">Expressions</a>,
+	giving you a high flexibility in defining rules for conditionally showing/hiding inputs
+	based on the values of other inputs.
+        <br/>
+        <br/>
+	And there is even more... see the Rappid v1.4 <q>Lisbon</q> <a href="../CHANGELOG_Rappid_v1_4_Lisbon.txt">CHANGELOG</a> page for details.
+    </p>
+
+    <h2>Go grab it and build advanced visual tools in days, not months!</h2>
+
+    <p>
+      Try Rappid in action in one of our online demo applications, <a href="../rappid.html">Rappid demo</a> and <a href="../rappid/bpmn.html">BPMN Editor</a>.
+      Read more about Rappid on the <a href="../about-rappid.html">About Rappid page</a>. Or visit the <a href="../rappid/docs.html">online documentation</a>.
+    </p>
+
+    <br/>
+    <br/>
+    <p>Thanks and Enjoy!</p>
+
+    <br/>
+    <br/>
+    <p>P.S. Why <q>Lisbon</q>? Because Rappid v1.4 was released in Lisbon!</p>
+
+    <span class="author" rel="author">David Durman</span>
+</article>
+
+ <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jointjs'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+        <footer>
+    <div class="footer-links">
+        <div class="links-column">
+            <ul>
+                <li ><a href="../download.html">Download</a></li>
+                <li ><a href="../demos.html">Demos</a></li>
+                <li ><a href="../license.html">License</a></li>
+            </ul>
+        </div>
+        <div class="links-column">
+            <ul>
+                <li ><a href="../tutorial.html">Tutorials</a></li>
+                <li ><a href="../api.html">JointJS API</a></li>
+                <li ><a href="../rappid/docs.html">Rappid API</a></li>
+                <li ><a href="../blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="links-column">
+            <ul>
+                <li ><a href="../about-rappid.html">Rappid</a></li>
+                <li><a href="../rappid.html">Rappid demo</a></li>
+                <li ><a href="../support.html">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="social">
+    <div class="twitter">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-size="medium" data-url="http://www.jointjs.com" data-count="vertical" data-via="jointjs">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div>
+    <div class="facebook">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.jointjs.com&layout=box_count&show_faces=false&width=46&action=like&colorscheme=light&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:48px; height:65px;" allowTransparency="true"></iframe>
+    </div>
+    <div class="g-plusone" data-size="tall" data-annotation="bubble" data-href="http://www.jointjs.com"></div>
+    <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+</div>
+
+    <div class="copyright">
+        Copyright &copy; 2009 - 2014 <b>client IO</b> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+    </div>
+</footer>
+
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <a href="https://github.com/DavidDurman/joint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    </body>
+</html>

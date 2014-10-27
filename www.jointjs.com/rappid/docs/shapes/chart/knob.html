@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../../index.html"><img class="logo small" src="../../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../../download.html">Download</a></li>
+            <li ><a href="../../../../demos.html">Demos</a></li>
+            <li ><a href="../../../../license.html">License</a></li>
+            <li ><a href="../../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../../support.html">Support</a></li>
+            <li ><a href="../../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../../docs.html">Home</a></li>
+        <li><a href="../../ui/stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="../../ui/stencil.html#installation">Installation</a>
+                <li><a href="../../ui/stencil.html#loading">Loading with elements</a>
+                <li><a href="../../ui/stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="../../ui/stencil.html#searchable">Searchable stencil</a>
+                <li><a href="../../ui/stencil.html#methods">Other methods</a>
+                <li><a href="../../ui/stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="../../ui/halo.html#installation">Installation</a>
+                <li><a href="../../ui/halo.html#create">Creating a Halo</a>
+                <li><a href="../../ui/halo.html#configuration">Configuration</a>
+                <li><a href="../../ui/halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="../../ui/halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="../../ui/halo.html#customize">Customizing Halo tools</a>
+                <li><a href="../../ui/halo.html#halo-api">Halo API</a>
+                <li><a href="../../ui/halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="../../ui/freeTransform.html#installation">Installation</a>
+                <li><a href="../../ui/freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="../../ui/inspector.html#installation">Installation</a>
+                <li><a href="../../ui/inspector.html#create">Creating an Inspector</a>
+                <li><a href="../../ui/inspector.html#configuration">Configuration</a>
+                <li><a href="../../ui/inspector.html#expressions">Expressions</a>
+                <li><a href="../../ui/inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="../../ui/inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="../../ui/inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="../../ui/paperScroller.html#installation">Installation</a>
+                <li><a href="../../ui/paperScroller.html#center">Centering the paper content</a>
+                <li><a href="../../ui/paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="../../ui/paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="../../ui/selectionView.html#installation">Installation</a>
+                <li><a href="../../ui/selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="../../ui/selectionView.html#changes">Reacting on changes</a>
+                <li><a href="../../ui/selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="../../ui/selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="../../ui/selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="../../ui/selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="../../ui/selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="../../ui/selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="../../ui/clipboard.html#installation">Installation</a>
+                <li><a href="../../ui/clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="../../ui/tooltip.html#installation">Installation</a>
+                <li><a href="../../ui/tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="../../ui/snaplines.html#installation">Installation</a>
+                <li><a href="../../ui/snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../../dia/validator.html#installation">Installation</a>
+                <li><a href="../../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../../com/channel.html#installation">Installation</a>
+                <li><a href="../../com/channel.html#use">Usage</a>
+                <li><a href="../../com/channel.html#rooms">Rooms</a>
+                <li><a href="../../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../bpmn.html#installation">Installation</a>
+                <li><a href="../bpmn.html#activity">Activity</a>
+                <li><a href="../bpmn.html#annotation">Annotation</a>
+                <li><a href="../bpmn.html#choreography">Choreography</a>
+                <li><a href="../bpmn.html#conversation">Conversation</a>
+                <li><a href="../bpmn.html#data-object">Data Object</a>
+                <li><a href="../bpmn.html#event">Event</a>
+                <li><a href="../bpmn.html#flow">Flow</a>
+                <li><a href="../bpmn.html#gateway">Gateway</a>
+                <li><a href="../bpmn.html#group">Group</a>
+                <li><a href="../bpmn.html#message">Message</a>
+                <li><a href="../bpmn.html#pool">Pool</a>
+                <li><a href="../bpmn.html#icons">Icons</a>
+                <li><a href="../bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../chart.html#installation">Installation</a>
+                <li><a href="../chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="plot.html#create">Basic Chart</a>
+              <li><a href="plot.html#series-style">Series Styling</a>
+              <li><a href="plot.html#multiple-series">Multiple Series</a>
+              <li><a href="plot.html#markings">Markings</a>
+              <li><a href="plot.html#guidelines">Guidelines</a>
+              <li><a href="plot.html#tooltips">Tooltips</a>
+              <li><a href="plot.html#legend">Legend</a>
+              <li><a href="plot.html#rt">Real-time Data</a>
+              <li><a href="plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="plot.html#time-series">Time Series</a>
+              <li><a href="plot.html#bar-series">Bar Series</a>
+              <li><a href="plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="plot.html#chart-options">Chart Options</a>
+              <li><a href="plot.html#chart-api">Chart API</a>
+              <li><a href="plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="pie.html#create">Basic Chart</a>
+              <li><a href="pie.html#slices-style">Styling Slices</a>
+              <li><a href="pie.html#multiple-series">Multiple Series</a>
+              <li><a href="pie.html#exploding">Exploding Slices</a>
+              <li><a href="pie.html#donut">Donut Chart</a>
+              <li><a href="pie.html#tooltips">Tooltips</a>
+              <li><a href="pie.html#legend">Legend</a>
+              <li><a href="pie.html#animation">Animation</a>
+              <li><a href="pie.html#effects">Effects</a>
+              <li><a href="pie.html#chart-options">Chart Options</a>
+              <li><a href="pie.html#chart-api">Chart API</a>
+              <li><a href="pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="knob.html#create">Basic Knob</a>
+              <li><a href="knob.html#knob-style">Styling the Knob</a>
+              <li><a href="knob.html#multiple-series">Multiple Values</a>
+              <li><a href="knob.html#tooltips">Tooltips</a>
+              <li><a href="knob.html#animation">Animation</a>
+              <li><a href="knob.html#knob-options">Knob Options</a>
+              <li><a href="knob.html#knob-api">Knob API</a>
+              <li><a href="knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../../format/svg.html#installation">Installation</a>
+                <li><a href="../../format/svg.html#use">Usage</a>
+                <li><a href="../../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../../format/raster.html#installation">Installation</a>
+                <li><a href="../../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../../format/gexf.html#installation">Installation</a>
+                <li><a href="../../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../../format/print.html#installation">Installation</a>
+                <li><a href="../../format/print.html#use">Usage</a>
+                <li><a href="../../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../../css/joint.all.min.css" />
+            <script src="../../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../../images/plugins/chart.png"/>shapes.chart.Knob</h2>
+
+<p>
+  <b>chart.Knob</b> is a great component for displaying numbers in a fancy way. They 
+  can also be animated to better visualize changes in values.
+</p>
+<br/>
+<img src="../../../../images/knobs.png" title="Knob chart variations" alt="Knob chart variations"/>
+
+<h2 id="create">Create a basic Knob</h2>
+
+<p>The code snippet below creates a basic Knob. The Knob contains
+only one value.</p>
+
+<pre><code>
+var graph = new joint.dia.Graph;
+var paper = new joint.dia.Paper({ el: $('#paper'), width: 200, height: 200, model: graph });
+
+var knob = new joint.shapes.chart.Knob({
+    position: { x: 20, y: 20 },
+    size: { width: 100, height: 100 },
+    min: 0, max: 100, value: 80,
+    fill: '#2c97de'
+});
+graph.addCell(knob);
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-create" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/knob/create.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/knob/create.js"></script>
+
+<h2 id="knob-style">Styling the Knob</h2>
+
+<p>
+  To set color of the knob, simply pass <code>fill</code> attribute with color of your choice to the knob constructor.
+  Moreover, as it is common in JointJS/Rappid, you can style any graphical element of the knob shape. For example, you might want to change
+  the font family or other font properties of the legend. For this,
+  you can customize the knob using the usual JointJS approach, via the
+  <code>attrs</code> object or the <a href="../../../../api.html#joint.dia.Element:attr">attr()</a> method. This means that by just knowing the structure of the
+  <a href="knob.html#chart-structure">SVG elements the knob is built from</a>, you have full flexibility in styling your knob. Only SVG and 
+  CSS standards are your limits.
+</p>
+
+<p>Let's have a look at some examples demonstrating different knob styles.
+For the full SVG structure of the knob, please see the section <a href="knob.html#chart-structure">Chart SVG Structure</a>
+in this document. Once you know the structure, it is easy to make CSS selectors referencing the SVG elements 
+that you want to style.</p>
+
+<pre><code>
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-knob-style" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/knob/knob-style.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/knob/knob-style.js"></script>
+
+<p>In the example above, we showed how to pass styling in the <code>attrs</code> object when 
+  creating a new knob but you can also change attributes
+  of an existing knob: </p>
+<pre><code>
+knob.attr('.slice .slice-fill/stroke', 'black')
+knob.attr('.slice .slice-fill/stroke-width', 2)
+knob.attr('.legend-slice text/font-size', 16)
+</code></pre>
+
+<p>Note that you can use not only <code>fill</code> but a whole range of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">other SVG attributes</a>
+  to style your knobs. Moreover, JointJS provides a facility to use <a href="../../../../tutorial/filters-gradients.html">gradients and filters</a>. 
+  You can take advantage of them to make your charts even prettier:</p>
+
+<pre><code>
+var knob = new joint.shapes.chart.Knob({
+    ...
+    attrs: {
+        '.data': {
+            filter: { name: 'dropShadow', args: { dx: 0, dy: 0, blur: 3, color: 'black' } }
+        }
+    }
+    ...
+});
+</code></pre>
+
+<h2 id="multiple-series">Multiple values</h2>
+
+<p>The Knob chart supports multiple series. The <b><code>value</code></b>, <b><code>fill</code></b>, <b><code>min</code></b> and <b><code>max</code></b> properties of the Knob constructor
+  accept arrays. Simply pass more values into the arrays and the Knob chart will automatically render multiple series as in the following example:</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-multiple-series" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/knob/multiple-series.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/knob/multiple-series.js"></script>
+
+<pre><code>
+var chart = new joint.shapes.chart.Knob({
+    ...
+    value: [30, 60, 90], 
+    fill: ['#F2C500', '#4CC3D9', '#E94B35'], 
+    min: 0, max: 100
+});
+</code></pre>
+
+<h2 id="tooltips">Tooltips</h2>
+
+<p>Tooltips are a great way to show contextual information in your charts. The following
+  demo shows how to use the <b>ui.Tooltip</b> plugin with combination with Knob chart:
+  </p>
+
+<p><b>IMPORTANT</b>: For tooltips to work, you must have the <a href="../../ui/tooltip.html">ui.Tooltip</a>
+plugin installed.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-tooltips" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/knob/tooltips.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/knob/tooltips.js"></script>
+
+<p>When setting up tooltips, we no longer work with the chart model. Instead, we request the paper
+    for the view that represents the chart. This view triggeres <code>mousemove</code>, and <code>mouseout</code>
+    events that we use to hide and show our tooltip. The <code>mousemove</code> event handler gets passed
+    two important arguments: <code>slice</code> and <code>event</code>.
+    These two arguments mean the following:
+    <ul>
+        <li><code>slice</code> - an object with useful information about the slice the event was triggered on. This object
+	  contains the following properties: <code>sliceIndex</code>, <code>serieIndex</code>, <code>value</code>,
+	  <code>percentage</code>, <code>fill</code>, <code>offset</code>, <code>angle</code>,
+	  <code>startAngle</code>, <code>endAngle</code>, <code>outerRadius</code>, <code>innerRadius</code>,
+	  and <code>label</code>. Most of the time, for tooltips, the important ones are <code>value</code>
+	  and <code>label</code>.</li>
+        <li><code>event</code> - This is the DOM event object. For tooltips, the two 
+	  important properties are <code>clientX</code> and <code>clientY</code>. We 
+	  use these to render the tooltip at a particular position.</li>
+    </ul>
+</p>
+<p>
+    All these three arguments help us render our tooltip. Here is the relevant code snippet from the above demo:
+</p>
+<pre data-src="/js/docs/shapes/chart/knob/tooltips-snippet.js"></pre>
+
+<h2 id="animation">Animation</h2>
+
+<p>In general, you can animate any property of the Knob chart (change its value 
+over a certain period of time). In the following demo, we will show how to animate 
+some properties of the Knobs. Using the same technique, you can animate an
+arbitrary property.
+</p>
+
+<pre><code>
+knob.transition('value', 100, { duration: 1000, timingFunction: joint.util.timing.exponential });
+knob.transition('pieHole', .4, { duration: 1000, timingFunction: joint.util.timing.exponential });
+</code></pre>
+
+<div class="docs-demo">
+
+    <button class="btn-animation-piehole">Animate pieHole</button>
+    <button class="btn-animation-value">Animate value</button>
+    <button class="btn-animation-fill">Animate fill</button>
+
+    <br/>
+    <br/>
+    <div id="paper-holder-animation" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/shapes/chart/knob/animation.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/shapes/chart/knob/animation.js"></script>
+
+<p>You can find more about JointJS transitions in the 
+  <a href="../../../../api.html#joint.dia.Element:transition">API reference</a>.</p>
+    
+
+<h2 id="knob-options">Knob Options</h2>
+
+<p>This is the full list of options that you can pass to the Knob constructor function.</p>
+
+<ul>
+    <li><code>value</code> - a number or an array of numbers (in case of multiple series) representing the value of the knob.</li>
+    <li><code>fill</code> - a color or an array of colors (in case of multiple series) representing the color of the knob. If multiple series are used, the number of items in the <code>value</code> array and <code>fill</code> array
+	  should match. If they don't match, the first color from the <code>fill</code> array will be taken wherever a color on the index matching the current serie value is missing.</li>
+    <li><code>min</code> - a minimum value of the knob. <code>min</code> together with <code>max</code> specify the range for the <code>value</code>. The same logic for multiple series as described above for <code>fill</code> applies.</li>
+    <li><code>max</code> - a maximum value of the knob. The same logic for multiple series as described above for <code>fill</code> applies.</li>
+    <li><code>serieDefaults</code> - an object with various properties specifying how series should be rendered. As Knob inherits from Pie chart, all of the properties described in <a href="pie.html#options-serie">Pie serie object</a> applies here as well.</li>
+    <li><code>sliceDefaults</code> - an object with various properties specifying how slices should be rendered. As Knob inherits from Pie chart, all of the properties described in <a href="pie.html#options-slice">Pie slice object</a> applies here as well.</li>
+</ul>
+
+<h2 id="knob-api">Knob API</h2>
+
+<h3>chart.Knob</h3>
+
+<p>As <code>chart.Knob</code> inherits from <code>chart.Pie</code> all of the <a href="pie.html#chart-api">chart.Pie API methods</a> apply here as well.</p>
+
+<h3>chart.KnobView</h3>
+
+<p>As <code>chart.Knob</code> inherits from <code>chart.Pie</code> all of the <a href="pie.html#chart-api">chart.PieView API methods</a> apply here as well.</p>
+
+<h3>chart.KnobView events</h3>
+
+<p>As <code>chart.Knob</code> inherits from <code>chart.Pie</code> all of the <a href="pie.html#chart-api">chart.Pie events</a> apply here as well.</p>
+
+<h2 id="knob-structure">Knob SVG structure</h2>
+
+<p>As <code>chart.Knob</code> inherits from <code>chart.Pie</code>, the SVG structure described in <a href="pie.html#chart-structure">chart.Pie SVG structure</a> applies here as well.</p>
+
+
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../../vendor/prism/prism.css">
+        <script src="../../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../../js/client-search.js"></script>
+        <script src="../../../../js/rappid-docs.js"></script>
+    </body>
+</html>

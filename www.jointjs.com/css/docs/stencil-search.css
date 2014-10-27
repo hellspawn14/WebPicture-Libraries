@@ -1,0 +1,17 @@
+#paper-holder-search {
+   left: 200px;    
+   height: 300px;
+   position: relative;
+}
+#stencil-holder-search {
+   width: 200px;
+   height: 300px;
+   position: absolute;
+}
+#stencil-holder-search .stencil .group-label {
+   padding: 0;
+}
+#stencil-holder-search .stencil .group .elements {
+   margin-left: -10px;
+   background: transparent;
+}

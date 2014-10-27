@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <title>JointJS - JavaScript diagramming library - API reference.</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><img class="logo small" src="images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="download.html">Download</a></li>
+            <li ><a href="demos.html">Demos</a></li>
+            <li ><a href="license.html">License</a></li>
+            <li ><a href="tutorial.html">Tutorials</a></li>
+            <li class="active"><a href="api.html">JointJS API</a></li>
+            <li ><a href="rappid/docs.html">Rappid API</a></li>
+            <li ><a href="support.html">Support</a></li>
+            <li ><a href="about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="api">
+
+    <div id="api-sidebar" class="content-sidebar">
+        <input id="api-search" type="search" placeholder="e.g. graph"/>
+        <ul class="searchable">
+            <li><a href="api.html#joint.dia.Element">joint.dia.Element</a>
+                <ul>
+                    <li><a href="api.html#joint.dia.Element:translate">translate</a></li>
+                    <li><a href="api.html#joint.dia.Element:resize">resize</a></li>
+                    <li><a href="api.html#joint.dia.Element:rotate">rotate</a></li>
+                    <li><a href="api.html#joint.dia.Element:attr">attr</a></li>
+                    <li><a href="api.html#joint.dia.Element:removeAttr">removeAttr</a></li>
+                    <li><a href="api.html#joint.dia.Element:prop">prop</a></li>
+                    <li><a href="api.html#joint.dia.Element:remove">remove</a></li>
+                    <li><a href="api.html#joint.dia.Element:toBack">toBack</a></li>
+                    <li><a href="api.html#joint.dia.Element:toFront">toFront</a></li>
+                    <li><a href="api.html#joint.dia.Element:toJSON">toJSON</a></li>
+                    <li><a href="api.html#joint.dia.Element:clone">clone</a></li>
+                    <li><a href="api.html#joint.dia.Element:embed">embed</a></li>
+                    <li><a href="api.html#joint.dia.Element:unembed">unembed</a></li>
+                    <li><a href="api.html#joint.dia.Element:getEmbeddedCells">getEmbeddedCells</a></li>
+                    <li><a href="api.html#joint.dia.Element:getBBox">getBBox</a></li>
+                    <li><a href="api.html#joint.dia.Element:transition">transition</a></li>
+                    <li><a href="api.html#joint.dia.Element:getTransitions">getTransitions</a></li>
+                    <li><a href="api.html#joint.dia.Element:stopTransitions">stopTransitions</a></li>
+                    <li><a href="api.html#joint.dia.Element:findView">findView</a></li>
+                    <li><a href="api.html#joint.dia.Element:events">List of triggered events</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#joint.dia.Link">joint.dia.Link</a>
+                <ul>
+                    <li><a href="api.html#joint.dia.Link:attr">attr</a></li>
+                    <li><a href="api.html#joint.dia.Link:removeAttr">removeAttr</a></li>
+                    <li><a href="api.html#joint.dia.Link:prop">prop</a></li>
+                    <li><a href="api.html#joint.dia.Link:toJSON">toJSON</a></li>
+                    <li><a href="api.html#joint.dia.Link:toBack">toBack</a></li>
+                    <li><a href="api.html#joint.dia.Link:toFront">toFront</a></li>
+                    <li><a href="api.html#joint.dia.Link:remove">remove</a></li>
+                    <li><a href="api.html#joint.dia.Link:disconnect">disconnect</a></li>
+                    <li><a href="api.html#joint.dia.Link:label">label</a></li>
+                    <li><a href="api.html#joint.dia.Link:clone">clone</a></li>
+                    <li><a href="api.html#joint.dia.Link:transition">transition</a></li>
+                    <li><a href="api.html#joint.dia.Link:getTransitions">getTransitions</a></li>
+                    <li><a href="api.html#joint.dia.Link:stopTransitions">stopTransitions</a></li>
+                    <li><a href="api.html#joint.dia.Link:findView">findView</a></li>
+                    <li><a href="api.html#joint.dia.Link:translate">translate</a></li>
+                    <li><a href="api.html#joint.dia.Link:events">List of triggered events</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#joint.dia.Graph">joint.dia.Graph</a>
+                <ul>
+                    <li><a href="api.html#joint.dia.Graph:addCell">addCell</a></li>
+                    <li><a href="api.html#joint.dia.Graph:addCells">addCells</a></li>
+                    <li><a href="api.html#joint.dia.Graph:resetCells">resetCells</a></li>
+                    <li><a href="api.html#joint.dia.Graph:getCell">getCell</a></li>
+                    <li><a href="api.html#joint.dia.Graph:getElements">getElements</a></li>
+                    <li><a href="api.html#joint.dia.Graph:getLinks">getLinks</a></li>
+                    <li><a href="api.html#joint.dia.Graph:getConnectedLinks">getConnectedLinks</a></li>
+                    <li><a href="api.html#joint.dia.Graph:disconnectLinks">disconnectLinks</a></li>
+                    <li><a href="api.html#joint.dia.Graph:removeLinks">removeLinks</a></li>
+                    <li><a href="api.html#joint.dia.Graph:getNeighbors">getNeighbors</a></li>
+                    <li><a href="api.html#joint.dia.Graph:toJSON">toJSON</a></li>
+                    <li><a href="api.html#joint.dia.Graph:fromJSON">fromJSON</a></li>
+                    <li><a href="api.html#joint.dia.Graph:clear">clear</a></li>
+                    <li><a href="api.html#joint.dia.Graph:findModelsFromPoint">findModelsFromPoint</a></li>
+                    <li><a href="api.html#joint.dia.Graph:findModelsInArea">findModelsInArea</a></li>
+                    <li><a href="api.html#joint.dia.Graph:events">List of triggered events</a></li>
+                    <li><a href="api.html#joint.dia.Graph:JSON">JSON format</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#joint.dia.Paper">joint.dia.Paper</a>
+                <ul>
+                    <li><a href="api.html#joint.dia.Paper:setDimensions">setDimensions</a></li>
+                    <li><a href="api.html#joint.dia.Paper:setOrigin">setOrigin</a></li>
+                    <li><a href="api.html#joint.dia.Paper:scale">scale</a></li>
+                    <li><a href="api.html#joint.dia.Paper:findView">findView</a></li>
+                    <li><a href="api.html#joint.dia.Paper:findViewByModel">findViewByModel</a></li>
+                    <li><a href="api.html#joint.dia.Paper:findViewsFromPoint">findViewsFromPoint</a></li>
+                    <li><a href="api.html#joint.dia.Paper:findViewsInArea">findViewsInArea</a></li>
+                    <li><a href="api.html#joint.dia.Paper:fitToContent">fitToContent</a></li>
+                    <li><a href="api.html#joint.dia.Paper:scaleContentToFit">scaleContentToFit</a></li>
+                    <li><a href="api.html#joint.dia.Paper:getContentBBox">getContentBBox</a></li>
+                    <li><a href="api.html#joint.dia.Paper:events">List of triggered events</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#joint.dia.ElementView">joint.dia.ElementView</a>
+                <ul>
+                    <li><a href="api.html#joint.dia.ElementView:getBBox">getBBox</a></li>
+                    <li><a href="api.html#joint.dia.ElementView:highlight">highlight</a></li>
+                    <li><a href="api.html#joint.dia.ElementView:unhighlight">unhighlight</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#joint.dia.LinkView">joint.dia.LinkView</a>
+                <ul>
+                    <li><a href="api.html#joint.dia.LinkView:getConnectionLength">getConnectionLength</a></li>
+                    <li><a href="api.html#joint.dia.LinkView:getBBox">getBBox</a></li>
+                    <li><a href="api.html#joint.dia.LinkView:sendToken">sendToken</a></li>
+                    <li><a href="api.html#joint.dia.LinkView:addVertex">addVertex</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#SpecialAttributes">SpecialAttributes</a>
+                <ul>
+                    <li><a href="api.html#SpecialAttributes:ref-x">ref-x</a></li>
+                    <li><a href="api.html#SpecialAttributes:ref-y">ref-y</a></li>
+                    <li><a href="api.html#SpecialAttributes:ref-dx">ref-dx</a></li>
+                    <li><a href="api.html#SpecialAttributes:ref-dy">ref-dy</a></li>
+                    <li><a href="api.html#SpecialAttributes:ref">ref</a></li>
+                    <li><a href="api.html#SpecialAttributes:x-alignment">x-alignment</a></li>
+                    <li><a href="api.html#SpecialAttributes:y-alignment">y-alignment</a></li>
+                    <li><a href="api.html#SpecialAttributes:text">text</a></li>
+                    <li><a href="api.html#SpecialAttributes:style">style</a></li>
+                    <li><a href="api.html#SpecialAttributes:magnet">magnet</a></li>
+                    <li><a href="api.html#SpecialAttributes:port">port</a></li>
+                    <li><a href="api.html#SpecialAttributes:filter">filter</a></li>
+                    <li><a href="api.html#SpecialAttributes:fill">fill</a></li>
+                    <li><a href="api.html#SpecialAttributes:stroke">stroke</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#joint.util">Utility functions</a>
+                <ul>
+                    <li><a href="api.html#joint.util:uuid">uuid</a></li>
+                    <li><a href="api.html#joint.util:guid">guid</a></li>
+                    <li><a href="api.html#joint.util:nextFrame">nextFrame</a></li>
+                    <li><a href="api.html#joint.util:cancelFrame">cancelFrame</a></li>
+                    <li><a href="api.html#joint.util:flattenObject">flattenObject</a></li>
+                    <li><a href="api.html#joint.util:getByPath">getByPath</a></li>
+                    <li><a href="api.html#joint.util:setByPath">setByPath</a></li>
+                    <li><a href="api.html#joint.util.format:number">format.number</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#v">Vectorizer</a>
+                <ul>
+                    <li><a href="api.html#v:V">V</a></li>
+                    <li><a href="api.html#v:translate">translate</a></li>
+                    <li><a href="api.html#v:rotate">rotate</a></li>
+                    <li><a href="api.html#v:scale">scale</a></li>
+                    <li><a href="api.html#v:bbox">bbox</a></li>
+                    <li><a href="api.html#v:text">text</a></li>
+                    <li><a href="api.html#v:attr">attr</a></li>
+                    <li><a href="api.html#v:remove">remove</a></li>
+                    <li><a href="api.html#v:append">append</a></li>
+                    <li><a href="api.html#v:prepend">prepend</a></li>
+                    <li><a href="api.html#v:svg">svg</a></li>
+                    <li><a href="api.html#v:defs">defs</a></li>
+                    <li><a href="api.html#v:clone">clone</a></li>
+                    <li><a href="api.html#v:findOne">findOne</a></li>
+                    <li><a href="api.html#v:find">find</a></li>
+                    <li><a href="api.html#v:toLocalPoint">toLocalPoint</a></li>
+                    <li><a href="api.html#v:translateCenterToPoint">translateCenterToPoint</a></li>
+                    <li><a href="api.html#v:translateAndAutoOrient">translateAndAutoOrient</a></li>
+                    <li><a href="api.html#v:animateAlongPath">animateAlongPath</a></li>
+                    <li><a href="api.html#v:hasClass">hasClass</a></li>
+                    <li><a href="api.html#v:addClass">addClass</a></li>
+                    <li><a href="api.html#v:removeClass">removeClass</a></li>
+                    <li><a href="api.html#v:toggleClass">toggleClass</a></li>
+                    <li><a href="api.html#v:V.decomposeMatrix">V.decomposeMatrix</a></li>
+                    <li><a href="api.html#v:V.createSVGMatrix">V.createSVGMatrix</a></li>
+                    <li><a href="api.html#v:V.createSVGTransform">V.createSVGTransform</a></li>
+                    <li><a href="api.html#v:V.createSVGPoint">V.createSVGPoint</a></li>
+                    <li><a href="api.html#v:V.rectToPath">V.rectToPath</a></li>
+                </ul>
+            </li>
+            <li><a href="api.html#g">Geometry</a>
+                <ul>
+                    <li><a href="api.html#g:point"><b>point</b></a>
+                        <ul>
+                            <li><a href="api.html#g:point.adhereToRect">adhereToRect</a></li>
+                            <li><a href="api.html#g:point.theta">theta</a></li>
+                            <li><a href="api.html#g:point.distance">distance</a></li>
+                            <li><a href="api.html#g:point.manhattanDistance">manhattanDistance</a></li>
+                            <li><a href="api.html#g:point.offset">offset</a></li>
+                            <li><a href="api.html#g:point.magnitude">magnitude</a></li>
+                            <li><a href="api.html#g:point.update">update</a></li>
+                            <li><a href="api.html#g:point.round">round</a></li>
+                            <li><a href="api.html#g:point.normalize">normalize</a></li>
+                            <li><a href="api.html#g:point.difference">difference</a></li>
+                            <li><a href="api.html#g:point.bearing">bearing</a></li>
+                            <li><a href="api.html#g:point.toPolar">toPolar</a></li>
+                            <li><a href="api.html#g:point.rotate">rotate</a></li>
+                            <li><a href="api.html#g:point.move">move</a></li>
+                            <li><a href="api.html#g:point.changeInAngle">changeInAngle</a></li>
+                            <li><a href="api.html#g:point.equals">equals</a></li>
+                            <li><a href="api.html#g:point.snapToGrid">snapToGrid</a></li>
+                            <li><a href="api.html#g:point.reflection">reflection</a></li>
+                            <li><a href="api.html#g:point.fromPolar">point.fromPolar</a></li>
+                            <li><a href="api.html#g:point.random">point.random</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html#g:line"><b>line</b></a>
+                        <ul>
+                            <li><a href="api.html#g:line.length">length</a></li>
+                            <li><a href="api.html#g:line.squaredLength">squaredLength</a></li>
+                            <li><a href="api.html#g:line.midpoint">midpoint</a></li>
+                            <li><a href="api.html#g:line.intersection">intersection</a></li>
+                            <li><a href="api.html#g:line.bearing">bearing</a></li>
+                            <li><a href="api.html#g:line.pointAt">pointAt</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html#g:rect"><b>rect</b></a>
+                        <ul>
+                            <li><a href="api.html#g:rect.origin">origin</a></li>
+                            <li><a href="api.html#g:rect.corner">corner</a></li>
+                            <li><a href="api.html#g:rect.topRight">topRight</a></li>
+                            <li><a href="api.html#g:rect.bottomLeft">bottomLeft</a></li>
+                            <li><a href="api.html#g:rect.center">center</a></li>
+                            <li><a href="api.html#g:rect.intersect">intersect</a></li>
+                            <li><a href="api.html#g:rect.sideNearestToPoint">sideNearestToPoint</a></li>
+                            <li><a href="api.html#g:rect.containsPoint">containsPoint</a></li>
+                            <li><a href="api.html#g:rect.containsRect">containsRect</a></li>
+                            <li><a href="api.html#g:rect.pointNearestToPoint">pointNearestToPoint</a></li>
+                            <li><a href="api.html#g:rect.intersectionWithLineFromCenterToPoint">intersectionWithLineFromCenterToPoint</a></li>
+                            <li><a href="api.html#g:rect.moveAndExpand">moveAndExpand</a></li>
+                            <li><a href="api.html#g:rect.round">round</a></li>
+                            <li><a href="api.html#g:rect.normalize">normalize</a></li>
+                            <li><a href="api.html#g:rect.bbox">bbox</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html#g:ellipse"><b>ellipse</b></a>
+                        <ul>
+                            <li><a href="api.html#g:ellipse.bbox">bbox</a></li>
+                            <li><a href="api.html#g:ellipse.intersectionWithLineFromCenterToPoint">intersectionWithLineFromCenterToPoint</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html#g:bezier"><b>bezier</b></a>
+                        <ul>
+                            <li><a href="api.html#g:bezier.curveThroughPoints">curveThroughPoints</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html#g:scale"><b>scale</b></a>
+                        <ul>
+                            <li><a href="api.html#g:scale.linear">linear</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="api.html#g:utils"><b>utils</b></a>
+                        <ul>
+                            <li><a href="api.html#g:toDeg">toDeg</a></li>
+                            <li><a href="api.html#g:toRad">toRad</a></li>
+                            <li><a href="api.html#g:snapToGrid">snapToGrid</a></li>
+                            <li><a href="api.html#g:normalizeAngle">normalizeAngle</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="api-container" class="content-container">
+
+        <h1>JointJS API</h1>
+
+	<p>
+	  This is the API reference to the open source JointJS core library. If you're looking for
+	  a documentation to the Rappid diagramming toolkit, the extension to JointJS, go <a href="rappid/docs.html">here</a>.
+	</p>
+
+        <p>
+            JointJS library exports three global variables: <b><code>joint</code></b>, <b><code>V</code></b> and <b><code>g</code></b>.
+        </p>
+
+        <p>
+            The <code>joint</code> namespace contains all the objects that you use to build up your diagrams. 
+	    Additionally, <code>joint.version</code> property tells you which version of JointJS you're using.
+        </p>
+        
+        <p>
+            The <a href="api.html#v"><code>V</code></a>
+            variable is a global exported by a lightweight SVG library that we call a <q>Vectorizer</q>. This tiny library 
+            makes manipulation with SVG documents much easier. JointJS uses this library internally. Normally, you don't have to get in
+            touch with this library at all but for advanced uses, it can be handy. 
+        </p>
+
+        <p>
+            The <a href="api.html#g"><code>g</code></a> namespace is another lighweight library used internally by JointJS that provides
+            many useful geometry operations. Again, you might not get in touch with this library but when you 
+            do have the need to perform geometric operations in your applications, you'll certainly find it helpful.
+        </p>
+
+        <h2 id="joint.dia.Element">joint.dia.Element</h2>
+        <p>
+            <b>joint.dia.Element</b> is the basic model for diagram elements. It's a <a href="http://backbonejs.org/#Model">Backbone model</a> with couple of additional important
+            properties. The first one to mention is a unique identifier for the element. Each element has a unique ID that is stored in the <b><code>id</code></b> property. This <code>id</code> has
+            a form of pseudo-generated <a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a>. Other properties
+            can be put into three groups:
+        </p>
+
+        <h3>Geometry</h3>
+        <p>Coordinates of an element are stored in the <b><code>position</code></b> property that is an object with <b><code>x</code></b> and <b><code>y</code></b> keys.
+            <code>position</code> can be accessed or set directly using the regular Backbone <code>set()</code>/<code>get()</code> methods
+            or through the <a href="api.html#joint.dia.Element:translate">translate</a> method.
+        </p>
+
+        <p>Rotation angle is stored in the <b><code>angle</code></b> property. This angle is in degrees and the rotation origin is always considered to be the center
+            of the element. <code>angle</code> can be also accessed or set directly using the regular Backbone <code>set()</code>/<code>get()</code> methods
+            or through the <a href="api.html#joint.dia.Element:rotate">rotate</a> method.
+        </p>
+
+        <p>Size of an element is stored in the <b><code>size</code></b> property that is an object with <b><code>width</code></b> and <b><code>height</code></b> keys.
+            Again, <code>size</code> can be accessed or set directly using the regular Backbone <code>set()</code>/<code>get()</code> methods
+            or through the <a href="api.html#joint.dia.Element:resize">resize</a> method.
+        </p>
+
+        <h3>Presentation</h3>
+
+        <p>Another important property is <b><code>attrs</code></b> which is an object with keys representing <b>selectors</b> that match subelements and values
+            which are SVG attributes that will be set on the subelements. One can find a list of <b>SVG attributes</b> and their descriptions e.g. on <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">MDN</a>.</p>
+
+        <p>It is important to note that each <code>joint.dia.Element</code> defines an SVG markup which is then
+            used by <code>joint.dia.ElementView</code> to render the element to the paper. For instance, 
+            the <code>joint.shapes.basic.Rect</code> element (that inherits from <code>joint.dia.Element</code>)
+            defines its markup as follows: 
+            <pre><code>
+&lt;g class="rotatable"&gt;&lt;g class="scalable"&gt;&lt;rect/&gt;&lt;/g&gt;&lt;text/&gt;&lt;/g&gt;
+            </code></pre>
+            Therefore, in order to set a red
+            fill color for the rectangle subelement, the <code>attrs</code> object should contain:
+            <pre><code>
+rect: { fill: 'red' }
+            </code></pre>
+            Again, it is not recommended to change the <code>attrs</code> object directly. Instead, use the 
+            <a href="api.html#joint.dia.Element:attr">attr</a> method.
+        </p>
+
+        <p>The <b><code>z</code></b> property specifies the stack order of the element in the SVG DOM. An element
+            with a higher <code>z</code> level is in front of an element with a lower <code>z</code> level. (This also stands
+            for links which have the exact same property.)</p>
+
+        
+        <h3>Nesting</h3>
+
+        <p>The last two properties of elements are <b><code>embeds</code></b> and <b><code>parent</code></b>. These two
+            are related to elements that contain or are contained withing other elements forming a hierarchical structure.
+            <b><code>embeds</code></b> is a list of cell <code>id</code>'s that are embedded inside the element. <b><code>parent</code></b>
+            is an <code>id</code> of the parent element of the embedded one. When a parent element is translated, all its children
+            get translated too.</p>
+
+        <br/>
+        <br/>
+        <br/>
+
+        <h3 id="joint.dia.Element:translate">translate <code>element.translate(tx, [ty])</code></h3>
+        <p>Translate an element by <code>tx</code> pixels in x axis and <code>ty</code> pixels in y axis.
+            <code>ty</code> is optional in which case the translation in y axis will be considered zero.</p>
+
+        <h3 id="joint.dia.Element:resize">resize <code>element.resize(width, height)</code></h3>
+        <p>Resize an element in place so that the <a href="tutorial.html#custom-elements">"scalable" group</a> has width <code>width</code> and height <code>height</code>. In place in this case means
+            that the top-left corner of the element stays at the same position after resizing. In other words,
+            the element is streched to the bottom/right.</p> 
+
+        <p>There is a difference between a classical scale and 
+            <a href="api.html#joint.dia.Element:resize">resize</a> operations. <code>resize</code> doesn't actually scale the whole SVG <code>&lt;g&gt;</code> element grouping
+            all its subelements. It only scales subelements of the <code>&lt;g class"scalable"/&gt;</code> group. This is very
+            useful and brings a lot of flexibility in defining which subelements should be scaled and which not. Imagine a simple
+            rectangle element with text inside. Usually, when we resize the whole element, we expect the rectangle to 
+            get scaled while the text should stay the same size, only its position should be adjusted so that the text stays
+            in the center of the rectangle. This can be easilly achieved by adding the <code>&lt;rect/&gt;</code> element to the <code>&lt;g class"scalable"/&gt;</code> group 
+            in the markup and positioning the text 
+            subelement relatively to the <code>&lt;rect /&gt;</code> element: <code>&lt;text ref-x=".5" ref-y=".5" ref="rect" /&gt;</code>.
+            Note that neither of <code>ref-x, ref-y and ref</code> attributes is an SVG standard attribute. These are special 
+            attributes introduced by JointJS. More on these in the section on <a href="api.html#SpecialAttributes">Special attributes</a>.</p>
+        
+        <h3 id="joint.dia.Element:rotate">rotate <code>element.rotate(deg, [absolute, origin])</code></h3>
+        <p>Rotate an element by <code>deg</code> degrees around its center. If the optional <code>absolute</code> parameter is <code>true</code>, 
+        the <code>deg</code> will be considered an absolute angle, not an addition to the previous angle.
+	  If <code>origin</code> is passed in the form of an object with <code>x</code> and <code>y</code> properties,
+	  then this point will be used as the origin for the rotation transformation.
+	</p>
+
+        <h3 id="joint.dia.Element:attr">attr <code>element.attr(attrs)</code></h3>
+        <p>Set SVG attributes (and JointJS special attributes) on subelements. <code>attr</code> can either be an object or string representing a path to
+            a nested attribute. If it is an object, the keys of the <code>attrs</code> object are CSS selectors
+            matching the subelements. The values are objects containing SVG attributes and their values. <code>attrs</code> object will be mixined
+            with <code>attrs</code> property of the <code>element</code> model. This is a convenient way of rewriting only some of the attributes
+            of the subelements. For overwritting all attributes of all subelements, use <code>element.set(attrs)</code>.
+            <pre><code>
+element.attr({
+    rect: { fill: 'blue' },
+    text: { fill: 'white', 'font-size': 15 },
+    '.myrect2': { fill: 'red' }
+});                            
+            </code></pre>
+            An alternative call using a string path and a value:
+            <pre><code>
+element.attr('text/font-size', 12);
+            </code></pre>
+        </p>
+
+        <h3 id="joint.dia.Element:removeAttr">removeAttr <code>element.removeAttr(path, [options])</code></h3>
+        <p>Remove a previously set attribute from the element. <code>path</code> can either be a string that specifies
+	  the path to the, possibly nested, attribute to be removed or an array of more paths.
+	  The associated element view makes sure the element gets re-rendered properly.
+	  If <code>options</code> is passed, it can contain data that is passed over to 
+	  the event listeners for the <code>change:attrs</code> event triggered on the element
+	  itself and also on the graph the element is in.
+	</p>
+
+        <h3 id="joint.dia.Element:prop">prop <code>element.prop(properties)</code></h3>
+        <p>Set properties, possibly nested, on the element model. This is an equivalent of the <a href="api.html#joint.dia.Element:attr">attr()</a>
+	  method but this time for custom data properties.
+            <pre><code>
+element.prop('name/first', 'John')
+element.prop('name/first')  // 'John'
+element.prop({ name: { first: 'John' } })
+// Nested arrays are supported too:
+element.prop('mylist/0/data/0/value', 50)
+element.prop({ mylist: [ { data: [ { value: 50 } ] } ] })
+            </code></pre>
+        </p>
+
+        <h3 id="joint.dia.Element:remove">remove <code>element.remove(options)</code></h3>
+        <p>Remove the element from the graph. All its embedded elements will get removed too and the element gets unembedded from its parent element. By default, 
+            all the associated links are removed too. To suppress this behaviour, set <code>options.disconnectLinks === true</code>. In this case, all the associated
+            links get disconnected from this element rather then removed completely from the graph.</p>
+
+        <h3 id="joint.dia.Element:toBack">toBack <code>element.toBack()</code></h3>
+        <p>Move the element so it is behind all other cells (elements/links).</p>
+
+        <h3 id="joint.dia.Element:toFront">toFront <code>element.toFront()</code></h3>
+        <p>Move the element so it is on top of all other cells (element/links).</p>
+
+        <p>All elements have a <code>z</code> property defining their z-level in the graph. This <code>z</code> property
+            can even be set directly by <code>element.set('z', 123)</code>. This change will be automatically handled by the <code>joint.dia.Paper</code>
+            object associated with the <code>joint.dia.Graph</code> object this element is part of and all the SVG elements will get resorted so that
+            their position in the DOM reflects the <code>z</code> level.</p>
+
+        <h3 id="joint.dia.Element:toJSON">toJSON <code>element.toJSON()</code></h3>
+        <p>Return a copy of the element's attributes for JSON serialization. This can be used for persistance or serialization. Note that this method doesn't
+            return a JSON string but rather an object that can be then serialized to JSON with <code>JSON.stringify()</code>.</p>
+
+        <h3 id="joint.dia.Element:clone">clone <code>element.clone(options)</code></h3>
+        <p>Returns a new instance of the element with identical attributes. If <code>options.deep === true</code>, then
+            all the embedded cells (elments, links) of the element are cloned as well. In this case, the return value is an array of
+            instances rather then a single instance.</p>
+
+        <h3 id="joint.dia.Element:embed">embed <code>element.embed(cell)</code></h3>
+        <p>Embed a cell (element or link) into the element. The element then becomes a parent of the embedded cell. When a parent is moved (translated),
+          all cells embedded into that parent will move as well. If links are embedded, their vertices move with the parent. This way both options are available:
+	  if a link is not embedded but its source/target elements are and their parent moves, the embedded elements
+	  move with the parent but the link vertices stay at the same position. If the link is embedded with its source/target elements, its vertices move as the parent moves.</p>
+
+        <h3 id="joint.dia.Element:unembed">unembed <code>element.unembed(cell)</code></h3>
+        <p>Free up an embedded cell from its parent element.</p>
+
+        <h3 id="joint.dia.Element:getEmbeddedCells">getEmbeddedCells <code>element.getEmbeddedCells()</code></h3>
+        <p>Return an array of all the embedded cells of an element. If all you need is <code>id</code>'s of all the embedded cells,
+            use <code>element.get('embeds')</code>.</p>
+
+        <h3 id="joint.dia.Element:getBBox">getBBox <code>element.getBBox()</code></h3>
+        <p>Returns an element's bounding box represented as a <code>g.rect</code> object (see <a href="http://www.daviddurman.com/hidden-gold-of-jointjs-the-geometry-library.html">geometry library</a>).</p>
+
+	<pre><code>
+if (element1.getBBox().intersect(element2.getBBox())) {
+    // elements intersect
+}
+	</pre></code>
+
+        <h3 id="joint.dia.Element:transition">transition <code>element.transition(path, value [, options])</code></h3>
+        <p>Allows to change the element's property gradually over a period of time. This method lets you specify what property to change (<code>path</code>), when the transition will start (<code>options.delay</code>), how long the transition will last (<code>options.duration</code>), how the transition will run (<code>options.timingFunction</code>), and how to interpolate the property value (<code>options.valueFunction</code>).</p>
+
+	<pre><code>
+element.transition('position/x', 250, {
+    delay: 100,
+    duration: 500,
+    timingFunction: function(t) { return t*t; },
+    valueFunction: function(a, b) { return function(t) { return a + (b - a) * t }}
+});
+// will start changing the element's x-coordinate in 100ms, for period of 500ms.
+	</code></pre>
+
+	<p>JointJS comes pre-built with some common timing and interpolating functions. The timing functions are defined in the <code>joint.util.timing</code> namespace
+            and the interpolating functions in the <code>joint.util.interpolate</code> namespace. The predefined timing functions are:
+            <ul>
+                <li><code>linear</code></li>
+                <li><code>quad</code></li>
+                <li><code>cubic</code></li>
+                <li><code>inout</code></li>
+                <li><code>exponential</code></li>
+                <li><code>bounce</code></li>
+            </ul>
+        </p>
+	<p>and the predefined interpolating functions are: 
+            <ul>
+                <li><code>number</code></li>
+                <li><code>object</code></li>
+                <li><code>hexColor</code></li>
+                <li><code>unit</code></li>
+            </ul>
+        </p>
+        Example use:
+	<pre><code>
+element.transition('attrs/text/font-size', '1em', { 
+    valueFunction: joint.util.interpolate.unit,
+    timingFunction: joint.util.timing.bounce
+});
+// will start changing the current font size value to 1em in the bounce fashion.
+	</pre></code>
+
+        <h3 id="joint.dia.Element:getTransitions">getTransitions <code>element.getTransitions()</code></h3>
+        <p>Return an array of all active transitions (their paths).</p>
+
+        <h3 id="joint.dia.Element:stopTransitions">stopTransitions <code>element.stopTransitions([path])</code></h3>
+        <p>Stops all running transitions. If parameter <code>path</code> is provided, it will stop only transitions specified by this path.</p>
+
+        <h3 id="joint.dia.Element:findView">findView <code>element.findView(paper)</code></h3>
+        <p>Find view (<a href="api.html#joint.dia.ElementView"><code>joint.dia.ElementView</code></a>) for the element model in the <code>paper</code>.
+	  This is a shortcut to the equivalent call <code>paper.findViewByModel(element)</code>
+	</p>
+
+        <h3 id="joint.dia.Element:events">List of triggered events</h3>
+        <p>The following list contains events that you can react on:
+            <ul>
+                <li><code>change</code> - generic event triggered for any change on the element</li>
+                <li><code>change:position</code> - triggered when the element changes its position</li>
+                <li><code>change:angle</code> - triggered when the element gets rotated</li>
+                <li><code>change:size</code> - triggered when the element gets resized</li>
+                <li><code>change:attrs</code> - triggered when the element changes its attributes</li>
+                <li><code>change:embeds</code> - triggered when other cells were embedded into the element</li>
+                <li><code>change:parent</code> - triggered when the element got embedded into another element</li>
+                <li><code>change:z</code> - triggered when the element is moved in the z-level (<a href="api.html#joint.dia.Element:toFront">toFront</a> and <a href="api.html#joint.dia.Element:toBack">toBack</a>)</li>
+		<li><code>transition:start</code> - triggered when a transition starts.</li>
+                <li><code>transition:end</code> - triggered when a transiton ends.</li>
+            </ul>
+            <pre><code>
+element.on('change:position', function() { alert('element moved') })
+            </code></pre>
+        </p>
+
+
+        <h2 id="joint.dia.Link">joint.dia.Link</h2>
+        <p>
+            <b>joint.dia.Link</b> is the basic model for diagram links. It's a <a href="http://backbonejs.org/#Model">Backbone model</a> with couple of additional important
+            properties. The first one is again a unique identifier for the link stored in the <b><code>id</code></b> property. The rest can be put into three groups:
+        </p>
+
+        <h3>Connections</h3>
+        Properties <b><code>source</code></b> and <b><code>target</code></b> determine to which elements the link is connected to. Both objects are of the form:
+        <pre><code>
+{
+    id: &lt;id of an element&gt;,
+    selector: &lt;CSS selector&gt;,
+    port: &lt;id of a port&gt;
+}
+        </code></pre>
+        where <code>id</code> is an ID of an element model the link should start/end at. <code>selector</code> is optional and if
+        specified, the source/target will point to any subelement (which we call a magnet in this case) that the CSS selector matches.
+        <code>port</code> is optional and if defined, it marks the port the source/target of the link points to. Magnets/ports can
+        be defined on shapes using the JointJS <a href="api.html#SpecialAttributes">Special attributes</a> <a href="api.html#SpecialAttributes:magnet">magnet</a>
+        and <a href="api.html#SpecialAttributes:port">port</a>.
+        The <code>source</code> and <code>target</code> can also have a form of a point:
+        <pre><code>
+{
+    x: &lt;number&gt;,
+    y: &lt;number&gt;
+}
+        </code></pre>
+        in which case the source/target of the link points to a point and is therefore not connected to any element.
+
+        <pre><code>
+link.set('source', { id: element.id })
+link.set('source', { id: element.id, selector: 'text' })
+link.set('target', { x: 200, y: 300 })
+        </code></pre>
+</p>
+
+        <h3>Presentation</h3>
+
+          <p>The shape of the link is determined by the <b><code>vertices</code></b>, <b><code>connector</code></b> and <b><code>router</code></b> properties.</p>
+
+          <p>The <code>vertices</code> array contains a list of points which are the points which the link should cross.
+
+          <pre><code>
+link.get('vertices')
+link.set('vertices', [{ x: 100, y: 120 }, { x: 150, y: 60 }])
+          </code></pre>
+          </p>
+
+
+<p>A <code>router</code> takes an array of vertices defined on the model and transforms them to an array of points (<b>route</b>) that the link should go through. The difference between vertices and the route is that vertices are user-defined whilst route is computed.</p>
+There are three routers (manhattan, metro and orthogonal) to your disposal. The first two are so called "smart routers" and they automatically avoid elements that are in their way.
+
+<p>The <code>orthogonal</code> and <code>manhattan</code> routers generate points that can be connected by vertical and horizontal line segments only. The <code>metro</code> router generates points that can be connected also with diagonal line segments.</p>
+
+<pre><code>
+link.set('router', { name: 'manhattan' });
+link.set('router', { name: 'metro' });
+link.set('router', { name: 'orthogonal' });
+</code></pre>
+
+
+<p>To keep backwards compatible it's possible to set the <code>manhattan</code> property to <code>true</code> in order to enable the orthogonal routing.
+                  <pre><code>
+// old approach
+link.set('manhattan', true)
+                    </code></pre>
+                </p>
+
+
+<p>A <code>connector</code> takes points returned by a router and generate SVG path commands so the link can be rendered. There are three connectors (normal, smooth and rounded) to your disposal.</p>
+
+<p>The <code>normal</code> connector connects points with straight lines. The <code>rounded</code> connector does the same but it smooths all the edges. The <code>smooth</code> connector interpolates the points using a cubic bezier curve.
+
+<pre><code>
+link.set('connector', { name: 'normal' });
+link.set('connector', { name: 'smooth' });
+</code></pre>
+
+<p>The curve of edges can be specified by <code>radius</code> argument passed to the <code>rounded</code> connector.
+
+<pre><code>
+link.set('connector', { name: 'rounded', args: { radius: 10 }});
+</code></pre>
+
+<p>To keep backwards compatible it's possible to set the <code>smooth</code> property to <code>true</code> in order to enable smooth connector.
+                    <pre><code>
+// old approach
+link.set('smooth', true)
+                    </code></pre>
+</p>
+
+            <p>Note that code responsible for routing and rendering links is completely pluggable so the family of routers and connectors can be easily extended.</p> 
+
+                <p>Styling of the link is contained in the <b><code>attrs</code></b> property which has exactly the same
+                    structure as the <b><code>attrs</code></b> property of elements. Please refer to the <a href="api.html#joint.dia.Element">joint.dia.Element</a> section and 
+                    <a href="api.html#joint.dia.Link">joint.dia.Link</a> sections of this page for more information on this.<p>
+
+                <p>Links also have the <b><code>z</code></b> property which is the z-level of the link. <code>z</code> property
+                    has exactly the same meaning as the <code>z</code> property of elements.</p>
+
+                <h3 id="joint.dia.Link:attr">attr <code>link.attr(attrs)</code></h3>
+                <p>Set SVG attributes on subelements. This is a method analogous to <a href="api.html#joint.dia.Element:attr">attr</a> method of <code>Joint.dia.Element</code>. 
+                    The keys of the <code>attrs</code> object are CSS selectors
+                    matching the SVG element the link consists of. The values are objects containing SVG attributes and their values. <code>attrs</code> object will be mixined
+                    with <code>attrs</code> property of the <code>link</code> model. This is a convenient way of rewriting only some of the attributes
+                    of the SVG elements. For overwritting all attributes of all SVG elements, use <code>link.set('attrs', attrs)</code>. Here it is important to mention how the
+                    markup of a link looks like:
+                    <pre><code>
+&lt;path class="connection"/&gt;
+&lt;path class="marker-source"/&gt;
+&lt;path class="marker-target"/&gt;
+&lt;path class="connection-wrap"/&gt;
+&lt;g class="labels" /&gt;
+&lt;g class="marker-vertices"/&gt;
+&lt;g class="marker-arrowheads"/&gt;
+&lt;g class="link-tools" /&gt;
+                    </code></pre>
+                    As you can see, the link consists of a couple of SVG path elements and couple of SVG group elements:
+
+                    <ul>
+                        <li><code>.connection</code> is the actual line of the link.</li>
+                        <li><code>.connection-wrap</code> is an SVG path element that covers the <code>.connection</code> element and is usually thicker so that the link is able to 
+                            handle pointer events (mousedown, mousemove, mouseup) that didn't target the thin <code>.connection</code> path exactly. This makes it easy
+                            to "grab" the link even though the mouse cursor didn't point exactly at the (usually thin) <code>.connection</code> path element.</li>
+                        <li><code>.marker-source</code> and <code>.marker-target</code> are the arrowheads of the link.</li>
+                    </ul>
+                    <pre><code>
+link.attr({
+    '.connection': { stroke: 'blue' },
+    '.marker-source': { fill: 'red', d: 'M 10 0 L 0 5 L 10 10 z' },
+    '.marker-target': { fill: 'yellow', d: 'M 10 0 L 0 5 L 10 10 z' }
+});                            
+                    </code></pre>
+                    An alternative call using a string path and a value:
+                    <pre><code>
+link.attr('.marker-source/fill', 'green');
+                    </code></pre>
+                </p>
+
+		<h3 id="joint.dia.Link:removeAttr">removeAttr <code>link.removeAttr(path, [options])</code></h3>
+                <p>Remove a previously set attribute from the link. <code>path</code> can either be a string that specifies
+		  the path to the, possibly nested, attribute to be removed or an array of more paths.
+		  The associated link view makes sure the link gets re-rendered properly.
+		  If <code>options</code> is passed, it can contain data that is passed over to 
+		  the event listeners for the <code>change:attrs</code> event triggered on the link
+		  itself and also on the graph the link is in.
+		</p>
+
+		<h3 id="joint.dia.Link:prop">prop <code>link.prop(properties)</code></h3>
+                <p>Set properties, possibly nested, on the element model. This is an equivalent of the <a href="api.html#joint.dia.Link:attr">attr()</a>
+                method but this time for custom data properties.
+            <pre><code>
+link.prop('name/first', 'John')
+link.prop('name/first')  // 'John'
+link.prop({ name: { first: 'John' } })
+// Nested arrays are supported too:
+link.prop('mylist/0/data/0/value', 50)
+link.prop({ mylist: [ { data: [ { value: 50 } ] } ] })
+            </code></pre>
+
+	        As you can see, this is the exact same method as the <a href="api.html#joint.dia.Element:prop">joint.dia.Element:prop()</a>.
+		</p>
+
+                <h3 id="joint.dia.Link:toJSON">toJSON <code>link.toJSON()</code></h3>
+                <p>Return a copy of the link's attributes for JSON serialization. This is a method analogous to <a href="api.html#joint.dia.Element:toJSON">toJSON</a> method of <code>Joint.dia.Element</code>.
+
+                <h3 id="joint.dia.Link:toBack">toBack <code>link.toBack()</code></h3>
+                <p>Move the link so it is behind all other cells (elements/links). This is a method analogous to <a href="api.html#joint.dia.Element:toBack">toBack</a> method of <code>Joint.dia.Element</code>.</p>
+
+                <h3 id="joint.dia.Link:toFront">toFront <code>link.toFront()</code></h3>
+                <p>Move the element so it is on top of all other cells (elements/links). This is a method analogous to <a href="api.html#joint.dia.Element:toFront">toFront</a> method of <code>Joint.dia.Element</code>.</p>
+
+                <h3 id="joint.dia.Link:remove">remove <code>link.remove()</code></h3>
+                <p>Remove the link from the graph.</p>
+
+                <h3 id="joint.dia.Link:disconnect">disconnect <code>link.disconnect()</code></h3>
+                <p>Disconnect the link from its <code>source</code> and <code>target</code> elements. The <code>source</code> and <code>target</code> then become a point at <code>[0,0]</code>.</p>
+
+                <h3 id="joint.dia.Link:label">label <code>link.label(index, properties)</code></h3>
+                <p>Set <code>properties</code> on a label indexed by <code>index</code>. A link can have multiple labels each having different position and attributes.</p> The link model
+                has a property <code>labels</code> that contains the whole array of labels of that link. Each item of that array has the form:
+                <pre><code>
+{
+        position: &lt;number&gt;,
+        attrs: { &lt;selector&gt;: &lt;SVG attributes&gt; }
+}
+                </code></pre></p>
+                <p>
+                Where <code>position</code> is the position of the label with regard to the link <code>.connection</code> SVG path. If the <code>position</code> is in <code>[0,1]</code> interval
+                then the position of the label is considered to be defined as a percentage of the total length of the <code>.connection</code> path. E.g. position <code>0.5</code> puts
+                the label to the middle of the link. If the position is <code>&gt;1</code> then the label will be put <code>position</code> pixels starting from the beginning of the <code>.connection</code> path.
+                <code>position &lt;0</code> puts the label <code>Math.abs(position)</code> pixels starting from the end of the <code>.connection</code> path.</p>
+
+                <p><code>attrs</code> is again an object with CSS selectors as keys and SVG attributes as values. The label markup is defined as follows:
+                    <pre><code>
+&lt;g class="label"&gt;
+&lt;rect /&gt;
+&lt;text /&gt;
+&lt;/g&gt;
+                    </code></pre>
+
+                    Where <code>&lt;rect&gt;</code> is a box below the label.
+                </p>
+                <pre><code>
+link.label(0, {
+    position: .5,
+    attrs: {
+        rect: { fill: 'white' },
+        text: { fill: 'blue', text: 'my label' }
+    }
+});
+                </code></pre>
+
+
+                <h3 id="joint.dia.Link:clone">clone <code>link.clone()</code></h3>
+                <p>Returns a new instance of the link with identical attributes.</p>
+
+		<h3 id="joint.dia.Link:transition">transition <code>link.transition(path, value [, options])</code></h3>
+        <p>Allows to change the link's property gradually over a period of time. This is a method analogous to <a href="api.html#joint.dia.Element:transition">transition</a> method of <code>Joint.dia.Element</code>.
+
+	<pre><code>
+link.transition('target', { x: 250, y: 250 }, {
+    delay: 100,
+    duration: 500,
+    timingFunction: joint.util.timing.bounce,
+    valueFunction: joint.util.interpolate.object
+});
+// will start changing the link target coordinates in 100ms, for period of 500ms and performing a bounce effect.
+	</code></pre>
+
+        <h3 id="joint.dia.Link:getTransitions">getTransitions <code>link.getTransitions()</code></h3>
+        <p>Return an array of all active transitions (their paths).</p>
+
+        <h3 id="joint.dia.Link:stopTransitions">stopTransitions <code>link.stopTransitions([path])</code></h3>
+        <p>Stops all running transitions. If parameter <code>path</code> is provided, it will stop only transitions specified by this path.</p>
+
+        <h3 id="joint.dia.Link:findView">findView <code>link.findView(paper)</code></h3>
+        <p>Find view (<a href="api.html#joint.dia.LinkView"><code>joint.dia.LinkView</code></a>) for the link model in the <code>paper</code>.
+	  This is a shortcut to the equivalent call <code>paper.findViewByModel(link)</code>
+	</p>
+
+        <h3 id="joint.dia.Link:translate">translate <code>link.translate(tx, ty, [options])</code></h3>
+        <p>Translate the link vertices (and source and target if they are points) by <code>tx</code> pixels in x axis and
+	  <code>ty</code> pixels in y axis. If <code>options</code> object is passed, it can contain data
+	  that is passed over the the event listeners for the change event on the link or graph.
+	</p>
+
+        id="joint.dia.Link:events">List of triggered events</h3>
+        he following list contains events that you can react on:
+        <ul>
+            <li><code>change</code> - generic event triggered for any change on the link</li>
+            <li><code>change:source</code> - triggered when the link changes its source</li>
+            <li><code>change:target</code> - triggered when the link changes its target</li>
+            <li><code>change:attrs</code> - triggered when the link changes its attributes</li>
+            <li><code>change:smooth</code> - triggered when the link toggled interpolation </li>
+            <li><code>change:manhattan</code> - triggered when the link toggled orthogonal routing</li>
+            <li><code>change:vertices</code> - triggered when the link changes its vertices array </li>
+            <li><code>change:z</code> - triggered when the link is moved in the z-level (<a href="api.html#joint.dia.Link:toFront">toFront</a> and <a href="api.html#joint.dia.Link:toBack">toBack</a>)</li>
+		<li><code>transition:start</code> - triggered when a transition starts.</li>
+		<li><code>transition:end</code> - triggered when a transiton ends.</li>
+        </ul>
+        <pre><code>
+link.on('change:source', function() { alert('source of the link changed') })
+        </code></pre>
+        </p>
+
+
+                <h2 id="joint.dia.Graph">joint.dia.Graph</h2>
+                <p>
+                    <b>joint.dia.Graph</b> is the model holding all the cells (elements and links) of the diagram. It's a <a href="http://backbonejs.org/#Model">Backbone model</a>.
+                    The collection of all the cells is stored in the property <b><code>cells</code></b>.</p>
+
+                <h3 id="joint.dia.Graph:addCell">addCell <code>graph.addCell(cell)</code></h3>
+                <p>Add a new cell to the graph. If <code>cell</code> is an array, all the cells in the array
+                    will be added to the graph.
+                    <pre><code>
+var rect = new joint.shapes.basic.Rect({ 
+    position: { x: 100, y: 100 },
+    size: { width: 70, height: 30 },
+    attrs: { text: { text: 'my rectangle' } }
+})
+var rect2 = rect.clone()
+var link = new joint.dia.Link({ source: { id: rect.id }, target: { id: rect2.id }  });
+var graph = new joint.dia.Graph
+graph.addCell(rect).addCell(rect2).addCell(link)
+                    </code></pre>
+                </p>
+                <h3 id="joint.dia.Graph:addCells">addCells <code>graph.addCells(cells)</code></h3>
+                <p>Add new cells to the graph. This is just a syntactic sugar to the <a href="api.html#joint.dia.Graph:addCell">addCell</a>
+                    method. Calling <a href="api.html#joint.dia.Graph:addCell">addCell</a> with an array of cells is an equivalent to calling <code>addCells</code>.</p>
+
+                <h3 id="joint.dia.Graph:resetCells">resetCells <code>graph.resetCells(cells, [options])</code></h3>
+                <p>Reset cells in the graph. Update all the cells in the graph in one bulk. This is a more efficient method of adding cells to the graph if you
+                    you want to replace all the cells in one go.
+		  <code>options</code> object can optionally contain additional data that is passed over
+		  to the event listeners of the graph reset event.
+		</p>
+
+                <h3 id="joint.dia.Graph:getCell">getCell <code>graph.getCell(id)</code></h3>
+                <p>Get a cell from the graph by its <code>id</code>.</p>
+
+                <h3 id="joint.dia.Graph:getElements">getElements <code>graph.getElements()</code></h3>
+                <p>Get all the elements in the graph (i.e. omit links).</p>
+
+                <h3 id="joint.dia.Graph:getLinks">getLinks <code>graph.getLinks()</code></h3>
+                <p>Get all the links in the graph (i.e. omit elements).</p>
+
+                <h3 id="joint.dia.Graph:getConnectedLinks">getConnectedLinks <code>graph.getConnectedLinks(element, options)</code></h3>
+                <p>Get all the associated links to the <code>element</code>. If <code>options.inbound === true</code>, only inbound links will be returned. Similarly,
+                if <code>options.outbound === true</code>, only outbound links will be returned.</p>
+
+                <h3 id="joint.dia.Graph:disconnectLinks">disconnectLinks <code>graph.disconnectLinks(element)</code></h3>
+                <p>Disconnect all the associated links with the <code>element</code>.</p>
+
+                <h3 id="joint.dia.Graph:removeLinks">removeLinks <code>graph.removeLinks(element)</code></h3>
+                <p>Remove all the associated links with the <code>element</code>.</p>
+
+                <h3 id="joint.dia.Graph:getNeighbors">getNeighbors <code>graph.getNeighbors(element)</code></h3>
+                <p>Get all the neighbors of <code>element</code> in the graph. Neighbors are all the elements connected
+                to <code>element</code> via either an inbound or an outbound link.</p>
+
+                <h3 id="joint.dia.Graph:toJSON">toJSON <code>graph.toJSON()</code></h3>
+                <p>Return an object representing the graph ready for JSON serialization. This can be used for persistance or serialization. Note that this method doesn't
+                    return a JSON string but rather an object that can be then serialized to JSON with <code>JSON.stringify()</code>.</p>
+
+                <h3 id="joint.dia.Graph:fromJSON">fromJSON <code>graph.fromJSON(json, [options])</code></h3>
+                <p>Load the graph from a JSON object (not string).
+                    <pre><code>
+var jsonString = JSON.stringify(graph)
+// ... send jsonString to the server, 
+// store it to the localStorage or do whatever you want
+// ... later on
+graph.fromJSON(JSON.parse(jsonString))
+                    </code></pre>
+		    <code>options</code> object can optionally contain additional data that is passed over
+		    to the event listeners of the graph changes.
+                </p>
+
+                <h3 id="joint.dia.Graph:clear">clear <code>graph.clear([options)</code></h3>
+                <p>Remove all the cells from the graph. <code>options</code> object can optionally contain additional data that is passed over
+		    to the event listeners of the graph cells remove event.
+		</p>
+
+                <h3 id="joint.dia.Graph:findModelsFromPoint">findModelsFromPoint <code>graph.findModelsFromPoint(point)</code></h3>
+                <p>Find elements (instance of <code>joint.dia.Element</code>) under a certain point in the graph. <code>point</code> is an object with <code>x</code> and <code>y</code> properties. Returns an
+                array of elements whose bounding box contains <code>point</code>. Note that there can be more then one element as elements might overlap.</p>
+
+                <h3 id="joint.dia.Graph:findModelsInArea">findModelsInArea <code>graph.findModelsInArea(rect)</code></h3>
+                <p>Find elements (instance of <code>joint.dia.Element</code>) in a certain area in the graph. <code>rect</code> is an object with <code>x</code>, <code>y</code>, <code>width</code> and <code>height</code> properties. Returns an
+                array of elements whose bounding box top/left coordinate falls into the <code>rect</code> rectangle.</p>
+
+                <h3 id="joint.dia.Graph:events">List of triggered events</h3>
+                <p>The following list contains events that you can react on:
+                    <ul>
+                        <li><code>change</code> - generic event triggered for any change in the graph</li>
+                        <li><code>add</code> - triggered when a new cell is added to the graph</li>
+                        <li><code>remove</code> - triggered when a cell is removed from the graph</li>
+                        <li>Moreover, all the events that are triggered on elements or links are propagated to the graph as well.</li>
+                    </ul>
+                    <pre><code>
+graph.on('add', function(cell) { 
+    alert('New cell with id ' + cell.id + ' added to the graph.') 
+})
+                    </code></pre>
+                </p>
+
+                <h3 id="joint.dia.Graph:JSON">JSON format</h3>
+                <p>The JointJS graph JSON representation has the following format:
+<pre><code>
+{
+    cells: [
+        { // Element
+            id: [string],
+            type: [string: type of shape],
+            attrs: { [attrs] },
+            position: { x: [number], y: [number] },
+            angle: [deg],
+            size: { width: [number], height: [number] },
+            z: [number],
+            embeds: [array: IDs of embedded cells],
+            parent: [string: ID of parent if embedded]
+            ... and some other, maybe custom, data properties
+        },
+        { // Link
+            id: [string],
+            type: [string: type of link, default: 'link'],
+            attrs: { [attrs] },
+            vertices: [{ x: [number], y: [number] }, ...],
+            source: { id: [string], selector: [optional CSS selector], port: [optional port identifier] },
+            target: { id: [string], selector: [optional CSS selector], port: [optional port identifier] },
+            labels: [{ position: [float], attrs: {...} }, ...]
+            z: [number],
+            ... and some other, maybe custom, data properties 
+        }
+    ]
+}
+</code></pre>
+                </p>
+
+                <h2 id="joint.dia.Paper">joint.dia.Paper</h2>
+                <p>
+                    <b>joint.dia.Paper</b> is the view for the <code>joint.dia.Graph</code> model. It inherits from the <a href="http://backbonejs.org/#View">Backbone View</a>.
+                    When a paper is associated with a graph, the paper makes sure that all the cells added to the graph are automatically rendered.
+
+                    <pre><code>
+var graph = new joint.dia.Graph
+var paper = new joint.dia.Paper({
+    el: $('#paper'),
+    width: 600,
+    height: 400,
+    gridSize: 10,
+    model: graph
+})
+var rect = new joint.shapes.basic.Rect({
+    position: { x: 50, y: 70 },
+    size: { width: 100, height: 40 }
+})
+graph.addCell(rect)
+                    </code></pre>
+                    Paper automatically handles this change and renders the rectangle to the SVG document that it internally holds.</p>
+                    
+                    <p id="joint.dia.Paper:options">The options object passed to the constructor may contain these properties:
+                        <ul>
+                            <li><code>el</code> - CSS selector, jQuery object or a DOM element holding the container for the paper</li>
+                            <li><code>width</code> - width of the paper in pixels</li>
+                            <li><code>height</code> - height of the paper in pixels</li>
+                            <li><code>origin</code> - position of zero coordinates of the paper in pixels (default is <code>{ x: 0, y: 0 }</code> i.e. top-left corner)</li>
+                            <li><code>gridSize</code> - size of the grid in pixels</li>
+                            <li><code>model</code> - <code>joint.dia.Graph</code> object</li>
+                            <li><code>perpendicularLinks</code> - if <code>true</code>, links will tend to get perpendicular to their associated objects. Default is <code>false</code></li>
+                            <li><code>elementView</code> - object that is responsible for rendering an element model into the paper. Defaults to <code>joint.dia.ElementView</code></li>
+                            <li><code>linkView</code> - object that is responsible for rendering a link model into the paper. Defaults to <code>joint.dia.LinkView</code></li>
+                            <li><code>defaultLink</code> - link that should be created when the user clicks and drags and active magnet (when creating a link from a port via the UI). Defaults to <code>new joint.dia.Link</code></li>
+                            <li><code>interactive</code> - if set to <code>false</code>, interaction with elements and links is disabled. If it is a function, it will be called with the cell view in action and the name of the method it is evaluated in (<code>'pointerdown'</code>, <code>'pointermove'</code>, ...). If the returned value of 
+			      such a function is <code>false</code> interaction will be disabled for the action. For links, there are special properties of the <code>interaction</code> object that are useful to disable the default behaviour. These
+			      properties are: <code>vertexAdd</code>, <code>vertexMove</code>, <code>vertexRemove</code> and <code>arrowheadMove</code>. By setting any of these properties to <code>false</code>, you can disable the related default action on links.</li>
+                            <li><code>validateMagnet(cellView, magnet)</code> - decide whether to create a link if the user clicks a magnet. <code>magnet</code> is the DOM element representing the magnet. By default, this function returns <code>true</code> for magnets that are not explicitely set to "passive" (which is usually the case of input ports).</li>
+                            <li><code>validateConnection(cellViewS, magnetS, cellViewT, magnetT, end, linkView)</code> - 
+                                decide whether to allow or disallow a connection between the source view/magnet (<code>cellViewS/magnetS</code>) 
+                                and target view/magnet (<code>cellViewT/magnetT</code>). <code>end</code> is either <code>"source"</code> or <code>"target"</code> and tells which end of
+                                the link is being dragged. This is useful for defining whether, for example, a link starting in a port POut of element A can lead to a port PIn of elmement B. By default, all linkings are allowed.</li>
+                            <li><code>linkConnectionPoint(linkView, view, magnet, reference)</code> - this function allows you to customize what are the sticky points of links. The function must return a point (with <code>x</code> and <code>y</code> properties) where the link sticks to the element.
+			      The function takes the link view, element view, the magnet (SVG element) the link should stick to and a reference point (either the closest vertex or the sticky point on the other side of the link).</li>
+                            <li><code>snapLinks</code> - when enabled, force a dragged link to snap to the closest element/port in the given radius. The option accepts <code>true</code> in which case default values are used or an object of the form
+			      <code>{ radius: &lt;value&gt; }</code> where you can specify the radius (default is 50).</li>
+                            <li><code>markAvailable</code> - marks all available magnets with <code>'available-magnet'</code> class name and all available cells with <code>'available-cell'</code> class name. Marks them when dragging a link is started and unmark when the dragging is stopped (default is <code>false</code>).
+			      What magnets/cells are available is determined by the <code>validateConnection</code> function.
+			    </li>
+                            <li><code>async</code> - when enabled, the paper renders cells added to the graph through <a href="api.html#joint.dia.Graph:resetCells"><code>graph.resetCells()</code></a> or <a href="api.html#joint.dia.Graph:addCells"><code>graph.addCells()</code></a> asynchronously. 
+			      This is very useful when you want to add a large number of cells into the graph. The rendering performance boost is significant and doesn't block the UI.
+			      The option accepts either <code>true</code> in which case default values are used or an object of the form
+			      <code>{ batchSize: &lt;value&gt; }</code> where you can specify the number of cells rendered in each animation frame (default is 50). Normally, the default <code>batchSize</code> works great
+			      but you might want to experiment with different values in case you encounter performance issues.
+			      It is important to note that when asynchronous rendering is used, some of the cell views might not yet
+			      be in the paper when you try to access them via the <a href="api.html#joint.dia.Paper:findViewByModel"><code>paper.findViewByModel()</code></a>, <a href="api.html#joint.dia.Element:findView"><code>element.findView()</code></a> or <a href="api.html#joint.dia.Link:findView"><code>link.findView()</code></a> methods. 
+			      What you should do in case you use async rendering is to wait for when the paper triggers the <a href="api.html#joint.dia.Paper:events"><code>render:done</code></a> event.
+			    </li>
+                        </ul>
+                    </p>
+
+                <h3 id="joint.dia.Paper:setDimensions">setDimensions <code>paper.setDimensions(width, height)</code></h3>
+                <p>Change dimensions of a paper. Dimensions should always be passed to the options object of the <code>joint.dia.Paper</code> constructor. Use <code>setDimensions()</code> to change
+                dimensions of the paper later on if needed. If the method called a <code>"resize"</code> event is triggered on the paper.</p>
+
+                <h3 id="joint.dia.Paper:setOrigin">setOrigin <code>paper.setOrigin(x, y)</code></h3>
+                <p>Lets you modify the origin (zero coordinates) of a paper. An origin can also be passed to the options object of the <code>joint.dia.Paper</code> constructor. If the method called a <code>"translate"</code> event is triggered on the paper.</p>
+
+                <h3 id="joint.dia.Paper:scale">scale <code>paper.scale(sx, sy, [ox, oy])</code></h3>
+                <p>Scale a paper by <code>sx</code> factor in x axis and <code>sy</code> factor in y axis. 
+                    <code>ox</code> and <code>oy</code> are optional and determine the origin of the scale transformation. This method effectively implements a paper zoom in/out.  If the method called a <code>"scale"</code> event is triggered on the paper.</p>
+
+                <h3 id="joint.dia.Paper:findView">findView <code>paper.findView(element)</code></h3>
+                <p>Find a view (instance of <code>joint.dia.ElementView</code> or <code>joint.dia.LinkView</code>) associated with a DOM element in the paper. <code>element</code> can either be a DOM element, jQuery object or a CSS selector.
+                    Sometimes, it is useful to find a view object for an element in the DOM. This method finds the closest view for any subelement of a view element.</p>
+
+                <h3 id="joint.dia.Paper:findViewByModel">findViewByModel <code>paper.findViewByModel(model)</code></h3>
+                <p>Find a view (instance of <code>joint.dia.ElementView</code> or <code>joint.dia.LinkView</code>) associated with a model. <code>model</code> can either be an instance of <code>joint.dia.Element</code> or <code>joint.dia.Link</code>.</p>
+
+                <h3 id="joint.dia.Paper:findViewsFromPoint">findViewsFromPoint <code>paper.findViewsFromPoint(point)</code></h3>
+                <p>Find views (instance of <code>joint.dia.ElementView</code>) under a certain point in the paper. <code>point</code> is an object with <code>x</code> and <code>y</code> properties. Returns an
+                array of views whose bounding box contains <code>point</code>. Note that there can be more then one views as views might overlap. Note there is a difference between
+                this method and the <a href="api.html#joint.dia.Graph:findModelsFromPoint">joint.dia.Graph:findModelsFromPoint</a>. A bounding box of a view can be different than the area computed by an element model <code>position</code> and <code>size</code>.
+                For example, if a <code>&lt;text&gt;</code> SVG element in the shape is positioned relatively and shifted down below the normal shape area (e.g. using the <a href="api.html#SpecialAttributes">JointJS special attributes</a>), the bounding box
+                of the view will be bigger than that of the model.</p>
+
+                <h3 id="joint.dia.Paper:findViewsInArea">findViewsInArea <code>paper.findViewsInArea(rect)</code></h3>
+                <p>Find views (instance of <code>joint.dia.ElementView</code>) in a certain area in the paper. <code>rect</code> is an object with <code>x</code>, <code>y</code>, <code>width</code> and <code>height</code> properties. Returns an
+                array of views whose bounding box top/left coordinate falls into the <code>rect</code> rectangle.</p>
+
+                <h3 id="joint.dia.Paper:fitToContent">fitToContent <code>paper.fitToContent([opt])</code></h3>
+                <p>Expand/shrink the paper to fit the content inside it. Snap the resulting width/height to the grid defined by <code>opt.gridWidth</code> / <code>opt.gridHeight</code>.
+                  <code>opt.padding</code> adds to the resulting width/height of the paper. By default the method fits paper to a content with positive coordinates only and sets the origin to (0,0) for the resulting paper.
+                  To change this behaviour use option <code>allowNewOrigin: ['negative'|'positive'|'any']</code>. <code>'negative'</code> to account also a content with negative coordinates. <code>'positive'</code> to allow origin to be set to left-top coordinates of a content. Or <code>'any'</code> to apply any of them. If the method is called <code>"resize"</code> and <code>"translate"</code> events can be triggered on the paper.
+                  To try it yourself see <a href="demos/paper.html">paper demo</a>.
+                </p>
+
+                <p><i>Depracated usage:&nbsp;&nbsp;<code>paper.fitToContent(gridWidth, gridHeight, padding, opt)</code></i><p>
+
+                <h3 id="joint.dia.Paper:scaleContentToFit">scaleContentToFit <code>paper.scaleContentToFit([opt])</code></h3>
+                <p>Scale the paper content so that it fits the paper dimensions. If <code>opt.padding</code> is set (default is <code>0</code>), there will be an additional padding in the resulting, scaled, paper content.
+		  If <code>opt.preserveAspectRatio</code> is defined (default is <code>true</code>), the aspect ratio of the scaled paper content will be preserved.
+		  <code>opt.minScaleX</code>, <code>opt.minScaleY</code>, <code>opt.maxScaleX</code> and <code>opt.maxScaleY</code> can be optionally used to set the minimum and maximum
+		  allowed scale factor for both axis.
+		  <code>opt.scaleGrid</code> is a number that will be used to as a rounding factor for the resulting scale. For example,
+		  if the resulting scale factor is calculated to be <code>1.15</code> and your <code>opt.scaleGrid</code> is set to <code>0.2</code>,
+		  then the resulting scale factor will be rounded to <code>1.2</code>. Last option is <code>opt.fittingBBox</code> which can be an object of the form
+		  <code>{ x: [number], y: [number], width: [number], height: [number] }</code> and is the area of the paper
+		  that should be scaled. By default <code>opt.fittingBBox</code> is <code>{ x: 0, y: y, width: paper.options.width, height: paper.options.height }</code>,
+		  i.e. the whole paper area. If the method called a <code>"scale"</code> event can be triggered on the paper.
+                  To try it yourself see <a href="demos/paper.html">paper demo</a>.
+		</p>
+
+                <h3 id="joint.dia.Paper:getContentBBox">getContentBBox <code>paper.getContentBBox()</code></h3>
+                <p>Return the bounding box of the content inside the paper.</p>
+
+                <h3 id="joint.dia.Paper:events">List of triggered events</h3>
+                <p>The following list contains events that you can react on in the paper:
+                    <ul>
+                        <li><code>cell:pointerdown</code> - triggered when a pointer is pressed on a cell. Takes <code>cellView</code>, <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>cell:pointermove</code> - triggered when a pointer is moved on a paper and <code>cell:pointerdown</code> was previously handled. Takes <code>cellView</code>, <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>cell:pointerup</code> - triggered when a pointer is released on a paper and <code>cell:pointerdown</code> was previously handled. Takes <code>cellView</code> and, <code>evt</code> as arguments.</li>
+                        <li><code>cell:pointerdblclick</code> - triggered when the user double-clicks a cell. Takes <code>cellView</code>, <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>cell:pointerclick</code> - triggered when the user clicks a cell. Takes <code>cellView</code>, <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>blank:pointerdown</code> - triggered when a pointer is pressed on a blank area on the paper. Takes <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>blank:pointerdblclick</code> - triggered when the user double-clicks a blank area on the paper. Takes <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>blank:pointerclick</code> - triggered when the user clicks a blank area on the paper. Takes <code>evt</code>, <code>x</code> and <code>y</code> as arguments.</li>
+                        <li><code>render:done</code> - triggered when the paper has finished rendering all the cell views in case <a href="api.html#joint.dia.Paper">async</a> rendering is enabled.</li>
+                    </ul>
+                    <pre><code>
+paper.on('blank:pointerdown', function(evt, x, y) { 
+    alert('pointerdown on a blank area in the paper.')
+})
+                    </code></pre>
+                </p>
+
+                <h2 id="joint.dia.ElementView">joint.dia.ElementView</h2>
+        <p>
+            <b>joint.dia.ElementView</b> is the view for the <code>joint.dia.Element</code> model or any of its inheritants. It inherits from the <a href="http://backbonejs.org/#View">Backbone View</a>.
+            <code>joint.dia.ElementView</code> is responsible for rendering an element with properties defined in its model into the paper. Also, this view is the place where the actual transformations take place.
+            Moreover, <code>joint.dia.ElementView</code> takes care of handling pointer events. To get a view associated to a model, use the <a href="api.html#joint.dia.Paper:findViewByModel">findViewByModel</a> method of the paper.</p>
+
+        <h3 id="joint.dia.ElementView:getBBox">getBBox <code>elementView.getBBox()</code></h3>
+        <p>Return a bounding box for an element view.</p>
+
+        <h3 id="joint.dia.ElementView:highlight">highlight <code>elementView.highlight([el])</code></h3>
+        <p>Highlight the element. This method sets the <code>highlighted</code> CSS class on either the root DOM node of the element or any subelement referenced to by the <code>el</code> selector or DOM descendant node. The actual styling of the highlighted element is in the <code>joint.css</code> stylesheet.
+            Feel free to style highlighted elements as you like. Example:
+            <pre><code>
+                    .element.highlighted rect {
+                        fill: red;
+                    }
+            </code></pre>
+        </p>
+
+        <h3 id="joint.dia.ElementView:unhighlight">unhighlight <code>elementView.unhighlight([el])</code></h3>
+        <p>Cancel highlight of the element. This method removes the <code>highlighted</code> CSS class on either the root DOM node of the element or any subelement referenced to by the <code>el</code> selector or DOM descendant node.</p>
+
+        <h2 id="joint.dia.LinkView">joint.dia.LinkView</h2>
+        <p>
+            <b>joint.dia.LinkView</b> is the view for the <code>joint.dia.Link</code> model or any of its inheritants. It inherits from the <a href="http://backbonejs.org/#View">Backbone View</a>.
+            <code>joint.dia.LinkView</code> is responsible for rendering a link with properties defined in its model into the paper.
+            <code>joint.dia.LinkView</code> takes care of handling pointer events.</p>
+
+        <h3 id="joint.dia.LinkView:getBBox">getBBox <code>linkView.getBBox()</code></h3>
+        <p>Return a bounding box for a link view.</p>
+
+        <h3 id="joint.dia.LinkView:getConnectionLength">getConnectionLength <code>linkView.getConnectionLength()</code></h3>
+        <p>Return a total length of a link in pixels.</p>
+
+        <h3 id="joint.dia.LinkView:sendToken">sendToken <code>linkView.sendToken(token, [duration], [callback])</code></h3>
+        <p>Send a token along the link. <code>token</code> is an SVG element that will be animated along the link path for <code>duration</code> milliseconds (default is 1000ms).
+	  <code>callback</code> will be called once the token reaches the end of the link path. Example:
+	  <pre><code>
+// Send an SVG circle token along the link.
+paper.findViewByModel(link).sendToken(V('circle', { r: 7, fill: 'green' }).node)
+	  </code></pre>
+	  Note that in the code above, we use the <a href="api.html#v">Vectorizer</a> mini-library to
+	  create the SVG circle element.<br/>
+	  Please see the <a href="demos/pn.html">Petri Net simulator demo</a> for a full working example.
+	</p>
+
+        <h3 id="joint.dia.LinkView:addVertex">addVertex <code>linkView.addVertex(vertex)</code></h3>
+	<p>Add a new vertex (an object with <code>x</code> and <code>y</code> properties) to the link. Normally, vertices are set through the <code>vertices</code> property of link models. However,
+	  sometimes it is useful to add a new vertex to the link and let the link determine to what index such a vertex should be added
+	  in the <code>vertices</code> array. For that, it must be the link view that does that. The link view tries to add
+	  the vertex to different indices in the <code>vertices</code> array, renders the connection SVG path and checks if
+	  the path length changed <q>significantly</q>. If it did, it tries another index. If not, the found index is most likely
+	  to be the one we want our new vertext to be added to. For instance, let's say you want to add a new vertex on double click instead of
+	  the default click event. You can create your paper in the following way:
+	  <pre><code>
+var paper = new joint.dia.Paper({
+    ...
+    linkView: joint.dia.LinkView.extend({
+	pointerdblclick: function(evt, x, y) {
+	    if (V(evt.target).hasClass('connection') || V(evt.target).hasClass('connection-wrap')) {
+		this.addVertex({ x: x, y: y });
+	    }
+	}
+    }),
+    interactive: function(cellView) {
+	if (cellView.model instanceof joint.dia.Link) {
+            // Disable the default vertex add functionality on pointerdown.
+	    return { vertexAdd: false };
+	}
+	return true;
+    }
+    ...
+});
+	  </code></pre>
+	</p>
+
+        <h2 id="SpecialAttributes">SpecialAttributes</h2>
+        <p>Special attributes defined by JointJS allows you to create custom elements in a declarative fashion.
+            Please refer to the <a href="tutorial.html#custom-elements">Creating custom elements</a> section of the Getting started guide
+            for an example on how this can be done.
+        </p>
+
+        <h3 id="SpecialAttributes:ref-x">ref-x</h3>
+        <p>Make x-coordinate of the subelement relative to the x-coordinate of the element referenced to by the selector in <code>ref</code> attribute.</p>
+
+        <h3 id="SpecialAttributes:ref-y">ref-y</h3>
+        <p>Make y-coordinate of the subelement relative to the y-coordinate of the element referenced to by the selector in <code>ref</code> attribute.</p>
+
+        <h3 id="SpecialAttributes:ref-dx">ref-dx</h3>
+        <p>Make x-coordinate of the subelement relative to the right edge of the element referenced to by the selector in <code>ref</code> attribute.</p>
+
+        <h3 id="SpecialAttributes:ref-dy">ref-dy</h3>
+        <p>Make y-coordinate of the subelement relative to the bottom edge of the element referenced to by the selector in <code>ref</code> attribute.</p>
+
+        <h3 id="SpecialAttributes:ref">ref</h3>
+        <p>CSS selector pointing to an element that is used as a reference for relative positioning attributes.</p>
+
+        <h3 id="SpecialAttributes:x-alignment">x-alignment</h3>
+        <p>If set to <code>'middle'</code>, the subelement will be centered around its new x-coordinate.</p>
+
+        <h3 id="SpecialAttributes:y-alignment">y-alignment</h3>
+        <p>If set to <code>'middle'</code>, the subelement will be centered around its new y-coordinate.</p>
+
+        <h3 id="SpecialAttributes:text">text</h3>
+        <p>Valid only for &lt;text&gt; subelements. 
+            <code>text</code> attribute contains the text that will be set either directly to the <code>&lt;text&gt;</code> subelement 
+            or its <code>&lt;tspan&gt;</code> children depending on whether the text is multiline or not (contains <code>'\n'</code> character(s)).</p>
+
+        <h3 id="SpecialAttributes:style">style</h3>
+        <p>An object containing CSS styles for a subelement.</p>
+
+        <h3 id="SpecialAttributes:magnet">magnet</h3>
+        <p>When set to <code>true</code>, the subelement can become a source/target of a link during link reconnection. Useful for
+        so called 'ports'.</p>
+
+        <h3 id="SpecialAttributes:port">port</h3>
+        <p>An object containing at least an <code>id</code> property. This property uniquely identifies the port. 
+            If a link gets connected to a <a href="api.html#SpecialAttributes:magnet">magnet</a> that has also a <code>port</code>
+            object defined, the <code>id</code> property of the port object will be copied to the <code>port</code> property 
+            of the source/target of the link.</p>
+
+        <h3 id="SpecialAttributes:filter">filter</h3>
+        <p>The <code>filter</code> attribute becomes a special attribute only in case it's defined as an object, instead of the
+            usual SVG syntax (e.g. <code>"url(#myfilter)"</code>). If it's defined as an object, it must have the following form:
+            <pre><code>
+{
+    name: &lt;name of the filter&gt;,
+    args: &lt;filter arguments&gt;
+}
+</code></pre>
+            where <code>name</code> is the name of the filter. See below for the list of built-in filters.
+            <code>args</code> is an object containing filter parameters. These parameters are dependent
+            on the filter used and are described in the list below as well.
+            Example usage:
+            <pre><code>
+element.attr('rect/filter', { name: 'dropShadow', args: { dx: 2, dy: 2, blur: 3 } });
+            </code></pre>
+            The following is the list of built-in filters. All these filters are defined in the <code>joint.util.filter</code>
+            namespace. This namespace can be extended simply by adding a new method to it with one argument, an object with filter
+            parameters, returning a string representing the SVG filter definition.
+            <ul>
+                <li><code>blur</code>
+                    <ul>
+                        <li><code>x</code> - horizontal blur</li>
+                        <li><code>y</code> - vertical blur [optional, if not defined <code>y</code> is the same as <code>x</code>]</li>
+                    </ul>
+                </li>
+                <li><code>dropShadow</code>
+                    <ul>
+                        <li><code>dx</code> - horizontal shift</li>
+                        <li><code>dy</code> - vertical shift</li>
+                        <li><code>blur</code> - blur</li>
+                        <li><code>color</code> - color</li>
+                        <li><code>opacity</code> - opacity</li>
+                    </ul>
+                </li>
+                <li><code>grayscale</code>
+                    <ul>
+                        <li><code>amount</code> - the proportion of the conversion. <code>1</code> is completely grayscale. <code>0</code> leaves the element unchanged.</li>
+                    </ul>
+                </li>
+                <li><code>sepia</code>
+                    <ul>
+                        <li><code>amount</code> - the proportion of the conversion. <code>1</code> is completely sepia. <code>0</code> leaves the element unchanged.</li>
+                    </ul>
+                </li>
+                <li><code>saturate</code>
+                    <ul>
+                        <li><code>amount</code> - the proportion of the conversion. <code>0</code> is completely un-saturated. <code>1</code> leaves the element unchanged.</li>
+                    </ul>
+                </li>
+                <li><code>hueRotate</code>
+                    <ul>
+                        <li><code>angle</code> - the number of degrees around the color circle the input samples will be adjusted</li>
+                    </ul>
+                </li>
+                <li><code>invert</code>
+                    <ul>
+                        <li><code>amount</code> - the proportion of the conversion. <code>1</code> is completely inverted. <code>0</code> leaves the element unchanged.</li>
+                    </ul>
+                </li>
+                <li><code>brightness</code>
+                    <ul>
+                        <li><code>amount</code> - the proportion of the conversion. <code>0</code> makes the element completely black. <code>1</code> leaves the element unchanged.</li>
+                    </ul>
+                </li>
+                <li><code>contrast</code>
+                    <ul>
+                        <li><code>amount</code> - the proportion of the conversion. <code>0</code> makes the element completely black. <code>1</code> leaves the element unchanged.</li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+
+        <h3 id="SpecialAttributes:fill">fill</h3>
+        <p>The <code>fill</code> attribute becomes a special attribute only in case it's defined as an object, instead of the
+            usual SVG syntax (e.g. <code>"#ffaabb"</code>). If it's defined as an object, it is assumed to be a gradient definition and must have the following form:
+            <pre><code>
+{
+    type: &lt;type of gradient&gt;,
+    stops: &lt;stop colors&gt;,
+    attrs: &lt;additional attributes&gt;
+}
+</code></pre>
+            
+            where <code>type</code> is either <code>'linearGradient'</code> or <code>'radialGradient'</code>, 
+            <code>attrs</code> is an object containing additional SVG attributes for the SVG gradient element
+            and <code>stops</code> is an array of the ramps of color on the gradient. Each stop object is of the form:
+            <pre><code>
+{
+    offset: &lt;offset&gt;,
+    color: &lt;color&gt;,
+    opacity: &lt;opacity&gt;
+}
+            </code></pre>
+
+            where <code>offset</code> is a string representing the offset of the gradient stop, <code>color</code> indicates what
+            color to use at that gradient stop and <code>opacity</code> is a number in the [0..1] range representing the
+            transparency of the stop color.
+            Example use:
+            <pre><code>
+element.attr('rect/fill', {
+    type: 'linearGradient',
+    stops: [
+        { offset: '0%', color: '#E67E22' },
+        { offset: '20%', color: '#D35400' },
+        { offset: '40%', color: '#E74C3C' },
+        { offset: '60%', color: '#C0392B' },
+        { offset: '80%', color: '#F39C12' }
+    ]
+});
+            </code></pre>
+
+            For an introduction to gradients, please refer to the tutorial on <a href="tutorial/filters-gradients.html">Filters and Gradients</a>.
+        </p>
+
+        <h3 id="SpecialAttributes:stroke">stroke</h3>
+        <p>The <code>stroke</code> attribute becomes a special attribute only in case it's defined as an object. This has the exact same
+            behaviour as the <a href="api.html#SpecialAttributes:fill">fill</a> attribute.
+        </p>
+
+        <h2 id="joint.util">Utility functions</h2>
+
+        <h3 id="joint.util:uuid">uuid <code>joint.util.uuid()</code></h3>
+        <p>Return a pseudo-<a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a>.</p>
+
+        <h3 id="joint.util:guid">guid <code>joint.util.guid()</code></h3>
+        <p>Return an identifier unique for the page.</p>
+
+        <h3 id="joint.util:nextFrame">nextFrame <code>joint.util.nextFrame(callback)</code></h3>
+        <p>Tell the browser to schedule the <code>callback</code> function to be called before the next repaint.
+            This is a cross-browser version of the <a href="https://developer.mozilla.org/en/docs/Web/API/window.requestAnimationFrame">window.requestAnimationFrame</a> function.
+            Returns an ID of the frame request.
+        </p>
+
+        <h3 id="joint.util:cancelFrame">cancelFrame <code>joint.util.cancelFrame(requestId)</code></h3>
+        <p>Cancels an animation frame request identified by <code>requestId</code> previously scheduled through a call to <a href="api.html#joint.util:nextFrame">joint.util.nextFrame</a>.</p>
+
+        <h3 id="joint.util:flattenObject">flattenObject <code>joint.util.flattenObject(object, delim, stop)</code></h3>
+        <p>Flatten a nested <code>object</code> up until the <code>stop</code> function returns <code>true</code>. The
+            <code>stop</code> function takes the value of the node currently traversed. <code>delim</code> is 
+            a delimiter for the combined keys in the resulting object.
+            Example:
+<pre><code>
+joint.util.flattenObject({ 
+    a: { 
+        a1: 1, 
+        a2: 2, 
+        a3: { 
+            a31: 5, 
+            a32: { 
+                a321: { a3211: 5 } 
+            } 
+        } 
+    }, 
+    b: 6 
+}, '/', function(v) { return !!v.a321; });
+
+/*
+{
+ "a/a1": 1,
+ "a/a2": 2,
+ "a/a3/a31": 5,
+ "a/a3/a32": {
+  "a321": {
+   "a3211": 5
+  }
+ },
+ "b": 6
+}
+*/
+</code></pre>
+        </p>
+
+        <h3 id="joint.util:getByPath">getByPath <code>joint.util.getByPath(object, path, delim)</code></h3>
+        <p>Return a value at the <code>path</code> in a nested <code>object</code>. <code>delim</code> is the 
+        delimiter used in the <code>path</code>
+            Example:
+<pre><code>
+joint.util.getByPath({ a: { aa: { aaa: 3 } } }, 'a/aa/aaa', '/');
+// 3
+</code></pre>
+        </p>
+
+        <h3 id="joint.util:setByPath">setByPath <code>joint.util.setByPath(object, path, value, delim)</code></h3>
+        <p>Set a <code>value</code> at the <code>path</code> in a nested <code>object</code>. <code>delim</code> is the 
+        delimiter used in the <code>path</code>. Returns the augmented <code>object</code>.
+<pre><code>
+joint.util.setByPath({ a: 1 }, 'b/bb/bbb', 2, '/');
+/*
+{
+ "a": 1,
+ "b": {
+  "bb": {
+   "bbb": 2
+  }
+ }
+}
+*/
+</code></pre>
+        </p>
+
+        <h3 id="joint.util:unsetByPath">unsetByPath <code>joint.util.unsetByPath(object, path, delim)</code></h3>
+        <p>Unset (delete) a property at the <code>path</code> in a nested <code>object</code>. <code>delim</code> is the 
+        delimiter used in the <code>path</code>. Returns the augmented <code>object</code>.
+<pre><code>
+joint.util.unsetByPath({ a: { aa: { aaa: 3 } } }, 'a/aa/aaa', '/');
+// { a: { aa: {} } }
+</code></pre>
+        </p>
+
+        <h3 id="joint.util.format:number">format.number <code>joint.util.format.number(specifier, value)</code></h3>
+        <p>Format number <code>value</code> according to the <code>specifier</code> defined via the 
+            <a href="http://docs.python.org/release/3.1.3/library/string.html#format-specification-mini-language">Python Format Specification Mini-language</a>.
+<pre><code>
+joint.util.format.number('.2f', 5)    // 5.00
+joint.util.format.number('03d', 5)    // 005
+joint.util.format.number('.1%', .205)    // 20.5%
+joint.util.format.number('*^9', 5)    // ****5****
+</code></pre>
+        </p>
+
+
+        <h2 id="v">Vectorizer</h2>
+
+        <p>JointJS exports three global variables, the <code>joint</code> namespace,
+            the <b><code>V</code></b> variable and the <b><code>g</code></b> variable (that is described later
+            in the <a href="api.html#g">Geometry</a> section). The <code>V</code> variable is a function
+            of a little SVG helper library that we call <q>Vectorizer</q>. The reason why this
+            library sits in its own namespace and not inside the <code>joint</code> namespace is
+            that it can be used completely standalone, even without JointJS. It is a very helpful
+            library making life easier when dealing with SVG. You can think of it as of a very lightweight
+            jQuery for SVG. If you want to use Vectorizer as a standalone library, see the download page
+            that contains both the <b><a href="download.html#vectorizer">development and minified versions</a></b>.
+        </p>
+
+        <h2 id="v:V"><code>V(svg)</code></h2>
+        <p>Return a Vectorizer object. If <code>svg</code> parameter is a string, construct SVG DOM
+            elements from the string markup. If <code>svg</code> is an SVG DOM element, just wrap that
+            element by the Vectorizer object and return it. You can think of this function
+            as of the <a href="http://api.jquery.com/jQuery/">jQuery $</a> function except that the
+            <code>V</code> function does not accept selectors. The Vectorizer object contains 
+            a reference to the original SVG DOM element in its <b><code>node</code></b> property. Examples:
+        </p>
+
+        <pre><code>
+var myElement = V('&lt;g&gt;&lt;rect/&gt;&lt;text/&gt;&lt;/g&gt;');
+console.log(myElement.node);  // SVGGroupElement
+myElement = V(document.querySelector('#mySVGElement'));
+
+var myCircle = V('circle', { r: 5, fill: 'red' });
+console.log(myCircle.node);  // SVGCircleElement
+        </code></pre>
+
+        <h3 id="v:translate">translate <code>translate(tx [, ty])</code></h3>
+        <p>Translate the element by <code>tx</code> pixels in x axis and <code>ty</code> pixels in y axis.
+            <code>ty</code> is optional in which case the translation in y axis is considered zero.</p>
+
+        <h3 id="v:rotate">rotate <code>rotate(angle [, cx, cy])</code></h3>
+        <p>Rotate the element by <code>angle</code> degrees. If the optional <code>cx</code> and <code>cy</code> 
+            coordinates are passed, they will be used as an origin for the rotation.</p>
+
+        <h3 id="v:scale">scale <code>scale(sx [, sy])</code></h3>
+        <p>Scale the element by <code>sx</code> and <code>sy</code> factors. If <code>sy</code> is not passed,
+            it will be considered the same as <code>sx</code>.</p>
+
+        <h3 id="v:bbox">bbox <code>bbox([withoutTransformations, target])</code></h3>
+        <p>Return the bounding box of the element after transformations are applied. If
+        <code>withoutTransformations</code> is <code>true</code>, transformations of the element
+        will not be considered when computing the bounding box. If <code>target</code> is specified,
+        bounding box will be computed relatively to the <code>target</code> element.</p>
+
+        <h3 id="v:text">text <code>text(content)</code></h3>
+        <p>Set the text <code>content</code> of the element. This only makes sense for the 
+            &lt;text&gt; element. This method can deal with multi-line text in case the <code>content</code>
+            string contains the new line characters (<code>\n</code>).</p>
+
+        <h3 id="v:attr">attr <code>attr(name, value)</code></h3>
+        <p>Set SVG attribute with <code>name</code> and <code>value</code> on the element. If <code>name</code>
+            is an object of the form <code>{ [name]: [value] }</code>, more attributes will be set in one go. </p>
+
+        <h3 id="v:remove">remove <code>remove()</code></h3>
+        <p>Remove the element from the DOM.</p>
+
+        <h3 id="v:append">append <code>append(el)</code></h3>
+        <p>Append another element <code>el</code> as the last child of the element. <code>el</code> can be either
+            a Vectorizer object or an SVG DOM element.</p>
+
+        <h3 id="v:prepend">prepend <code>prepend(el)</code></h3>
+        <p>Prepend another element <code>el</code> as the first child of the element. <code>el</code> can be either
+            a Vectorizer object or an SVG DOM element.</p>
+
+        <h3 id="v:svg">svg <code>svg()</code></h3>
+        <p>Return the Vectorizer object for the root SVG element of the element.</p>
+
+        <h3 id="v:defs">defs <code>defs()</code></h3>
+        <p>Return the Vectorizer object for the first <code>&lt;defs&gt;</code> element of the root SVG element.
+            Note that the <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs"><code>&lt;defs&gt;</code></a>
+            element is a good place to put referenced SVG elements like gradients, clip paths, filters and others.
+        </p>
+
+        <h3 id="v:clone">clone <code>clone()</code></h3>
+        <p>Clone the Vectorizer object creating a brand new copy of the element. This clone is not automatically
+            added to the DOM.</p>
+
+        <h3 id="v:findOne">findOne <code>findOne(selector)</code></h3>
+        <p>Return the first element wrapped in the Vectorizer object matching the <code>selector</code>
+            Return <code>undefined</code> if not such element was found.</p>
+
+        <h3 id="v:find">find <code>find(selector)</code></h3>
+        <p>Return all elements wrapped in the Vectorizer object matching the <code>selector</code>.</p>
+
+        <h3 id="v:toLocalPoint">toLocalPoint <code>toLocalPoint(x, y)</code></h3>
+        <p>Convert a global point with coordinates <code>x</code> and <code>y</code> into the coordinate
+            space of the element.</p>
+
+        <h3 id="v:translateCenterToPoint">translateCenterToPoint <code>translateCenterToPoint(p)</code></h3>
+        <p>Translate the element so that its new center will be at point <code>p</code>. <code>p</code> is an object of the
+            form <code>{ x: [number], y: [number] }</code>.</p>
+
+        <h3 id="v:translateAndAutoOrient">translateAndAutoOrient <code>translateAndAutoOrient(position, reference, target)</code></h3>
+        <p>Auto-orient the element. This basically implements the <code>orient=auto</code> attribute
+            of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker">markers</a>. 
+            The easiest way of understanding on what this does is to imagine the element is an
+            arrowhead. Calling this method on the arrowhead makes it point to the <code>position</code> point while
+            being auto-oriented (properly rotated) towards the <code>reference</code> point.
+            <code>target</code> is the element relative to which the transformations are applied. Usually the root SVG element which is also
+            default if not <code>target</code> is passed.</p>
+
+        <h3 id="v:animateAlongPath">animateAlongPath <code>animateAlongPath(attrs, path)</code></h3>
+        <p>Animate the element along the <code>path</code> SVG element (or Vectorizer object). <code>attrs</code>
+            contain <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute#AnimationTiming">Animation Timing attributes</a> describing the animation. 
+            The following example shows how to send a token along a JointJS link element:
+            <pre><code>
+var c = V('circle', { r: 8, fill: 'red' });
+c.animateAlongPath({ dur: '4s', repeatCount: 'indefinite' }, paper.findViewByModel(myLink).$('.connection')[0]);
+V(paper.svg).append(c);
+            </code></pre>
+        </p>
+
+        <h3 id="v:hasClass">hasClass <code>hasClass(className)</code></h3>
+        <p>Return <code>true</code> if the element contains <code>className</code> in its <code>class</code> attribute. Return
+            <code>false</code> otherwise.</p>
+
+        <h3 id="v:addClass">addClass <code>addClass(className)</code></h3>
+        <p>Append <code>className</code> to the element <code>class</code> attribute if it doesn't contain it already.
+            Return the Vectorizer object for easy chaining.</p>
+
+        <h3 id="v:removeClass">removeClass <code>removeClass(className)</code></h3>
+        <p>Remove <code>className</code> from the element <code>class</code> attribute if it contains it.
+            Return the Vectorizer object for easy chaining.</p>
+
+        <h3 id="v:toggleClass">toggleClass <code>toggleClass(className, switch)</code></h3>
+        <p>Add or remove <code>className</code> from the element <code>class</code> attribute depending on either the class's presence or the value of the switch argument.</p>
+
+        <h3 id="v:V.decomposeMatrix">V.decomposeMatrix <code>V.decomposeMatrix(matrix)</code></h3>
+        <p>Decompose the <a href="https://developer.mozilla.org/en/docs/Web/API/SVGMatrix">SVG transformation <code>matrix</code></a> into separate transformations. Return
+            an object of the form: <code>{ translateX: [number], translateY: [number], scaleX: [number], scaleY: [number], skewX: [number], skewY: [number], rotation: [number] }</code>.</p>
+
+        <h3 id="v:V.createSVGMatrix">V.createSVGMatrix <code>V.createSVGMatrix(extension)</code></h3>
+        <p>Return the <a href="https://developer.mozilla.org/en/docs/Web/API/SVGMatrix">SVG transformation matrix</a> initialized
+            with the matrix <code>extension</code>. <code>extension</code> is an object of the form: <code>{ a: [number], b: [number], c: [number], d: [number], e: [number], f: [number]}</code>.</p>
+
+        <h3 id="v:V.createSVGTransform">V.createSVGTransform <code>V.createSVGTransform()</code></h3>
+        <p>Return the <a href="https://developer.mozilla.org/en/docs/Web/API/SVGTransform">SVG transform</a> object.</p>
+
+        <h3 id="v:V.createSVGPoint">V.createSVGPoint <code>V.createSVGPoint(x, y)</code></h3>
+        <p>Return the <a href="https://developer.mozilla.org/en/docs/Web/API/SVGPoint">SVG point</a> object initialized with the <code>x</code> and <code>y</code> coordinates.</p>
+
+        <h3 id="v:V.rectToPath">V.rectToPath <code>V.rectToPath(r)</code></h3>
+        <p>Convert a rectangle <code>r</code> to SVG path commands. <code>r</code> is an object of the form
+            <code>{ x: [number], y: [number], width: [number], height: [number], top-ry: [number], top-ry: [number], bottom-rx: [number], bottom-ry: [number] }</code>
+            where <code>x, y, width, height</code> are the usual rectangle attributes and <code>[top-/bottom-]rx/ry</code> allows for
+            specifying radius of the rectangle for all its sides (as opposed to the built-in SVG rectangle that has only <code>rx</code> and <code>ry</code> attributes).
+        </p>
+
+
+        <h2 id="g">Geometry</h2>
+
+        <p>Together with <a href="api.html#v">Vectorizer</a>, Geometry is another lightweight library built-in to JointJS. 
+            This library implements many useful <b>geometry operations</b>. The geometry library does not have any dependencies
+            and can be used standalone. Please see the download page
+            that contains both the <b><a href="download.html#geometry">development and minified versions</a></b> of this library.
+        </p>
+
+        <h3 id="g:point">g.point <code>g.point(x [, y])</code></h3>
+        <p>Return a new point object with <code>x</code> and <code>y</code> coordinates. If
+            <code>x</code> is a string, it is considered to be in the form <code>"[number] [number]"</code>
+            or <code>"[number]@[number]"</code> where the first number is x coordinate and the second is y coordinate. Examples:
+            <pre><code>
+var p = g.point(10, 20);
+var p = new g.point(10, 20);
+var p = g.point('10 20');
+var p = g.point('10@20');
+var p = g.point(g.point(10, 20));
+            </code></pre>
+        </p>
+
+        <h4 id="g:point.adhereToRect">adhereToRect <code>adhereToRect(r)</code></h4>
+        <p>If the point lies outside the rectangle <code>r</code>, adjust the point so that it becomes the nearest point on the boundary of <code>r</code>.</p>
+
+        <h4 id="g:point.theta">theta <code>theta(p)</code></h4>
+        <p>Return the angle (in degrees) between the point, another point <code>p</code> and the x-axis.</p>
+
+        <h4 id="g:point.distance">distance <code>distance(p)</code></h4>
+        <p>Return the distance between the point and another point <code>p</code>.</p>
+
+        <h4 id="g:point.manhattanDistance">manhattanDistance <code>manhattanDistance(p)</code></h4>
+        <p>Return the <a href="http://en.wikipedia.org/wiki/Taxicab_geometry">manhattan distance</a> between the point and another point <code>p</code>.</p>
+
+        <h4 id="g:point.offset">offset <code>offset(dx [, dy])</code></h4>
+        <p>Offset the point (change its <code>x</code> and <code>y</code> coordinates) by <code>dx</code> in x-axis and <code>dy</code> in y-axis. If <code>dy</code> is not
+            specified, it is considered to be zero.</p>
+
+        <h4 id="g:point.magnitude">magnitude <code>magnitude()</code></h4>
+        <p>Return the <a href="http://en.wikipedia.org/wiki/Magnitude_(mathematics)">magnitude</a> of the point vector.</p>
+
+        <h4 id="g:point.update">update <code>update(x, y)</code></h4>
+        <p>Update the point <code>x</code> and <code>y</code> coordinates with new values and return the point itself. Useful for chaining.</p>
+
+        <h4 id="g:point.round">round <code>round([decimals])</code></h4>
+        <p>Round the point (optionally on certain number of <code>decimals</code> decimal places) and return the point itself.</p>
+
+        <h4 id="g:point.normalize">normalize <code>normalize(len)</code></h4>
+        <p><a href="http://en.wikipedia.org/wiki/Unit_vector">Normalize</a> the point vector and return the point itself. In other words, 
+            scale the line segment between (0, 0) and the point in order for it to have a length of <code>len</code>. 
+            If len is not specified, it is considered to be <code>1</code> in which case a unit vector is computed.</p>
+
+        <h4 id="g:point.difference">difference <code>difference(p)</code></h4>
+        <p>Return a point that has coordinates computed as a difference between the point and another point <code>p</code>.</p>
+
+        <h4 id="g:point.bearing">bearing <code>bearing(p)</code></h4>
+        <p>Return the bearing (cardinal direction) of the line between the point and another point <code>p</code>.
+	  The return value is a one of the following strings: <code>'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW' and 'N'</code>.</p>
+
+        <h4 id="g:point.toPolar">toPolar <code>toPolar(o)</code></h4>
+        <p>Convert rectangular to polar coordinates. If the origin <code>o</code> is not specified, it is considered to be at (0,0).</p>
+
+        <h4 id="g:point.rotate">rotate <code>rotate(o, angle)</code></h4>
+        <p>Rotate the point by <code>angle</code> around the origin <code>o</code>.</p>
+
+        <h4 id="g:point.move">move <code>move(ref, distance)</code></h4>
+        <p>Move the point on a line that leads to another point <code>ref</code> by a certain <code>distance</code>.</p>
+
+        <h4 id="g:point.changeInAngle">changeInAngle <code>changeInAngle(dx, dy, ref)</code></h4>
+        <p>Return the change in angle that is the result of moving the point from its previous position (<code>-dx</code>, <code>-dy</code>) to its new position. 
+            This move is relative to the <code>ref</code> point and x axis.</p>
+
+        <h4 id="g:point.equals">equals <code>equals(p)</code></h4>
+        <p>Return <code>true</code> if the point equals another point <code>p</code> Return <code>false</code> otherwise.</p>
+
+        <h4 id="g:point.snapToGrid">snapToGrid <code>snapToGrid(gridSize, [gridSizeY])</code></h4>
+        <p>Snap the point (change its <code>x</code> and <code>y</code> coordinates) to a grid of size <code>gridSize</code> (or <code>gridSize</code> x <code>gridSizeY</code> for non-uniform grid).</p>
+
+        <h4 id="g:point.reflection">reflection <code>reflection(p)</code></h4>
+        <p>Return a point that is a reflection of the point with the center of reflection at point <code>p</code>.</p>
+
+        <h4 id="g:point.fromPolar">point.fromPolar <code>point.fromPolar(r, angle, o)</code></h4>
+        <p>Construct a point from <a href="http://en.wikipedia.org/wiki/Polar_coordinate_system">polar coordinates</a>.</p>
+
+        <h4 id="g:point.random">point.random <code>point.random(x1, x2, y1, y2)</code></h4>
+        <p>Construct a point with random coordinates that fall into the range [<code>x1</code>, <code>x2</code>] and [<code>y1</code>, <code>y2</code>].</p>
+
+
+        <h3 id="g:line">g.line <code>g.line(p1, p2)</code></h3>
+        <p>Return a new line object with starting at point <code>p1</code> ending at point <code>p2</code>. <code>p1</code>
+            and <code>p2</code> are first passed through the <a href="api.html#g:point"><code>point</code></a> constructor so they can
+            also be passed in the string forms. Examples:
+            <pre><code>
+var l = g.line(g.point(10, 20), g.point(50, 60));
+var l = new g.line('10 20', '50 60');
+var l = g.line('10@20', '50@60');
+            </code></pre>
+        </p>
+
+        <h4 id="g:line.length">length <code>length()</code></h4>
+        <p>Return the length of the line.</p>
+
+        <h4 id="g:line.squaredLength">squaredLength <code>squaredLength()</code></h4>
+        <p>Return the squared length of the line. Useful in cases the real length is not necessary (saves the Math.sqrt() operation).</p>
+
+        <h4 id="g:line.midpoint">midpoint <code>midpoint()</code></h4>
+        <p>Return the point that is in the middle of the line.</p>
+
+        <h4 id="g:line.intersection">intersection <code>intersection(l)</code></h4>
+        <p>Return the intersection point of the line with another line <code>l</code>. Return <code>null</code> if there is no such point.</p>
+
+        <h4 id="g:line.bearing">bearing <code>bearing()</code></h4>
+        <p>Return the bearing (cardinal direction) of the line.
+	  The return value is a one of the following strings: <code>'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW' and 'N'</code>.</p>
+
+        <h4 id="g:line.pointAt">pointAt <code>pointAt(t)</code></h4>
+        <p>Return a point on the line at length specified by a floating point number <code>t</code> from the interaval <code>[0,1]</code>.
+	  For example, if <code>t</code> equals <code>0.5</code>, the function returns the midpoint of the line.</p>
+
+
+        <h3 id="g:rect">g.rect <code>g.rect(x, y, width, height)</code></h3>
+        <p>Return a new rectangle object with top left corner at point with coordinates <code>x</code>, <code>y</code> and dimensions <code>width</code> 
+            and <code>height</code>. If only <code>x</code> is specified, it is considered to be an object in the form
+            <code>{ x: [number], y: [number], width: [number], height: [number] }</code> in which case a copy of the rectangle is returned.</p>
+
+        <h4 id="g:rect.origin">origin <code>origin()</code></h4>
+        <p>Return the point that is the top left corner of the rectangle.</p>
+
+        <h4 id="g:rect.corner">corner <code>corner()</code></h4>
+        <p>Return the point that is the bottom right corner of the rectangle.</p>
+
+        <h4 id="g:rect.topRight">topRight <code>topRight()</code></h4>
+        <p>Return the point that is the top right corner of the rectangle.</p>
+
+        <h4 id="g:rect.bottomLeft">bottomLeft <code>bottomLeft()</code></h4>
+        <p>Return the point that is the bottom left corner of the rectangle.</p>
+
+        <h4 id="g:rect.center">center <code>center()</code></h4>
+        <p>Return the point that is the center of the rectangle.</p>
+
+        <h4 id="g:rect.intersect">intersect <code>intersect(r)</code></h4>
+        <p>Return <code>true</code> if the rectangle intersects another rectangle <code>r</code>. Return <code>false</code> otherwise.</p>
+
+        <h4 id="g:rect.sideNearestToPoint">sideNearestToPoint <code>sideNearestToPoint(p)</code></h4>
+        <p>Return the <code>"top"</code>, <code>"left"</code>, <code>"right"</code> or <code>"bottom"</code> string denoting the side of the rectangle which is nearest to the point <code>p</code>.</p>
+
+        <h4 id="g:rect.containsPoint">containsPoint <code>containsPoint(p)</code></h4>
+        <p>Return <code>true</code> if the point <code>p</code> is inside the rectangle (inclusive). Return <code>false</code> otherwise.</p>
+
+        <h4 id="g:rect.containsRect">containsRect <code>containsRect(r)</code></h4>
+        <p>Return <code>true</code> if the rectangle <code>r</code> is inside the rectangle (inclusive). Return <code>false</code> otherwise.</p>
+
+        <h4 id="g:rect.pointNearestToPoint">pointNearestToPoint <code>pointNearestToPoint(p)</code></h4>
+        <p>Return the point on the boundary of the rectangle nearest to the point <code>p</code>.</p>
+
+        <h4 id="g:rect.intersectionWithLineFromCenterToPoint">intersectionWithLineFromCenterToPoint <code>intersectionWithLineFromCenterToPoint(p [, angle])</code></h4>
+        <p>Return the point on the boundary of the rectangle that is the intersection of the rectangle 
+            with a line starting in the center of the rectangle ending in the point <code>p</code>. 
+            If <code>angle</code> is specified, the intersection will take into account 
+            the rotation of the rectangle by <code>angle</code> degrees around its center.</p>
+
+        <h4 id="g:rect.moveAndExpand">moveAndExpand <code>moveAndExpand(r)</code></h4>
+        <p>Offset the rectangle by <code>r.x</code> and <code>r.y</code> and expand it by <code>r.width</code> and <code>r.height</code>.</p>
+
+        <h4 id="g:rect.round">round <code>round([decimals])</code></h4>
+        <p>Round the rectangle coordinates and dimensions (optionally on <code>decimal</code> places) and return the rectangle itself.</p>
+
+        <h4 id="g:rect.normalize">normalize <code>normalize()</code></h4>
+        <p>Normalize the rectangle, i.e. make it so that it has non-negative width and height. If width is less than <code>0</code>, the 
+	  function swaps left and right corners and if height is less than <code>0</code>, the top and bottom corners are swapped.</p>
+
+        <h4 id="g:rect.bbox">bbox <code>bbox(angle)</code></h4>
+        <p>Return a rectangle that is the bounding box of the rectangle taking into account its rotation around center specified by <code>angle</code> degrees.</p>
+
+
+        <h3 id="g:ellipse">g.ellipse <code>g.ellipse(c, a, b)</code></h3>
+        <p>Return a new ellipse object with center at point <code>c</code> and parameters <code>a</code> and <code>b</code>.</p>
+
+        <h4 id="g:ellipse.bbox">bbox <code>bbox()</code></h4>
+        <p>Return the rectangle that is the bounding box of the ellipse.</p>
+
+        <h4 id="g:ellipse.intersectionWithLineFromCenterToPoint">intersectionWithLineFromCenterToPoint <code>intersectionWithLineFromCenterToPoint(p, angle)</code></h4>
+        <p>Return the point on the boundary of the ellipse that is the intersection of the ellipse with 
+            a line starting in the center of the ellipse ending in the point <code>p</code>. 
+            If <code>angle</code> is specified, the intersection will take into account 
+            the rotation of the ellipse by <code>angle</code> degrees around its center.</p>
+
+        <h3 id="g:bezier.curveThroughPoints">g.bezier.curveThroughPoints <code>g.bezier.curveThroughPoints(points)</code></h3>
+        <p>Return the SVG path commands that define a cubic bezier curve going through the <code>points</code>.
+            This method automatically computes the cubic bezier control points necessary to create a smooth curve crossing <code>points</code>.</p>
+
+        <h3 id="g:scale.linear">g.scale.linear <code>g.scale.linear(domain, range, value)</code></h3>
+        <p>Return the <code>value</code> from the <code>domain</code> interval linearly scaled to the <code>range</code> interval. Both
+            <code>domain</code> and <code>range</code> intervals must be specified as arrays with two numbers specifying start and end of the interval.</p>
+
+        <h3 id="g:toDeg">g.toDeg <code>g.toDeg(rad)</code></h3>
+        <p>Convert radians <code>rad</code> to degrees.</p>
+
+        <h3 id="g:toRad">g.toRad <code>g.toRad(deg, over360)</code></h3>
+        <p>Convert degrees <code>deg</code> to radians. If <code>over360</code> is <code>true</code>, do not modulate on 360 degrees.</p>
+
+        <h3 id="g:snapToGrid">g.snapToGrid <code>g.snapToGrid(val, gridSize)</code></h3>
+        <p>Snap the value <code>val</code> to a grid of size <code>gridSize</code>.</p>
+
+        <h3 id="g:normalizeAngle">g.normalizeAngle <code>g.normalizeAngle(angle)</code></h3>
+        <p>Convert the <code>angle</code> to the range <code>[0, 360]</code>.</p>
+
+
+    </div>  <!-- end of .content-container -->
+
+</section>
+
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <script src="js/client-search.js"></script>
+    </body>
+</html>

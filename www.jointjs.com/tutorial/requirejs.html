@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/joint.css" />
+        <link rel="stylesheet" href="../css/tutorial.css" />
+
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+        <title>JointJS - JavaScript diagramming library - Getting started.</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../index.html"><img class="logo small" src="../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../download.html">Download</a></li>
+            <li ><a href="../demos.html">Demos</a></li>
+            <li ><a href="../license.html">License</a></li>
+            <li class="active"><a href="../tutorial.html">Tutorials</a></li>
+            <li ><a href="../api.html">JointJS API</a></li>
+            <li ><a href="../rappid/docs.html">Rappid API</a></li>
+            <li ><a href="../support.html">Support</a></li>
+            <li ><a href="../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <div class="content-sidebar">
+
+    <ul>
+        <li><a href="../tutorial.html">Introduction</a>
+            <ul>
+                <li><a href="../tutorial.html#hello-world">Hello World!</a></li>
+                <li><a href="../tutorial.html#event-handling">Event handling</a></li>
+                <li><a href="../tutorial.html#multiple-papers">Multiple papers</a></li>
+                <li><a href="../tutorial.html#element-styling">Element styling</a></li>
+                <li><a href="../tutorial.html#link-styling">Link styling</a></li>
+                <li><a href="../tutorial.html#custom-elements">Creating custom elements</a></li>
+            </ul>
+        </li>
+        <li><a href="../tutorial.html#tutorials">Tutorials</a>
+            <ul>
+                <li><a href="constraint-move-to-circle.html">Constraint movement to circle</a></li>
+                <li><a href="html-elements.html">HTML inside JointJS elements</a></li>
+                <li><a href="hyperlinks.html">Hyperlinks inside elements</a></li>
+                <li><a href="hierarchy.html">Tips on hierarchical diagrams</a></li>
+                <li><a href="filters-gradients.html">Filters and Gradients</a></li>
+                <li><a href="ports.html">Working with Ports</a></li>
+                <li><a href="multiple-links-between-elements.html">Multiple links between elements</a></li>
+                <li><a href="connecting-by-dropping.html">Connecting by dropping</a></li>
+                <li><a href="requirejs.html">Integration with RequireJS</a></li>
+                <li><a href="links-patterns.html">Links and patterns</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+        <link rel="stylesheet" type="text/css" href="../downloads/joint.min.css" />
+        <script type="text/javascript" src="../downloads/joint.min.js"></script>
+
+        <section id="tutorial">
+
+            <div class="content-container">
+                <h2>Integrating JointJS with RequireJS</h2>
+
+<p>
+    Some people ask how to integrate <em>JointJS</em> with the <a href="http://requirejs.org">RequireJS</a> module loader. 
+    This tutorial describes how to do just that. Starting from <em>JointJS</em> v0.9, it is actually pretty simple. Even though <em>JointJS</em>
+    is not in the AMD format (with the exception of the standalone <em><a href="../api.html#g">Geometry</a></em> and <em><a href="../api.html#v">Vectorizer</a></em> libraries), it is easy 
+    to define a shim for it. <em>JointJS</em> exports only one global variable <b><code>joint</code></b>.
+</p>
+
+<h3>index.html</h3>
+
+<p>Let's start with our <code>index.html</code> file. This file includes only the <code>require.js</code> library, our stylesheets
+    and defines what is the starting point of our application (in our case, <code>main.js</code> file):
+<pre><code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+      &lt;link rel="stylesheet" href="joint.css" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div id="app"&gt;&lt;/div&gt;
+      &lt;script data-main="main" src="require.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+For simplicity, we assume all the files are in the same folder as our <code>index.html</code> file.
+</p>
+
+<h3>RequireJS config, the main.js file</h3>
+
+<p>Now we can start with the more interesting part, our <code>main.js</code> file, containing the configuration
+of our modules needed by RequireJS. <em>JointJS</em> is dependent on <em>jQuery</em>, <em>Backbone</em> (which further depends on <em>Underscore</em>*) and
+two other libraries developed internally for <em>JointJS</em>, the <em>Vectorizer</em> and <em>Geometry</em> libraries.</p>
+
+<p>First we define our module names and tell RequireJS where to find them (the <code>paths</code> object). 
+Notice how we include <em>JointJS</em> using the <code>joint.clean.js</code>
+distribution file. This file contains <em>JointJS</em> library less of <em>jQuery</em>, <em>Backbone</em>, <em>Lodash</em>, <em>Vectorizer</em> and <em>Geometry</em>. You can download
+this file from the <a href="../download.html">Download page</a>.</p>
+
+<p>Next we create our shims that tell RequireJS what to do
+with libraries that are not AMD compliant. This is defined in the <code>shim</code> section of the RequireJS config where we list dependencies
+for each of these modules and define what globals our shimed modules export.</p>
+
+<pre><code class="language-javascript">
+require.config({
+    paths: {
+        geometry: './geometry',
+        vectorizer: './vectorizer',
+        jquery: './jquery',        
+        lodash: './lodash',
+        backbone: './backbone',
+        joint: './joint.clean'
+    },
+    shim: {
+        backbone: {
+            //These script dependencies should be loaded before loading backbone.js.
+            deps: ['lodash', 'jquery'],
+            //Once loaded, use the global 'Backbone' as the module value.
+            exports: 'Backbone'
+        },
+        joint: {
+            deps: ['geometry', 'vectorizer', 'jquery', 'lodash', 'backbone'],
+            exports: 'joint',
+            init: function(geometry, vectorizer) {
+                // JointJS must export geometry and vectorizer otheriwse
+                // they won't be exported due to the AMD nature of those libs and
+                // so JointJS would be missing them.
+                this.g = geometry;
+                this.V = vectorizer;
+            }
+        },
+        lodash: {
+            exports: '_'
+        }
+    }
+});
+
+// Now we're ready to require JointJS and write our application code.
+require(['joint'], function(joint) {
+    var graph = new joint.dia.Graph;
+    var paper = new joint.dia.Paper({ width: 600, height: 400, model: graph });
+
+    var elApp = document.getElementById('app');
+    elApp.appendChild(paper.el);
+
+    var rect = new joint.shapes.basic.Rect({
+        position: { x: 50, y: 50 },
+        size: { width: 100, height: 100 }
+    });
+    graph.addCell(rect);
+});
+</code></pre>
+</p>
+
+<p>
+* Note we previously mentioned that <em>Backbone</em> is dependent on <em>Underscore</em> but we actually use the <em>Lodash</em> library instead.
+This is becausae Lodash library is a drop-in replacement for <em>Underscore</em> extending it with more features that <em>JointJS</em> uses.
+</p>
+
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+    
+        <link rel="stylesheet" href="../vendor/prism/prism.css">
+        <script src="../vendor/prism/prism.js"></script>
+    </body>
+</html>

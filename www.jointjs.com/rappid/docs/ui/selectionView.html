@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><img class="logo small" src="../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../download.html">Download</a></li>
+            <li ><a href="../../../demos.html">Demos</a></li>
+            <li ><a href="../../../license.html">License</a></li>
+            <li ><a href="../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../support.html">Support</a></li>
+            <li ><a href="../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../docs.html">Home</a></li>
+        <li><a href="stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="stencil.html#installation">Installation</a>
+                <li><a href="stencil.html#loading">Loading with elements</a>
+                <li><a href="stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="stencil.html#searchable">Searchable stencil</a>
+                <li><a href="stencil.html#methods">Other methods</a>
+                <li><a href="stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="halo.html#installation">Installation</a>
+                <li><a href="halo.html#create">Creating a Halo</a>
+                <li><a href="halo.html#configuration">Configuration</a>
+                <li><a href="halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="halo.html#customize">Customizing Halo tools</a>
+                <li><a href="halo.html#halo-api">Halo API</a>
+                <li><a href="halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="freeTransform.html#installation">Installation</a>
+                <li><a href="freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="inspector.html#installation">Installation</a>
+                <li><a href="inspector.html#create">Creating an Inspector</a>
+                <li><a href="inspector.html#configuration">Configuration</a>
+                <li><a href="inspector.html#expressions">Expressions</a>
+                <li><a href="inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="paperScroller.html#installation">Installation</a>
+                <li><a href="paperScroller.html#center">Centering the paper content</a>
+                <li><a href="paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="selectionView.html#installation">Installation</a>
+                <li><a href="selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="selectionView.html#changes">Reacting on changes</a>
+                <li><a href="selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="clipboard.html#installation">Installation</a>
+                <li><a href="clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="tooltip.html#installation">Installation</a>
+                <li><a href="tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="snaplines.html#installation">Installation</a>
+                <li><a href="snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../dia/validator.html#installation">Installation</a>
+                <li><a href="../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../com/channel.html#installation">Installation</a>
+                <li><a href="../com/channel.html#use">Usage</a>
+                <li><a href="../com/channel.html#rooms">Rooms</a>
+                <li><a href="../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../shapes/bpmn.html#installation">Installation</a>
+                <li><a href="../shapes/bpmn.html#activity">Activity</a>
+                <li><a href="../shapes/bpmn.html#annotation">Annotation</a>
+                <li><a href="../shapes/bpmn.html#choreography">Choreography</a>
+                <li><a href="../shapes/bpmn.html#conversation">Conversation</a>
+                <li><a href="../shapes/bpmn.html#data-object">Data Object</a>
+                <li><a href="../shapes/bpmn.html#event">Event</a>
+                <li><a href="../shapes/bpmn.html#flow">Flow</a>
+                <li><a href="../shapes/bpmn.html#gateway">Gateway</a>
+                <li><a href="../shapes/bpmn.html#group">Group</a>
+                <li><a href="../shapes/bpmn.html#message">Message</a>
+                <li><a href="../shapes/bpmn.html#pool">Pool</a>
+                <li><a href="../shapes/bpmn.html#icons">Icons</a>
+                <li><a href="../shapes/bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../shapes/chart.html#installation">Installation</a>
+                <li><a href="../shapes/chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart/plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="../shapes/chart/plot.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/plot.html#series-style">Series Styling</a>
+              <li><a href="../shapes/chart/plot.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/plot.html#markings">Markings</a>
+              <li><a href="../shapes/chart/plot.html#guidelines">Guidelines</a>
+              <li><a href="../shapes/chart/plot.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/plot.html#legend">Legend</a>
+              <li><a href="../shapes/chart/plot.html#rt">Real-time Data</a>
+              <li><a href="../shapes/chart/plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="../shapes/chart/plot.html#time-series">Time Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-series">Bar Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="../shapes/chart/plot.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/plot.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="../shapes/chart/pie.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/pie.html#slices-style">Styling Slices</a>
+              <li><a href="../shapes/chart/pie.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/pie.html#exploding">Exploding Slices</a>
+              <li><a href="../shapes/chart/pie.html#donut">Donut Chart</a>
+              <li><a href="../shapes/chart/pie.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/pie.html#legend">Legend</a>
+              <li><a href="../shapes/chart/pie.html#animation">Animation</a>
+              <li><a href="../shapes/chart/pie.html#effects">Effects</a>
+              <li><a href="../shapes/chart/pie.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/pie.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="../shapes/chart/knob.html#create">Basic Knob</a>
+              <li><a href="../shapes/chart/knob.html#knob-style">Styling the Knob</a>
+              <li><a href="../shapes/chart/knob.html#multiple-series">Multiple Values</a>
+              <li><a href="../shapes/chart/knob.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/knob.html#animation">Animation</a>
+              <li><a href="../shapes/chart/knob.html#knob-options">Knob Options</a>
+              <li><a href="../shapes/chart/knob.html#knob-api">Knob API</a>
+              <li><a href="../shapes/chart/knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../format/svg.html#installation">Installation</a>
+                <li><a href="../format/svg.html#use">Usage</a>
+                <li><a href="../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../format/raster.html#installation">Installation</a>
+                <li><a href="../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../format/gexf.html#installation">Installation</a>
+                <li><a href="../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../format/print.html#installation">Installation</a>
+                <li><a href="../format/print.html#use">Usage</a>
+                <li><a href="../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../css/joint.all.min.css" />
+            <script src="../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../images/plugins/selection.png"/>ui.SelectionView</h2>
+
+<p>SelectionView implements elements selection, moving the selection in one go
+    and manipulating the selection in terms of selecting/deselecting individual elements.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Include <code>joint.ui.selectionView.js</code> and <code>joint.ui.selectionView.css</code> files to your HTML:</p>
+
+<pre><code>
+&lt;link rel="stylesheet" type="text/css" href="joint.ui.selectionView.css" /&gt;
+&lt;script type="text/javascript" src="joint.ui.selectionView.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="create">Initialize SelectionView</h2>
+
+<p>First, a collection for storing selected cells must be created. This can just be a normal
+<a href="http://backbonejs.org/#Collection">Backbone Collection</a>. The second step is to create the SelectionView itself. This view takes care
+of rendering the bounding rectangle during the selection action, determining which elements
+fall into this rectangle and also provides methods for selecting/deselecting individual elements.</p>
+
+<pre><code>
+var selection = new Backbone.Collection;
+var selectionView = new joint.ui.SelectionView({ paper: paper, graph: graph, model: selection });
+</code></pre>
+
+<p>The next step is to hook the selection actions to the relevant events triggered on the paper and selectionView:</p>
+
+<pre><code>
+paper.on('blank:pointerdown', selectionView.startSelecting);
+
+paper.on('cell:pointerup', function(cellView, evt) {
+     if ((evt.ctrlKey || evt.metaKey) && !(cellView.model instanceof joint.dia.Link)) {
+             selection.add(cellView.model);
+             selectionView.createSelectionBox(cellView);
+     }
+});
+
+selectionView.on('selection-box:pointerdown', function(evt) {
+     if (evt.ctrlKey || evt.metaKey) {
+             var cell = selection.get($(evt.target).data('model'));
+             selection.reset(selection.without(cell));
+             selectionView.destroySelectionBox(paper.findViewByModel(cell));
+     }
+});
+</code></pre>
+
+<p>Note that the <code>selection-box:pointerdown</code> event is triggered on the selection view when 
+the mouse cursor is pressed above a selected element.</p>
+
+<h2 id="changes">Reacting on changes in SelectionView</h2>
+
+<p>As our selection is just a normal <a href="http://backbonejs.org/#Collection">Backbone Collection</a>, we can take advantage of the Backbone methods
+to identify elements that are currently in the selection:</p>
+
+<pre><code>
+selection.on('reset add', function() {
+    // Print types of all the elements in the selection. 
+    console.log(selection.pluck('type'));
+});
+</code></pre>
+<br/>
+
+<div class="docs-demo">
+    <strong>Select elements by dragging a selection rectangle starting in a blank paper area or individually
+        by hodling Ctrl (or Meta) key and clicking on elements.</strong>
+    <br/>
+    <label id="selection-info"></label>
+    <br/>
+    <div id="paper-holder" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/selectionView.js">source code to this demo</a>&nbsp;|&nbsp;
+        <a target="_blank" href="../../../css/docs/selectionView.css">CSS to this demo</a>
+    </div>
+</div>
+<link rel="stylesheet" href="../../../css/docs/selectionView.css" />
+<script src="../../../js/docs/selectionView.js"></script>
+
+
+<h2 id="customization">Customizing the look of SelectionView</h2>
+
+<p>The bounding rectangle of the active selection, the rectangles above the selected elements and the rectangle around all the elements
+once the selection is made can all be styled in CSS.
+The selection bounding rectangle is a &lt;div&gt; element with the <code>.selection</code> class. The rectangles
+above the selected elements are also &lt;div&gt; elements having the <code>.selection-box</code> class and the final
+rectangle surrouning all the selected element is a &lt;div&gt; with class <code>.selection-wrapper</code>. An example of 
+a custom styling might look like the following:
+</p>
+
+<pre><code>
+.selection {
+   background-color: red;
+   border: 2px dashed red;
+   opacity: .7;
+}
+.selection-box {
+   border: 1px solid #8e44ad;
+   margin-top: -4px;
+   margin-left: -4px;
+   box-shadow: 2px 2px 5px #8e44ad;
+}
+.selection-wrapper {
+   border: 1px dotted #8e44ad;
+}
+</code></pre>
+
+<br/>
+
+<div class="docs-demo">
+    <label id="selection-info"></label>
+    <br/>
+    <div id="paper-holder-styling" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/selectionView_styling.js">source code to this demo</a>&nbsp;|&nbsp;
+        <a target="_blank" href="../../../css/docs/selectionView_styling.css">CSS to this demo</a>
+    </div>
+</div>
+<link rel="stylesheet" href="../../../css/docs/selectionView_styling.css" />
+<script src="../../../js/docs/selectionView_styling.js"></script>
+
+
+<h2 id="disable-tools">Disabling Selection tools</h2>
+
+<p>As you might have noticed, each selection is surrounded by a rectangle and offers two 
+  built-in icon tools by default: <code>remove</code> and <code>rotate</code>.
+  To disable any of these tools you may add a line similar to the following to your css:</p>
+
+<pre><code>
+.selection .handle.rotate { display: none; } /* disables the rotate tool */
+</pre></code>
+
+<p>Another way to remove tool handles is via JavaScript:</p>
+<pre><code>
+selectionView.removeHandle('rotate');
+</code></pre>
+
+<p>To quickly disable all the tools (hide them) and also to hide the rectangular
+box around all the selected elements, you can simply do:</p>
+<pre><code>
+.selection-wrapper { display: none; }
+</pre></code>
+
+
+<h2 id="customize-tools">Customizing Selection tools</h2>
+
+<p>SelectionView provides three methods for adding, removing and changing custom tools: <code>addHandle()</code>, <code>removeHandle()</code> and <code>changeHandle()</code>.
+Use the <code>addHandle()</code> method to add new tools to your selection:</p>
+
+<pre><code>
+selectionView.addHandle({ name: 'myaction', position: 's', icon: 'myaction.png' });
+selectionView.on('action:myaction:pointerdown', function(evt) {
+    evt.stopPropagation();
+    alert('My custom action.');
+});
+</code></pre>
+
+<div class="docs-demo">
+    <label id="selection-info"></label>
+    <br/>
+    <div id="paper-holder-customize" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/selectionView_customize.js">source code to this demo</a>&nbsp;|&nbsp;
+        <a target="_blank" href="../../../css/docs/selectionView_customize.css">CSS to this demo</a>
+    </div>
+</div>
+<link rel="stylesheet" href="../../../css/docs/selectionView_customize.css" />
+<script src="../../../js/docs/selectionView_customize.js"></script>
+
+<p>
+In the example above, we added a new tool named <code>myaction</code>, positioned the tool to the south (bottom-center)
+and used our own icon <code>myaction.png</code>. When the user clicks on our tool, SelectionView triggers an
+event named <code>action:[name]:pointerdown</code>. We can handle the event by listening 
+on the SelectionView object. Similarly, the SelectionView triggers <code>action:[name]:pointermove</code> and
+<code>action:[name]:pointerup</code> events. This gives us a high flexibility in implementing
+our own actions. You might have noticed that this API is exactly the same as in the <a href="halo.html">ui.Halo</a> plugin. 
+The difference is that in SelectionView, we can have actions that manipulate multiple elements in one go.
+</p>
+
+<p>For removing a tool, use the <code>removeHandle(name)</code> method:</p>
+
+<pre><code>
+selectionView.removeHandle('myaction')
+</code></pre>
+
+<p><code>changeHandle()</code> method allows us to change tools. For instance, if we want to change a 
+position of the remove tool, we could use:
+
+<pre><code>
+selectionView.changeHandle('remove', { position: 'ne' })
+</code></pre>
+
+<h2 id="selection-api">SelectionView API</h2>
+
+<table>
+    <tr>
+        <th>addHandle(opt)</th>
+        <td>Add a custom tool to the SelectionView. <code>opt.name</code> is
+            the name of the custom tool. This name will be also set as a CSS class to the
+            handle DOM element making it easy to select it your CSS stylesheet. <code>opt.position</code>
+            is a string that specifies a position of the tool handle. Possible values are 
+            <code>n</code>, <code>nw</code>, <code>w</code>, <code>sw</code>, <code>s</code>,
+            <code>se</code>, <code>e</code> and <code>ne</code>. <code>opt.icon</code> is 
+            a URL of the icon used to render the tool. This icons is set as a background image on
+            the tool handle DOM element.
+        </td>
+    </tr>
+    <tr>
+        <th>removeHandle(name)</th>
+        <td>Remove a tool handle named <code>name</code> from the SelectionView.
+        </td>
+    </tr>
+    <tr>
+        <th>changeHandle(name, opt)</th>
+        <td>Change a tool handle named <code>name</code> in the SelectionView. The <code>opt</code> object can contain the
+            same parameters as with the <code>addHandle()</code> method except of the <code>name</code> property.
+            <code>opt</code> parameters will be merged with those defined previously.
+        </td>
+    </tr>
+    <tr>
+        <th>createSelectionBox(elementView)</th>
+        <td>Create a selection box around an element view. This must be called after the element is added to the selection model:
+	  <pre><code>
+selectionView.model.add(myElement)
+selectionView.createSelectionBox(myElement.findView(paper));
+	  </code></pre>
+        </td>
+    </tr>
+    <tr>
+        <th>destroySelectionBox(elementView)</th>
+        <td>Remove a selection box around an element view. This must be called after the element is removed from the selection model:
+	  <pre><code>
+selectionView.model.remove(myElement)
+selectionView.destroySelectionBox(myElement.findView(paper));
+	  </code></pre>
+        </td>
+    </tr>
+    <tr>
+        <th>on(event, callback)</th>
+        <td>Register a handler (<code>callback</code>) for an <code>event</code> See
+            the <a href="selectionView.html#selection-events">SelectionView Events</a> section for the list of events
+            the SelectionView object triggers.
+        </td>
+    </tr>
+    <tr>
+        <th>startSelecting(evt)</th>
+        <td>Initiate bulk selection. See
+	    below in the <a href="selectionView.html#common-setup">Common Setup</a> section how that can be used.
+        </td>
+    </tr>
+</table>
+
+<h2 id="selection-events">SelectionView Events</h2>
+
+<p>The SelectionView object triggers events when the user manipulates its tools. These events can
+be handled by using the SelectionView <code>on()</code> method.</p>
+
+<table>
+    <tr>
+        <th>action:[name]:pointerdown</th>
+        <td>Triggered when the user clicks (touches) on a tool handle named <coce>[name]</code>.
+        </td>
+    </tr>
+    <tr>
+        <th>action:[name]:pointermove</th>
+        <td>
+            Triggered when the user moves with mouse cursor after a tool handle named <coce>[name]</code>
+            was mousedowned (touched).
+        </td>
+    </tr>
+    <tr>
+        <th>action:[name]:pointerup</th>
+        <td>
+            Triggered when the user releases his mouse cursor after a tool handle named <coce>[name]</code>
+            was mousedowned (touched).
+        </td>
+    </tr>
+    <tr>
+        <th>selection-box:pointerdown</th>
+        <td>
+            Triggered when the user clicks on a selected element, an element that has a selection box above it.
+	    The hanlder gets passed the DOM event object. To access the actual element model from 
+	    the event object, we can take advantage of the fact that all the selection boxe &lt;div&gt;
+	    elements have the model stored in their <code>data-model</code> attribute. See
+	    below in the <a href="selectionView.html#common-setup">Common Setup</a> section how that can be used.
+        </td>
+    </tr>
+</table>
+
+<h2 id="common-setup">Common Setup of the SelectionView in Applications Explained</h2>
+
+<p>The following is a common setup of the SelectionView in applications.</p>
+
+<h3>Cherry picking elements</h3>
+
+<p>For <q>cherry picking elements</q> - when the user clicks on an element holding 
+the <code>[CTRL]</code> key, we register a handler for the <code>cell:pointerup</code> event on the paper, which is
+triggered when the user releases his mouse above a cell (either element or a link - links get filtered out in 
+our case). In this handler, we add the element to our selection collection and create a selection box around that element.
+</p>
+
+<pre><code>
+paper.on('cell:pointerup', function(cellView, evt) {
+    if ((evt.ctrlKey || evt.metaKey) && !(cellView.model instanceof joint.dia.Link)) {
+        selection.add(cellView.model);
+        selectionView.createSelectionBox(cellView);
+    }
+});
+</code></pre>
+
+<h3>Releasing selection on cherry-picked elements</h3>
+
+<p>
+  To implement the reverse action of cherry-picking, i.e. when the user clicks a selected
+  element while holding the <code>[CTRL]</code> key, we register a handler for the
+  <code>selection-box:pointerdown</code> event on the SelectionView (see <a href="selectionView.html#selection-events">SelectionView events</a> for reference).
+  In this handler, we remove the element from our selection collection and destroy the selection box.
+</p>
+
+<pre><code>
+selectionView.on('selection-box:pointerdown', function(evt) {
+    if (evt.ctrlKey || evt.metaKey) {
+        var cell = selection.get($(evt.target).data('model'));
+        selection.reset(selection.without(cell));
+        selectionView.destroySelectionBox(cell.findView(paper));
+    }
+});
+</code></pre>
+
+<h3>Initiating bulk selection</h3>
+
+<p>
+Last thing we want to setup is the bulk selection that should happen
+when the user drags a blank area in the paper:
+</p>
+
+<pre><code>
+paper.on('blank:pointerdown', selectionView.startSelecting);
+</code></pre>
+
+<p>TIP: some applications might not want the user to be able to create selections
+when dragging a blank area in the paper. This is because they might have a different
+action for this, let's say <em>panning</em> the paper. In that case, you can,
+for example, start bulk selection only when the <code>[SHIFT]</code> key is being hold:
+</p>
+
+<pre><code>
+paper.on('blank:pointerdown', function(evt) {
+    if (evt.shiftKey) selectionView.startSelecting(evt);
+});
+</code></pre>
+
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../vendor/prism/prism.css">
+        <script src="../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../js/client-search.js"></script>
+        <script src="../../../js/rappid-docs.js"></script>
+    </body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><img class="logo small" src="../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../download.html">Download</a></li>
+            <li ><a href="../../../demos.html">Demos</a></li>
+            <li ><a href="../../../license.html">License</a></li>
+            <li ><a href="../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../support.html">Support</a></li>
+            <li ><a href="../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../docs.html">Home</a></li>
+        <li><a href="../ui/stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="../ui/stencil.html#installation">Installation</a>
+                <li><a href="../ui/stencil.html#loading">Loading with elements</a>
+                <li><a href="../ui/stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="../ui/stencil.html#searchable">Searchable stencil</a>
+                <li><a href="../ui/stencil.html#methods">Other methods</a>
+                <li><a href="../ui/stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="../ui/halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="../ui/halo.html#installation">Installation</a>
+                <li><a href="../ui/halo.html#create">Creating a Halo</a>
+                <li><a href="../ui/halo.html#configuration">Configuration</a>
+                <li><a href="../ui/halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="../ui/halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="../ui/halo.html#customize">Customizing Halo tools</a>
+                <li><a href="../ui/halo.html#halo-api">Halo API</a>
+                <li><a href="../ui/halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="../ui/freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="../ui/freeTransform.html#installation">Installation</a>
+                <li><a href="../ui/freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="../ui/inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="../ui/inspector.html#installation">Installation</a>
+                <li><a href="../ui/inspector.html#create">Creating an Inspector</a>
+                <li><a href="../ui/inspector.html#configuration">Configuration</a>
+                <li><a href="../ui/inspector.html#expressions">Expressions</a>
+                <li><a href="../ui/inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="../ui/inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="../ui/inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="../ui/paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="../ui/paperScroller.html#installation">Installation</a>
+                <li><a href="../ui/paperScroller.html#center">Centering the paper content</a>
+                <li><a href="../ui/paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="../ui/paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="../ui/selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="../ui/selectionView.html#installation">Installation</a>
+                <li><a href="../ui/selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="../ui/selectionView.html#changes">Reacting on changes</a>
+                <li><a href="../ui/selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="../ui/selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="../ui/selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="../ui/selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="../ui/selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="../ui/selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="../ui/clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="../ui/clipboard.html#installation">Installation</a>
+                <li><a href="../ui/clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="../ui/tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="../ui/tooltip.html#installation">Installation</a>
+                <li><a href="../ui/tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="../ui/snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="../ui/snaplines.html#installation">Installation</a>
+                <li><a href="../ui/snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../dia/validator.html#installation">Installation</a>
+                <li><a href="../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="channel.html">com.Channel</a>
+            <ul>
+                <li><a href="channel.html#installation">Installation</a>
+                <li><a href="channel.html#use">Usage</a>
+                <li><a href="channel.html#rooms">Rooms</a>
+                <li><a href="channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../shapes/bpmn.html#installation">Installation</a>
+                <li><a href="../shapes/bpmn.html#activity">Activity</a>
+                <li><a href="../shapes/bpmn.html#annotation">Annotation</a>
+                <li><a href="../shapes/bpmn.html#choreography">Choreography</a>
+                <li><a href="../shapes/bpmn.html#conversation">Conversation</a>
+                <li><a href="../shapes/bpmn.html#data-object">Data Object</a>
+                <li><a href="../shapes/bpmn.html#event">Event</a>
+                <li><a href="../shapes/bpmn.html#flow">Flow</a>
+                <li><a href="../shapes/bpmn.html#gateway">Gateway</a>
+                <li><a href="../shapes/bpmn.html#group">Group</a>
+                <li><a href="../shapes/bpmn.html#message">Message</a>
+                <li><a href="../shapes/bpmn.html#pool">Pool</a>
+                <li><a href="../shapes/bpmn.html#icons">Icons</a>
+                <li><a href="../shapes/bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../shapes/chart.html#installation">Installation</a>
+                <li><a href="../shapes/chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart/plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="../shapes/chart/plot.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/plot.html#series-style">Series Styling</a>
+              <li><a href="../shapes/chart/plot.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/plot.html#markings">Markings</a>
+              <li><a href="../shapes/chart/plot.html#guidelines">Guidelines</a>
+              <li><a href="../shapes/chart/plot.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/plot.html#legend">Legend</a>
+              <li><a href="../shapes/chart/plot.html#rt">Real-time Data</a>
+              <li><a href="../shapes/chart/plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="../shapes/chart/plot.html#time-series">Time Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-series">Bar Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="../shapes/chart/plot.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/plot.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="../shapes/chart/pie.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/pie.html#slices-style">Styling Slices</a>
+              <li><a href="../shapes/chart/pie.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/pie.html#exploding">Exploding Slices</a>
+              <li><a href="../shapes/chart/pie.html#donut">Donut Chart</a>
+              <li><a href="../shapes/chart/pie.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/pie.html#legend">Legend</a>
+              <li><a href="../shapes/chart/pie.html#animation">Animation</a>
+              <li><a href="../shapes/chart/pie.html#effects">Effects</a>
+              <li><a href="../shapes/chart/pie.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/pie.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="../shapes/chart/knob.html#create">Basic Knob</a>
+              <li><a href="../shapes/chart/knob.html#knob-style">Styling the Knob</a>
+              <li><a href="../shapes/chart/knob.html#multiple-series">Multiple Values</a>
+              <li><a href="../shapes/chart/knob.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/knob.html#animation">Animation</a>
+              <li><a href="../shapes/chart/knob.html#knob-options">Knob Options</a>
+              <li><a href="../shapes/chart/knob.html#knob-api">Knob API</a>
+              <li><a href="../shapes/chart/knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../format/svg.html#installation">Installation</a>
+                <li><a href="../format/svg.html#use">Usage</a>
+                <li><a href="../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../format/raster.html#installation">Installation</a>
+                <li><a href="../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../format/gexf.html#installation">Installation</a>
+                <li><a href="../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../format/print.html#installation">Installation</a>
+                <li><a href="../format/print.html#use">Usage</a>
+                <li><a href="../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../css/joint.all.min.css" />
+            <script src="../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../images/plugins/channel.png"/>com.Channel <img width="30" alt="Channel Plugin - Beta" src="../../../images/beta.png" title="Beta"/></h2>
+
+<p>The Channel plugin is a very powerful tool that brings <b>real-time collaboration</b> capability 
+to your applications. The plugin <b>synchronises JointJS graphs between clients and server</b> 
+and automatically resolves merge conflicts. Real-time collaboration is only one 
+application of this plugin. Others include push updates, easy persistence, monitoring and more.</p>
+
+<p>The Channel plugin uses <a href="http://en.wikipedia.org/wiki/Operational_transformation">Operational transformations</a>
+to maintain consistency across concurrent updates. This means that even though there are different updates
+to the same JointJS graph that happened at the same time at different sites (across clients and even server),
+the Channel plugin makes sure the result, after applying those updates, is exactly the same at
+all sites while preserving intention.</p>
+
+<p>The Channel plugin runs both in browsers and NodeJS environment and requires
+a NodeJS server running in order to synchronize clients. The procedure to get the channel plugin
+up and running is quite straightforward and is described in this document. However, if you, for any reason, do 
+not want to maintain a NodeJS application on your backend, please <a href="mailto:org@client.io?Subject=Channel">let us know</a>. 
+Thanks to the cross-domain nature of the Channel plugin, we can run the NodeJS application for you which
+means that the only thing you have to do is to use the client-side part of the Channel plugin. This
+allows you to have real-time collaboration in your applications without any backend configuration!</p>
+
+<p>The demo of this plugin can be seen at <a href="http://jointjs.com/rappid">http://jointjs.com/rappid</a>.
+    If you open the same URL of the Rappid demo (including the hash part that it gave you) in a different browser window
+    or send it to a friend, you should be able to collaborate on the same document in real-time.
+</p>
+
+
+<h2 id="installation">Install</h2>
+
+<h3>In a browser</h3>
+
+<p>Include <code>joint.com.channel.js</code> file into your HTML:</p>
+<pre><code>
+&lt;script type="text/javascript" src="joint.com.channel.js"&gt;&lt;/script&gt;
+</code></pre>
+
+
+<h3>On a server</h3>
+
+<p>
+Make sure you have <a href="http://nodejs.org">NodeJS</a> installed. NodeJS installation already comes
+with NPM (Node Package Manager) that we'll use to install all the dependencies. Go to the Rappid package
+root directory (where the <code>package.json</code> file is located) and run:
+
+<pre><code>
+npm install
+</code></pre>
+
+This will install all the necessary dependencies needed by the server side Channel.
+</p>
+
+<h2 id="use">Usage</h2>
+
+<h3>In a browser</h3>
+
+<p>In a browser, the only thing necessary is to instantiate the <code>joint.com.Channel</code> constructor function
+and pass it a <b><code>url</code></b> of the server-side channel and the <b><code>graph</code></b> we
+want to be synchronising:</p>
+
+
+<pre><code>
+var graph = new joint.dia.Graph;
+var channel = new joint.com.Channel({ url: 'ws://localhost:4141', graph: graph });
+</code></pre>
+
+<p>Note we're using the <i>ws</i> protocol as the Channel plugin uses <a href="http://en.wikipedia.org/wiki/WebSocket">WebSockets</a> for real-time
+communication between server and client. If you plan to take advantage of us maintaining the NodeJS server for you,
+you'll get a dedicated URL that you can use in your channel and you can skip the rest of the <i>Usage</i> section.</p>
+
+<h3>On a server</h3>
+
+<p>On a server, we use the exact same <code>joint.com.Channel</code> constructor function but this time
+we pass it a <code>port</code> we'd like the WebSocket server to be listening on:</p>
+
+<pre><code>
+var joint = require('./index');
+var Channel = require('./plugins/com/Channel/joint.com.Channel').Channel;
+
+var graph = new joint.dia.Graph;
+var channel = new Channel({ port: 4141, graph: graph });
+</code></pre>
+
+<p>In this example, we assume the server side script is located in the root directory
+of the Rappid package so that the paths used in the <code>require()</code>s are valid.</p>
+
+<h2 id="rooms">Rooms</h2>
+
+<p>The problem with the previous approach is that if you have more clients that should 
+be divided into groups (rooms) each room sharing its own JointJS graph, you'd have to
+run as many servers as you have rooms each on a different port. This limits the number
+of rooms you can serve by the number of ports that your OS allows you to allocate. In general,
+this is not an ideal approach. Instead, we'd rather have just one server running that is able
+to maintain more graphs and route the communication between clients based on the room they're in.
+This is exactly what <code>joint.com.ChannelHub</code> does.
+</p>
+
+<p>ChannelHub runs a WebSocket server and handles client connections. When a client wants
+to get connected, ChannelHub decides to which Channel it should route the requests to. In this case,
+the only server running is the ChannelHub. The server side Channels don't create their
+servers internally. Your server side script changes to something like this:
+
+<pre><code>
+var channels = {};
+var channelHub = new ChannelHub({ port: 4141 });
+channelHub.route(function(req) {
+    var query = JSON.parse(req.query.query);
+    if (channels[query.room]) {
+        // The room the client wants to connect to already exists, 
+        // tell the ChannelHub which channel it should route further requests of this client.
+        return channels[query.room];
+    }
+    // Yet unknown room. Create a channel for this room with a new JointJS graph and tell
+    // the ChannelHub that further requests of this client should go to this new channel.
+    return channels[query.room] = new Channel({ graph: new joint.dia.Graph });
+});
+</code></pre>
+</p>
+
+<p>Notice how we instantiated the Channel. In this case, we don't pass neither a <code>url</code> nor
+a <code>port</code>. This defines a Channel that is not a client (no <code>url</code>) and it also
+does not create a WebSocket server internally (no <code>port</code>). Instead, it is the
+ChannelHub that handles requests and decides to which Channel it should route messages to.</p>
+
+<p>Also, your client side initialization of Channel changes a little bit in order to enable rooms:
+
+<pre><code>
+var channel = new joint.com.Channel({ url: 'ws://localhost:4141', graph: graph, query: { room: 'A' } });
+</code></pre>
+
+We pass the <code>query</code> object that contains some data that help the ChannelHub
+decide to which channel to route the messages to. In this case, we use <code>room: 'A'</code>
+and on the server, we saw <code>query.room</code> which we base our decision on. This data
+can be arbitrary. Feel free to use any kind of decision making mechanism.</p>
+
+
+<h2 id="configuration">Configuration</h2>
+
+<h3>Channel</h3>
+
+<ul>
+    <li><code>url</code> - URL of the server-side channel to which we want the client to be connected to. If this parameter is passed,
+    the channel is considered to be a client. (Note that you can have a client running in NodeJS too.)</li>
+    <li><code>port</code> - port number of the channel server. If this parameter is passed,
+        the channel is considered to be a server.</li>
+    <li><code>reconnectInterval</code> - if a client looses a connection to the server, it tries to reconnect every <code>reconnectInterval</code> milliseconds.
+        The default is 10000ms = 10s. This settings makes sense only for clients.
+    <li><code>healthCheckInterval</code> - Interval in milliseconds in which a health check is performed
+        on all the sites of a server. Each health check decreases the <code>ttl</code> value of a site if the site socket
+        is disconnected. If the site socket gets connected again, its <code>ttl</code> returns to its original value. The default is a
+        health check performed every 1 minute. Considering the default <code>ttl</code> is 60, this means that if
+        every minute of an hour a site didn't respond (its socket was closed) then such a site is considered dead (not responding anymore) and
+        therefore removed from the channel register. The reason for health checks is the following. Consider
+        you have ChannelHub running your server. This ChannelHub contains couple of Channels each representing 
+        a different room. Consider there is 3 clients connected to one room simultaneously editing the same graph. One
+        of the clients doesn't want to work anymore and shuts down his browser or closes the tab with your application.
+        Now the channel of the room still keeps this client in its register as the client might reconnect anytime (the user closed his browser,
+        went for a coffee and came back in ten minutes.) The <code>healthCheckInterval</code> and <code>ttl</code>
+        allows you to configure the maximum waiting time in which the channel should still keep track of the client.
+        This setting makes sense only for server.
+    </li>
+    <li><code>ttl</code> - time-to-live of a site. Explained above. The actual time to live of a site in milliseconds is <code>ttl * healthCheckInterval</code>. The default <code>ttl</code> is 60. 
+        This setting makes sense only for server.</li>
+    <li><code>query</code> - An object that is send with the initial handshake of a client with a server. This can be an arbitrary JSON object. 
+        The <code>query</code> object is especially useful when working with rooms (see above for documentation on using the Channel plugin with rooms).
+        This setting makes sense only for clients.</li>
+    <li><code>debugLevel</code> - the verbosity of debugging logs. The default 0 meaning no debug messages are printed out. Set to a higher number
+        if you want to get some inside on how the Channel works.</li>
+</ul>
+
+<h3>ChannelHub</h3>
+
+<ul>
+    <li><code>port</code> - port number of the channelHub server.</li>
+    <li><code>route(req)</code> - this is actually not an option that you pass to the ChannelHub constructor function
+        but a method that you define directly on the channelHub object. The <code>route(req)</code> method receives
+        a connect reuqest from a client and must return a channel object that is supposed to further communicate
+        with that client. The <code>req</code> parameter contains the request object. The <code>req.query.query</code>
+        contains the <code>query</code> object that the client sent during handshake (see above the Channel configuration section).
+        Note that <code>req.query.query</code> is a JSON string so you should convert it to an object with <code>JSON.parse()</code>
+        before acessing its inner properties. Use this object to determine what channel to return.</li>
+</ul>
+
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../vendor/prism/prism.css">
+        <script src="../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../js/client-search.js"></script>
+        <script src="../../../js/rappid-docs.js"></script>
+    </body>
+</html>

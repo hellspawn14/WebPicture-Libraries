@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../../index.html"><img class="logo small" src="../../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../../download.html">Download</a></li>
+            <li ><a href="../../../../demos.html">Demos</a></li>
+            <li ><a href="../../../../license.html">License</a></li>
+            <li ><a href="../../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../../support.html">Support</a></li>
+            <li ><a href="../../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../../docs.html">Home</a></li>
+        <li><a href="../../ui/stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="../../ui/stencil.html#installation">Installation</a>
+                <li><a href="../../ui/stencil.html#loading">Loading with elements</a>
+                <li><a href="../../ui/stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="../../ui/stencil.html#searchable">Searchable stencil</a>
+                <li><a href="../../ui/stencil.html#methods">Other methods</a>
+                <li><a href="../../ui/stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="../../ui/halo.html#installation">Installation</a>
+                <li><a href="../../ui/halo.html#create">Creating a Halo</a>
+                <li><a href="../../ui/halo.html#configuration">Configuration</a>
+                <li><a href="../../ui/halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="../../ui/halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="../../ui/halo.html#customize">Customizing Halo tools</a>
+                <li><a href="../../ui/halo.html#halo-api">Halo API</a>
+                <li><a href="../../ui/halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="../../ui/freeTransform.html#installation">Installation</a>
+                <li><a href="../../ui/freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="../../ui/inspector.html#installation">Installation</a>
+                <li><a href="../../ui/inspector.html#create">Creating an Inspector</a>
+                <li><a href="../../ui/inspector.html#configuration">Configuration</a>
+                <li><a href="../../ui/inspector.html#expressions">Expressions</a>
+                <li><a href="../../ui/inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="../../ui/inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="../../ui/inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="../../ui/paperScroller.html#installation">Installation</a>
+                <li><a href="../../ui/paperScroller.html#center">Centering the paper content</a>
+                <li><a href="../../ui/paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="../../ui/paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="../../ui/selectionView.html#installation">Installation</a>
+                <li><a href="../../ui/selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="../../ui/selectionView.html#changes">Reacting on changes</a>
+                <li><a href="../../ui/selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="../../ui/selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="../../ui/selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="../../ui/selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="../../ui/selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="../../ui/selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="../../ui/clipboard.html#installation">Installation</a>
+                <li><a href="../../ui/clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="../../ui/tooltip.html#installation">Installation</a>
+                <li><a href="../../ui/tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="../../ui/snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="../../ui/snaplines.html#installation">Installation</a>
+                <li><a href="../../ui/snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../../dia/validator.html#installation">Installation</a>
+                <li><a href="../../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../../com/channel.html#installation">Installation</a>
+                <li><a href="../../com/channel.html#use">Usage</a>
+                <li><a href="../../com/channel.html#rooms">Rooms</a>
+                <li><a href="../../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../bpmn.html#installation">Installation</a>
+                <li><a href="../bpmn.html#activity">Activity</a>
+                <li><a href="../bpmn.html#annotation">Annotation</a>
+                <li><a href="../bpmn.html#choreography">Choreography</a>
+                <li><a href="../bpmn.html#conversation">Conversation</a>
+                <li><a href="../bpmn.html#data-object">Data Object</a>
+                <li><a href="../bpmn.html#event">Event</a>
+                <li><a href="../bpmn.html#flow">Flow</a>
+                <li><a href="../bpmn.html#gateway">Gateway</a>
+                <li><a href="../bpmn.html#group">Group</a>
+                <li><a href="../bpmn.html#message">Message</a>
+                <li><a href="../bpmn.html#pool">Pool</a>
+                <li><a href="../bpmn.html#icons">Icons</a>
+                <li><a href="../bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../chart.html#installation">Installation</a>
+                <li><a href="../chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="plot.html#create">Basic Chart</a>
+              <li><a href="plot.html#series-style">Series Styling</a>
+              <li><a href="plot.html#multiple-series">Multiple Series</a>
+              <li><a href="plot.html#markings">Markings</a>
+              <li><a href="plot.html#guidelines">Guidelines</a>
+              <li><a href="plot.html#tooltips">Tooltips</a>
+              <li><a href="plot.html#legend">Legend</a>
+              <li><a href="plot.html#rt">Real-time Data</a>
+              <li><a href="plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="plot.html#time-series">Time Series</a>
+              <li><a href="plot.html#bar-series">Bar Series</a>
+              <li><a href="plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="plot.html#chart-options">Chart Options</a>
+              <li><a href="plot.html#chart-api">Chart API</a>
+              <li><a href="plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="pie.html#create">Basic Chart</a>
+              <li><a href="pie.html#slices-style">Styling Slices</a>
+              <li><a href="pie.html#multiple-series">Multiple Series</a>
+              <li><a href="pie.html#exploding">Exploding Slices</a>
+              <li><a href="pie.html#donut">Donut Chart</a>
+              <li><a href="pie.html#tooltips">Tooltips</a>
+              <li><a href="pie.html#legend">Legend</a>
+              <li><a href="pie.html#animation">Animation</a>
+              <li><a href="pie.html#effects">Effects</a>
+              <li><a href="pie.html#chart-options">Chart Options</a>
+              <li><a href="pie.html#chart-api">Chart API</a>
+              <li><a href="pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="knob.html#create">Basic Knob</a>
+              <li><a href="knob.html#knob-style">Styling the Knob</a>
+              <li><a href="knob.html#multiple-series">Multiple Values</a>
+              <li><a href="knob.html#tooltips">Tooltips</a>
+              <li><a href="knob.html#animation">Animation</a>
+              <li><a href="knob.html#knob-options">Knob Options</a>
+              <li><a href="knob.html#knob-api">Knob API</a>
+              <li><a href="knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../../format/svg.html#installation">Installation</a>
+                <li><a href="../../format/svg.html#use">Usage</a>
+                <li><a href="../../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../../format/raster.html#installation">Installation</a>
+                <li><a href="../../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../../format/gexf.html#installation">Installation</a>
+                <li><a href="../../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../../format/print.html#installation">Installation</a>
+                <li><a href="../../format/print.html#use">Usage</a>
+                <li><a href="../../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../../css/joint.all.min.css" />
+            <script src="../../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../../images/plugins/chart.png"/>shapes.chart.Plot</h2>
+
+<p>
+  The <b>chart.Plot</b> chart allows you to create <b>Line, Bar and Area</b> charts
+  or their combinations.
+</p>
+
+<h2 id="create">Create a basic chart</h2>
+
+<pre><code>
+var graph = new joint.dia.Graph;
+var paper = new joint.dia.Paper({ el: $('#paper'), width: 500, height: 500, model: graph });
+
+var chart = new joint.shapes.chart.Plot({
+    position: { x: 50, y: 50 },
+    size: { width: 300, height: 100 },
+    series: [ { name: 'myserie', data: [{ x: 1, y: 2 }, { x: 2, y: 3 }, { x: 3, y: 2 }, { x: 4, y: 3 }] } ]
+});
+graph.addCell(chart);
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-create" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-create.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-create.js"></script>
+
+<h2 id="series-stye">Series styling</h2>
+
+<p>All the elements of the chart can be customized using the usual JointJS approach, via the
+<code>attrs</code> object or the <a href="../../../../api.html#joint.dia.Element:attr">attr()</a> method. This means that by just knowing the structure of the SVG elements
+the chart is built from, you have full flexibility in styling your chart. Following the JointJS
+philosophy, we don't try to invent special parameters. Instead, we try to follow SVG and CSS standards
+as much as we can in the way things are styled.</p>
+
+<p>Let's have a look at one snippet of the SVG structure of the charts that is used to render a serie.
+For the full SVG structure of charts, please see the section <a href="plot.html#chart-structure">Chart SVG Structure</a>
+in this document. Once you know the structure, it is easy to make CSS selectors referencing the SVG elements 
+that you want to style. We'll show an example of that below. the SVG structure of one serie is the following:</p>
+
+<pre><code>
+&lt;g class="serie [name of the serie]"&gt;
+    &lt;path/&gt;
+    &lt;g class="points"&gt;
+        &lt;g class="point"&gt;
+            &lt;circle/&gt;
+            &lt;text/&gt;
+        &lt;/g&gt;
+        &lt;!-- ... possibly more points --&gt;
+    &lt;/g&gt;
+&lt;/g&gt;
+</code></pre>
+
+<p>Knowing that, we can, for example, set the stroke color of the serie SVG path like this:</p>
+<pre><code>
+var chart = new joint.shapes.chart.Plot({
+    position: { x: 50, y: 50 }, size: { width: 300, height: 100 },
+    series: [ { name: 'myserie', data: [{ x: 1, y: 2 }, { x: 2, y: 3 }, { x: 3, y: 2 }, { x: 4, y: 3 }] } ],
+    attrs: {
+        '.myserie path': { stroke: 'green', 'stroke-width': 3 }
+    }
+});
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-series-style-intro" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-series-style-intro.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-series-style-intro.js"></script>
+
+<p>In the example above, we showed how to pass styling when creating a new chart but you can also change attributes
+of an existing chart: </p>
+<pre><code>
+chart.attr('.myserie path/stroke', 'red');
+</code></pre>
+
+<p>Note that not only you can change strokes but you can also use <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes">other SVG 
+presentational attributes</a>. An interesting one is the <code>fill</code> attribute. By setting the <code>fill</code>
+attribute on our serie path, we effectively render our serie as an <b><a href="http://en.wikipedia.org/wiki/Area_chart">Area chart</a></b>. In the 
+following demos, we even use the <a href="../../../../tutorial/filters-gradients.html#gradients">JointJS gradients</a>
+for the <code>fill</code> attribute making our charts even prettier:</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-series-style" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-series-style.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-series-style.js"></script>
+
+
+<h2 id="multiple-series">Multiple series</h2>
+
+<p>The Chart plugin supports multiple series. Simply add more series to the <code>series</code> 
+array. As you might have noticed, series objects have the <code>name</code>
+property. This <code>name</code> is then set as a class name on the serie SVG grouping element. This allows
+you to style series based on their names as we've already shown in the previous demos. In the following
+example, we plot multiple series and style them differently based on their names.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-multiple-series" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-multiple-series.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-multiple-series.js"></script>
+
+<p>All series have automatically generated legends. This <b>legend is interactive</b>. You can click
+on the labels in the legend and turn off and on the rendering of the associated serie in the chart.</p>
+
+<h2 id="markings">Markings</h2>
+
+<p>Markings (a.k.a trend lines) are vertical or horizontal lines or rectangles highlighting a certain area in the chart.
+    You can have an unlimited number of markings in your charts. Markings are defined in the <code>markings</code> array with
+    coordinates of the start and end of the marking.</p>
+
+<p>The following is a snippet from the options passed to the chart constructor that defines four markings and styles them.
+For the full source code, please follow the link below the demo.<p>
+
+<pre><code>
+markings: [
+    { name: 'target', start: { y: 3.2 }, label: 'My Target' },
+    { name: 'current', start: { x: 4 } },
+    { name: 'previous', start: { x: 2.8 }, end: { x: 3.2 } },
+    { name: 'next', start: { x: 4.8, y: 3.5 }, end: { x: 5.2, y: 2.5 } }
+],
+attrs: {
+    '.marking.target rect': { fill: 'red' },
+    '.marking.next rect': { fill: '#3498DB', rx: 1000, ry: 1000, 'fill-opacity': .6, stroke: 'black' },
+    '.marking.previous rect': { fill: '#27AE60', 'fill-opacity': .8 }
+}
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-markings" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-markings.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-markings.js"></script>
+
+<h2 id="guidelines">Guidelines</h2>
+
+<p>Guidelines are lines that appear when you hover over the chart with your mouse pointer. They
+    help the user orient himself in the chart. Guidelines are disabled by default but 
+    can be very easily turned on.</p>
+
+<p>Here is the snippet from the <code>attrs</code> object that enables guidelines:</p>
+
+<pre><code>
+attrs: {
+    '.guideline': { 'stroke-dasharray': '3,1', 'stroke-width': .8, display: 'block' },
+    '.x-guideline': { stroke: 'red' },
+    '.y-guideline': { stroke: 'green' }
+}
+</code></pre>
+
+<p><b>Hover over the chart</b> to see the guidelines following your mouse cursor.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-guidelines" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-guidelines.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-guidelines.js"></script>
+
+<h2 id="tooltips">Tooltips</h2>
+
+<p>Tooltips are a great way to show contextual information in your charts. The JointJS Chart plugin
+also provides a facility to get to the closest points to the mouse cursor from all the series data points.
+Moreover, the chart view offers the <code>renderPoint()</code> method that makes it easy to display
+a point marker at the place of any data point from any serie. Let's start with a demo and then
+see how this can be implemented.</p>
+
+<p><b>IMPORTANT</b>: For tooltips to work, you must have the <a href="../../ui/tooltip.html">ui.Tooltip</a>
+plugin installed.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-tooltips" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-tooltips.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-tooltips.js"></script>
+
+<p>When setting up tooltips, we no longer work with the chart model. Instead, we request the paper
+    for the view that represents the chart. This view triggeres <code>mouseover</code> and <code>mouseout</code>
+    events that we use to hide and show our tooltip. The <code>mouseover</code> event handler gets passed
+    three important arguments: <code>dataPoint</code>, <code>clientPoint</code> and <code>closestPoints</code>.
+    These three arguments mean the following:
+    <ul>
+        <li><code>dataPoint</code> - the point in the chart area. This point is interpolated based 
+            on the minimum and maximum x and y values and the position of the mouse cursor in the chart.</li>
+        <li><code>clientPoint</code> - basically the mouse event <code>clientX</code> and <code>clientY</code>
+            coordinates but transformed to the coordinate system of the chart view.</li>
+        <li><code>closestPoints</code> - an array of from each data serie that are the closest points to the mouse cursor.
+            Each object in this array is of the form: <code>{ x: [number], y: [number], serie: [serie object] }</code>.</li>
+    </ul>
+</p>
+<p>
+    All these three arguments help us render our tooltip. Here is the relevant code snippet from the above demo:
+</p>
+<pre data-src="/js/docs/chart-tooltips-snippet.js"></pre>
+
+<h2 id="legend">Legend</h2>
+
+<p>The chart legend is auto-generated and contains labels and colors of all the data series. The legend
+    is also interactive by default and allows the user to turn on and off data series displayed in the chart.
+    This sections shows you how you can <b>customize the legend and its position</b> and also how to 
+    turn series on and off programatically.</p>
+
+<p>The legend is rendered as an SVG group element with the class <code>legend</code>. Inside this group, 
+    we have <code>legend-item</code>s each containing an SVG circle and text elements. Please refer to the
+    <a href="plot.html#chart-structure">Chart SVG structure</a> section for the full SVG structure of the chart.
+    This is all you need to know to be able to style the legend. Moreover, we have prepared a syntactic
+    sugar method (<code>legendPosition()</code>) for positioning the legend so that you don't have to deal with the low-level 
+    positioning using the <a href="../../../../api.html#SpecialAttributes">JointJS special attributes</a>:
+</p>
+
+<pre><code>
+chart.legendPosition('nw');
+</code></pre>
+<br/>
+
+<div class="docs-demo">
+
+    <button class="btn-legend-position" data-position="n">n</button>
+    <button class="btn-legend-position" data-position="nw">nw</button>
+    <button class="btn-legend-position" data-position="w">w</button>
+    <button class="btn-legend-position" data-position="sw">sw</button>
+    <button class="btn-legend-position" data-position="s">s</button>
+    <button class="btn-legend-position" data-position="se">se</button>
+    <button class="btn-legend-position" data-position="e">e</button>
+    <button class="btn-legend-position" data-position="ne">ne</button>
+    <button class="btn-legend-position" data-position="nne">nne</button>
+    <button class="btn-legend-position" data-position="nn">nn</button>
+    <button class="btn-legend-position" data-position="nnw">nnw</button>
+    <button class="btn-legend-position" data-position="nnww">nnww</button>
+    <button class="btn-legend-position" data-position="nww">nww</button>
+    <button class="btn-legend-position" data-position="ww">ww</button>
+    <button class="btn-legend-position" data-position="sww">sww</button>
+    <button class="btn-legend-position" data-position="ssww">ssww</button>
+    <button class="btn-legend-position" data-position="ssw">ssw</button>
+    <button class="btn-legend-position" data-position="ss">ss</button>
+    <button class="btn-legend-position" data-position="sse">sse</button>
+    <button class="btn-legend-position" data-position="ssee">ssee</button>
+    <button class="btn-legend-position" data-position="see">see</button>
+    <button class="btn-legend-position" data-position="ee">ee</button>
+    <button class="btn-legend-position" data-position="nee">nee</button>
+    <button class="btn-legend-position" data-position="nnee">nnee</button>
+    <br/>
+    <br/>
+
+    <div id="paper-holder-legend" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-legend.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-legend.js"></script>
+
+<p>Also, the styling of the legend item text (name of the associated serie), the legend item circle and
+the their look in the disabled state (when the serie is turned off) can be done the usual JointJS way:</p>
+
+<pre><code>
+chart.attr('.legend-item text/fill', 'red');
+chart.attr('.legend-item circle/r', 6);
+chart.attr('.legend-item circle/stroke', 'black');
+chart.attr('.legend-item.disabled text/fill', 'blue');
+</code></pre>
+
+
+<h2 id="rt">Real-time data</h2>
+
+<p>The Channel plugin supports real-time data plotting out-of-the-box. Every change to the <code>series</code>
+    array triggers an update of the chart view and new series are rendered. However, the Chart plugin
+    provides two methods that are handy when dealing with real-time data: <code>addPoint(p, serieName, op)</code> and
+    <code>lastPoint(serieName)</code>. Use <code>addPoint()</code> to add a new data point to a serie
+    identified by <code>serieName</code>. This method automatically triggers an update and the associated view is re-rendered:
+</p>
+
+<pre><code>
+setInterval(function() {
+    chart.addPoint({ x: chart.lastPoint('myserie').x + 1, y: Math.random() * 2 + 2 }, 'myserie', { maxLen: 6 });
+}, 600);
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-rt" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-rt.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-rt.js"></script>
+
+<h2 id="fixed-axis">Fixed axis</h2>
+
+<p>By default, the chart plugin automatically choses the minimum and maximum values on each of the axis
+    based on the minimum/maximum data points. By specifying <code>min</code> and <code>max</code> values
+    in the <a href="plot.html#options-axis">axis object</a>, you can define the precise minimum and maximum values
+    for the axis:
+</p>
+
+<pre><code>
+var chart = new joint.shapes.chart.Plot({
+    ...
+    axis: {
+        'y-axis': { min: -3, max: 10 },
+        'x-axis': { min: -5, max: 10 }
+    }
+    ...
+})
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-fixed-axis" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-fixed-axis.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-fixed-axis.js"></script>
+
+
+<h2 id="time-series">Time series</h2>
+
+<p>By going through the previous sections, you already know all you need to be able to plot time series.
+    There is nothing special about plotting time series except of being able to format the data/times 
+    on the x axis. For that, the Chart plugin allows you to define your own formatting functions for
+    the tick labels. This means that for representing time series data, your data point x coordinates
+    should be in the <a href="http://en.wikipedia.org/wiki/Unix_time">UNIX time format</a>. Then you 
+    just provide a function that formats this timestamp into a more readable representation:</p>
+
+<pre><code>
+var chart = new joint.shapes.chart.Plot({
+    ...
+    series: [
+        { name: 'temp', data: [{ x: 1397560472344, y: 21.5 }, ... ] }
+    ],
+    axis: {
+        'x-axis': {
+            tickFormat: function(t) {
+                var d = new Date(t);
+                return (d.getMonth() + 1) + '/' + d.getDate() + '/' + d.getHours() + '/' + d.getMinutes()
+            }
+        },
+        'y-axis': { 
+            tickFormat: function(v) { return joint.util.format.number('.1f', v) + ' dgC'} 
+        }
+    }
+    ...
+});
+</code></pre>
+
+<p>TIP: We recommend using the great <a href="http://momentjs.com/">Moment.js</a> JavaScript library for parsing, 
+    validating, manipulating and formatting dates.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-time-series" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-time-series.js">source code to this demo</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a target="_blank" href="../../../../js/docs/chart-time-series-data.js">data to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-time-series-data.js"></script>
+<script src="../../../../js/docs/chart-time-series.js"></script>
+
+
+<h2 id="bar-series">Bar series</h2>
+
+<p>The chart plugin supports bar series. To turn a serie to a bar serie, just set the <code>bars</code> option to <code>true</code>:</p>
+
+<pre><code>
+var chart = new joint.shapes.chart.Plot({
+    ...
+    series: [
+        { name: 'myserie', bars: true, data: [{ x: 2, y: 20 }, ... ] }
+    ]
+    ...
+});
+</code></pre>
+
+<p>There is couple of recommended settings when working with bar charts, namely <code>padding</code>, <code>align</code> and <code>barWidth</code>.
+    <code>padding</code> is not specific to bar charts but is especially useful when using this kind of chart. This is because when bars are rendered,
+    they must be aligned to a certain value on the x axis. By default, the top-left corner of each bar is at the position of the associated <code>x</code> 
+    data point value. That means that without any padding, the last bar won't be visible (only a very tiny fraction of its left border). Therefore,
+    we have to set at least <code>right</code> <code>padding</code> to make the bar visible. The <code>align</code> property of <code>bars</code>
+    object controls the alignment of the bars with respect to the associated <code>x</code> data point value. Possible values are <code>"left"</code> (the default),
+    <code>"right"</code> and <code>"middle"</code>. <code>barWidth</code> controls the width of the bars. If the value is a floating point number between <code>0</code>
+    and <code>1</code>, it is used to set the final width of each bar proportianally to the calculated width. If the value is an integer higher than <code>1</code>, it
+    is considered to be an absolute width in pixels. For a full description of the bar options, please see the <a href="plot.html#options-serie">Serie options object</a>, especially
+    the <code>bars</code> object.
+</p>
+
+<div class="docs-demo">
+    <button id="btn-bar-series-toggle-points">Toggle points</button><br/>
+    <div id="paper-holder-bar-series" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-bar-series.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-bar-series.js"></script>
+
+<h2 id="bar-line-series">Bar &amp; Line series intermixed</h2>
+
+<p>Bar and Line series can be rendered together as part of one chart.</p>
+
+<pre><code>
+var chart = new joint.shapes.chart.Plot({
+    ...
+    series: [
+        { name: 'mybars', bars: { barWidth: .7 }, data: [{ x: 1, y: 15 }, ... ] },
+        { name: 'myotherbars', bars: { barWidth: .7 }, data: [{ x: 1, y: 12 }, ... ] },
+        { name: 'myline', interpolate: 'bezier', data: [{ x: 1, y: 20 }, ... ] }
+    ]
+    ...
+});
+</code></pre>
+
+<p>As you can see in the code above, we have two bar series and one line serie as part of one chart. It is important to note that
+if there are more than one bar serie in the chart, by default, the bars of the different series will be rendered one over another.
+For cases where this is not desirable, you can offset the bars of one of the series as shown in the demo below:
+</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-bar-line-series" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../../js/docs/chart-bar-line-series.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../../js/docs/chart-bar-line-series.js"></script>
+
+<p>As you might have noticed in the demo above, <b>negative values</b> for the series <b>are sully supported</b>.</p>
+
+<h2 id="chart-options">Chart Options</h2>
+
+<p>This is the full list of the options that you can pass to the chart constructor function.</p>
+
+<ul>
+    <li><code>series</code> - an array of <a href="plot.html#options-serie">series</a>.</li>
+    <li><code>markings</code> - an array of <a href="plot.html#options-markings">markings</a>. Markings can be both vertical or horizontal lines or rectangles.</li>
+    <li><code>axis</code> - axis definition. Currently, the object can contain only <code>x-axis</code> and <code>y-axis</code> properties representing one <a href="http://www.jointjs.com/rappid/docs/shapes/chart/options-axis">axis</a>.</li>
+</ul>
+
+<h3 id="options-serie">Serie</h3>
+
+<p>These are items of the <code>series</code> array.</p>
+
+<ul>
+    <li><code>name</code> - the name of the serie. This name is added as a CSS class to the serie container (the SVG group element).</li>
+    <li><code>label</code> - the serie label (used in the auto-generated legend)</li>
+    <li><code>data</code> - an array of data points of the form <code>{ x: [number], y: [number] }</code></li>
+    <li><code>interpolate</code> - the interpolation method. Interpolation methods include:
+        <ul>
+            <li><code>linear</code> - the default interpolation.</li>
+            <li><code>bezier</code> - interpolation with a bezier curve.</li>
+            <li><code>step</code> - step function</li>
+            <li><code>stepBefore</code> - step function</li>
+            <li><code>stepAfter</code> - step function</li>
+        </ul>
+    </li>
+    <li><code>bars</code> - controls bar series. If set to <code>true</code>, the series will be rendered as a bar serie using default options.
+        You can override the default options by setting <code>bars</code> to an object that can have the following properties (all are optional):
+        <ul>
+            <li><code>align</code> - the alignment of the bars with respect to the x data point values. Possible values are <code>"middle"</code> (default),
+            <code>"left"</code> and <code>"right"</code>.</li>
+            <li><code>barWidth</code> - controls the width of the bars. If the value is a floating point number between <code>0</code>
+                and <code>1</code>, it is used to set the final width of each bar proportianally to the calculated width. The calculated width
+                is computed such as, for a consecutive x values on the axis, the sum of the widths of all the bars equals the width of the chart area.
+                If the value is an integer higher than <code>1</code>, it is considered to be an absolute width in pixels.</li>
+            <li><code>top-rx</code> - the top x radius of the bars. Together with the <code>top-ry</code> value, this allows you to define border radius for the bars.</li>
+            <li><code>top-ry</code> - the top y radius of the bars.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3 id="options-markings">Marking</h3>
+<p>These are items of the <code>markings</code> array.</p>
+
+<ul>
+    <li><code>start</code> - the start coordinate of the marking. An object of the form <code>{ x: [number], y: [number] }</code>. If
+        only <code>x</code> is given, a vertical marking is rendered at that x-coordinate. If only <code>y</code> is given,
+        a horizontal marking is rendered at that <code>y</code> coordinate.</li>
+    <li><code>end</code> - the end coordinate of the marking. An object of the form <code>{ x: [number], y: [number] }</code>. If
+        only <code>x</code> is given, a vertical marking is rendered at that x-coordinate. If only <code>y</code> is given,
+        a horizontal marking is rendered at that <code>y</code> coordinate. If both <code>start</code> and <code>end</code> objects 
+        are defined, a rectangular marking starting at <code>start</code> coordinates ending at <code>end</code> coordinates is rendered.
+        (TIP: if you style your marking with high <code>rx</code> and <code>ry</code> values, you can make the marking look like a circle.)</li>
+    <li><code>name</code> - the name of the marking. This name is added as a CSS class to the marking container (the SVG group element). This makes it easier to style it.</li>
+    <li><code>label</code> - the marking label. This is an auto-positioned text element.</li>
+    <li><code>attrs</code> - additional SVG attributes that will be set on the marking container SVG element. This is sometimes useful if you
+        want to store additional data associated with the marking in its DOM elemnet. For example, when using tooltips.</li>
+</ul>
+
+<h3 id="options-axis">Axis</h3>
+<p>These are properties of the <code>axis</code> object.</p>
+
+<ul>
+    <li><code>tickFormat</code> - a format of the tick labels. This can be either a string in the <a href="https://docs.python.org/2/library/string.html#formatspec">Python Format Specification Mini-Language</a>
+        or a function that takes the value the tick represents and returns the label for that tick.
+        Example:
+        <pre><code>
+// floating point value with one digit after the decimal point
+{ axis: { 'x-axis': { tickFormat: '.1f' } } }
+// currency
+{ axis: { 'y-axis': { tickFormat: function(v) { return '$' + joint.util.format.number('.2f', v) } } } 
+        </code></pre>
+    </li>
+    <li><code>tickSuffix</code> - a string or a function that will be used as a suffix of the resulting formatted tick label. If it is a function, it is passed the tick value
+        as an argument.
+    </li>
+    <li><code>min</code> - the precise minimum value for the scale. Specifying <code>min</code> and <code>max</code> values for axis prevents
+        the chart plugin to automatically choose the minimum and maximum values for the axis, which is the default. See the <a href="plot.html#fixed-axis">Fixed axis</a> section
+        for more information.
+    </li>
+    <li><code>max</code> - the precise maximum value for the scale.
+    </li>
+    <li><code>ticks</code> - the number of ticks on the axis. Default is <code>10</code>.
+    </li>
+    <li><code>tickStep</code> - the modulus for tick display in the x axis. Default is <code>1</code>, therefore,
+      all ticks are displayed. Set this value to a higher number to filter out ticks. For example,
+      setting this number to <code>10</code> makes the axis render only every 10-th tick. Note that this option
+      only works for the <code>x-axis</code>.
+    </li>
+</ul>
+
+<h2 id="chart-api">Chart API</h2>
+
+<h3>chart.Plot</h3>
+
+<table>
+    <tr>
+        <th>legendPosition(position [, opt])</th>
+        <td>Set position of the legend. <code>position</code> is a string that can be one of
+            <code>n</code>, <code>nw</code>, <code>w</code>, <code>sw</code>, <code>s</code>,
+            <code>se</code>, <code>e</code>, <code>ne</code>, <code>nne</code>, <code>nn</code>,
+            <code>nnw</code>, <code>nnww</code>, <code>nww</code>, <code>ww</code>, <code>sww</code>,
+            <code>ssww</code>, <code>ssw</code>, <code>ss</code>, <code>sse</code>, <code>ssee</code>,
+            <code>see</code>, <code>ee</code>, <code>nee</code>, <code>nnee</code>. See the
+            <a href="plot.html#legend">Legend</a> section for more info. <code>opt.padding</code> can be used
+            to set the distance between the legend and the chart edges. The default is <code>10px</code>.
+        </td>
+    </tr>
+    <tr>
+        <th>addPoint(p, serieName [, opt])</th>
+        <td>Append point <code>p</code> to the serie identified by <code>serieName</code>. If <code>opt.maxLen</code>
+            is set and the number of points in the serie is higher than <code>maxLen</code>, shift the data in the serie.
+        </td>
+    </tr>
+    <tr>
+        <th>lastPoint(serieName)</th>
+        <td>Return the last point in the serie identified by <code>serieName</code>.</td>
+    </tr>
+    <tr>
+        <th>firstPoint(serieName)</th>
+        <td>Return the first point in the serie identified by <code>serieName</code>.</td>
+    </tr>
+</table>
+
+<h3>chart.PlotView</h3>
+
+<p>To access the view for a plot chart, use: <code>paper.findViewByModel(chart)</code>.</p>
+
+<table>
+    <tr>
+        <th>renderPoint(p, serie)</th>
+        <td>Render a point at the coordinates defined in <code>p</code>. <code>serie</code>
+            is the <a href="plot.html#options-serie">object</a> from the <code>chart.Plot</code> <code>series</code> array and
+            defines the serie for which the point should be rendered.
+            Return the SVG DOM element for the point. See the <a href="plot.html#tooltips">Tooltips</a> section on why this
+            method is useful.
+        </td>
+    </tr>
+    <tr>
+        <th>getSerieColor(serieName)</th>
+        <td>Return the color used to draw the serie identified by <code>serieName</code>.</td>
+    </tr>
+    <tr>
+        <th>hideSerie(serieName)</th>
+        <td>Hide serie identified by <code>serieName</code>.</td>
+    </tr>
+    <tr>
+        <th>showSerie(serieName)</th>
+        <td>Show serie identified by <code>serieName</code>.</td>
+    </tr>
+    <tr>
+        <th>closestPoints(x)</th>
+        <td>Return an array of the closest points from all the series in the chart for a given <code>x</code> coordinate.</td>
+    </tr>
+</table>
+
+<h2 id="chart-structure">Chart SVG structure</h2>
+
+<p>The following is the chart SVG structure that you can take as a reference when styling chart elements.</p>
+
+<pre data-src="/html/docs/chart-structure.html"></pre>
+
+<h3 id="selector-examples">Selector examples</h3>
+
+<pre><code>
+chart.attr('.caption/text', 'My Chart')  // Set chart caption.
+chart.attr('.subcaption/text', '2014')  // Set chart sub caption.
+chart.attr('.caption/fill', 'red')  // Set chart caption text color.
+chart.attr('.caption/font-size', 20)  // Set chart caption font size.
+chart.attr('.caption/ref-x, 10)  // Move chart caption 10px from the left edge of the chart.
+chart.attr('.guideline/display, 'block')  // Display guidelines.
+chart.attr('.x-axis .tick line/stroke' , 'green')  // Set the color of the ticks on the x axis.
+chart.attr('.y-axis .tick text/fill' , 'blue')  // Set the color of the tick labels on the y axis.
+chart.attr('.legend-item[data-serie="myserie"]/text-decoration' , 'underline')  // Underline a legend label.
+chart.attr('.point/display' , 'none')  // Hide the data points.
+chart.attr('.data .myserie .bar[data-x="5"]/fill' , 'blue')  // Set blue fill color for only the bar with x value 5.
+</code></pre>
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../../vendor/prism/prism.css">
+        <script src="../../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../../js/client-search.js"></script>
+        <script src="../../../../js/rappid-docs.js"></script>
+    </body>
+</html>

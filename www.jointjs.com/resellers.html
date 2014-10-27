@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      
+
+        <link rel="canonical" href="index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. Build modeling tools, visualize graphs, implement visual languages of various kinds." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, graphs" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <title>JointJS - the HTML 5 JavaScript diagramming library.</title>
+        
+        
+    </head>
+    <body>
+        <header>
+    <a href="http://jointjs.com"><h1><img class="logo" src="images/logo-transparent.png" alt="Logo."/><span class="joint">Joint</span><span class="js">JS</span><em>JavaScript diagramming library</em></h1></a>
+    <nav>
+        <ul>
+            <li ><a href="download.html">Download</a></li>
+            <li ><a href="demos.html">Demos</a></li>
+            <li ><a href="license.html">License</a></li>
+            <li ><a href="tutorial.html">Tutorials</a></li>
+            <li ><a href="api.html">JointJS API</a></li>
+            <li ><a href="rappid/docs.html">Rappid API</a></li>
+            <li ><a href="support.html">Support</a></li>
+            <li ><a href="about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+        
+        <section id="resellers">
+
+    <h1>Buy from an Authorized Reseller</h1>
+
+    <div class="reseller">
+        <img src="images/resellers/CSLogo.gif" />
+        <h3><a href="http://www.componentsource.com/products/rappid/index.html">Component Source</a></h3>
+        <p>Component Source offers convenient, one-stop shopping from 250+ Software Publishers specializing in Application Development & Operations. They also
+        provide support in your local language.</p>
+
+	<a href="resellers.html#" onclick="document.querySelector('.toll-free-numbers').style.display = null; return false;">Show Toll-free numbers</a>
+
+	<div class="toll-free-numbers" style="display: none">
+	  
+	  <h4>America</h4>
+
+	  <table>
+	    <tr>
+	      <th>
+		Country
+	      </th>
+	      
+	      <th>
+		Language
+	      </th>
+	      
+	      <th>
+		Phone Number
+	      </th>
+	      
+	      <th>
+		Availability (Mon-Fri)
+	      </th>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Argentina.png" />
+		<label>Argentina</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		0800 666 0185
+	      </td>
+	      
+	      <td>
+		Availability (Mon-Fri)
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 666 0185
+	      </td>
+	      
+	      <td>
+		24 hour
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Brazil.png" />
+		<label>Brazil</label>
+	      </td>
+	      
+	      <td class="lang">
+		Portuguese
+	      </td>
+	      
+	      <td class="tel">
+		0800 891 6478
+	      </td>
+	      
+	      <td>
+		6:00am-7:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 891 6478
+	      </td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Canada.png" />
+		<label>Canada</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		(888) 850 9911
+	      </td>
+	      
+	      <td>
+		24 hour
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		French
+	      </td>
+	      
+	      <td class="tel">
+		+44 118 958 1111
+	      </td>
+	      
+	      <td>
+		3:00am-11:30am  EDT
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Canada.png" />
+		<label>Canada (Reseller Sales)</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		1230 020 6857 <br />
+		800 570258
+	      </td>
+	      
+	      <td>
+		4:00am-6:00pm  local time <br />
+		4:00am-6:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1230 020 6857 <br />
+		800 570258
+		
+	      </td>
+	      
+	      <td>
+		24 hour <br />
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Colombia.png" />
+		<label>Colombia</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		01800 710 2043
+	      </td>
+	      
+	      <td>
+		3:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		01800 710 2043
+	      </td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Ecuador.png" />
+		<label>Ecuador</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		1 800 010 562
+	      </td>
+	      
+	      <td>
+		3:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1 800 010 562
+	      </td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Mexico.png" />
+		<label>Mexico</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		01 800 681 1559</td>
+	      
+	      <td>
+		2:00am-4:00pm  CST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		01 800 681 1559</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Panama.png" />
+		<label>Panama</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		00 1 800 203 1587</td>
+	      
+	      <td>
+		3:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		00 1 800 203 1587</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Peru.png" />
+		<label>Peru</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		0800 53288</td>
+	      
+	      <td>
+		3:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 53288</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Uruguay.png" />
+		<label>Uruguay</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		000 401 902 38</td>
+	      
+	      <td>
+		5:00am-7:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		000 401 902 38</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Ecuador.png" />
+		<label>Ecuador</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		1 800 010 562
+	      </td>
+	      
+	      <td>
+		3:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1 800 010 562
+	      </td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/United_States_of_America.png" />
+		<label>USA(Government Sales)</label>
+              </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		(888) 850 9966</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+    	      <td class="country">
+		<img src="images/flags/United_States_of_America.png" />
+		<label>USA (Reseller Sales)</label>
+              </td>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		(888) 850 9955</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Venezuela.png" />
+		<label>Venezuela</label>
+	      </td>
+	      
+	      <td class="lang">
+		Spanish
+	      </td>
+	      
+	      <td class="tel">
+		0 800 100 9103</td>
+	      
+	      <td>
+		3:30am-5:30pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0 800 100 9103</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	  </table>
+
+	  <h4>Asia Pacific</h4>
+
+	  <table>
+	    <tr>
+	      <th>
+		Country
+	      </th>
+	      
+	      <th>
+		Language
+	      </th>
+	      
+	      <th>
+		Phone Number
+	      </th>
+	      
+	      <th>
+		Availability (Mon-Fri)
+	      </th>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Australia.png" />
+		<label>Australia</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1 800 0 15292
+	      </td>
+	      
+	      <td>
+		10:00am-6:00pm  EST</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td rowspan="3" class="country">
+		<img src="images/flags/China.png" />
+		<label>China, P.R. (North)</label>
+	      </td>
+	      
+	      <td class="lang">
+		Mandarin
+	      </td>
+	      
+	      <td class="tel">
+		10800 481 1661
+	      </td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		Cantonese
+	      </td>
+	      
+	      <td class="tel">
+		10800 481 1661</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		10800 481 1661</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="3" class="country">
+		<img src="images/flags/China.png" />
+		<label>China, P.R. (South)</label>
+              </td>
+	      
+	      <td class="lang">
+		Mandarin
+	      </td>
+	      
+	      <td class="tel">
+		10800 813 1594
+	      </td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		Cantonese
+	      </td>
+	      
+	      <td class="tel">
+		10800 813 1594</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		10800 813 1594</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="3" class="country">
+		<img src="images/flags/Hong_Kong.png" />
+		<label>Hong Kong</label>
+	      </td>
+	      
+	      <td class="lang">
+		Mandarin
+	      </td>
+	      
+	      <td class="tel">
+		800 908 581
+	      </td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		Cantonese
+	      </td>
+	      
+	      <td class="tel">
+		800 908 581</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		800 908 581</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/India.png" />
+		<label>India</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		000 800 44 01 455
+	      </td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Indonesia.png" />
+		<label>Indonesia</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		001 803 00811 351
+	      </td>
+	      
+	      <td>
+		8:00am-4:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Japan.png" />
+		<label>Japan</label>
+	      </td>
+	      
+	      <td class="lang">
+		Japanese
+	      </td>
+	      
+	      <td class="tel">
+		0120 343 550</td>
+	      
+	      <td>
+		10:00am-6:00pm  JST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0120 343 550</td>
+	      
+	      <td>
+		9:00am-5:00pm  JST
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/South_Korea.png" />
+		<label>Republic Of Korea</label>
+	      </td>
+	      
+	      <td class="lang">
+		Korean
+	      </td>
+	      
+	      <td class="tel">
+		00798 14 800 6332</td>
+	      
+	      <td>
+		10:00am-6:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		+44 118 958 1111</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Malaysia.png" />
+		<label>Malaysia</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1 800 81 7261</td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/New_Zealand.png" />
+		<label>New Zealand</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		800 449181</td>
+	      
+	      <td>
+		12:00pm-8:00pm</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Philippines.png" />
+		<label>Philippines</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1 800 1816 0315
+	      </td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td rowspan="3" class="country">
+		<img src="images/flags/Singapore.png" />
+		<label>Singapore</label>
+	      </td>
+	      
+	      <td class="lang">English</td>
+	      
+	      <td class="tel">
+		800 810 2136
+	      </td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		Mandarin
+	      </td>
+	      
+	      <td class="tel">
+		800 810 2136</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		Cantonese
+	      </td>
+	      
+	      <td class="tel">
+		800 810 2136</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="3" class="country">
+		<img src="images/flags/Taiwan.png" />
+		<label>Taiwan ROC</label>
+	      </td>
+	      
+	      <td class="lang">Mandarin</td>
+	      
+	      <td class="tel">
+		00 801 814313
+	      </td>
+	      
+	      <td>
+		9:00am-5:00pm  local time
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">Cantonese</td>
+	      
+	      <td class="tel">
+		00 801 814313</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		00 801 814313</td>
+	      
+	      <td>9:00am-5:00pm  local time</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Thailand.png" />
+		<label>Thailand</label>
+	      </td>
+	      
+	      <td class="lang">English </td>
+	      
+	      <td class="tel">
+		001 800 81 4 5257</td>
+	      
+	      <td>
+		8:00am-4:00pm  local time</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Vietnam.png" />
+		<label>Viet Nam</label>
+	      </td>
+	      
+	      <td class="lang">English </td>
+	      
+	      <td class="tel">
+		120-81-863</td>
+	      
+	      <td>
+		8:00am-4:00pm  local time</td>
+	    </tr>
+	    
+	    
+	  </table>
+
+	  <h4>EMEA</h4>
+
+	  <table>
+	    <tr>
+	      <th>
+		Country
+	      </th>
+	      
+	      <th>
+		Language
+	      </th>
+	      
+	      <th>
+		Phone Number
+	      </th>
+	      
+	      <th>
+		Availability (Mon-Fri)
+	      </th>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Austria.png" />
+		<label>Austria</label>
+	      </td>
+	      
+	      <td class="lang">
+		German
+	      </td>
+	      
+	      <td class="tel">
+		0800 281 750
+	      </td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 281 750
+	      </td>
+	      
+	      <td>
+		24 hour
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Belgium.png" />
+		<label>Belgium</label>
+	      </td>
+	      
+	      <td class="lang">
+		French
+	      </td>
+	      
+	      <td class="tel">
+		0800 7 5603
+	      </td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 7 5603</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Bulgaria.png" />
+		<label>Bulgaria</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		00800 115 4445
+	      </td>
+	      
+	      <td>
+		24 hour
+	      </td>
+	    </tr>
+	    
+
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Croatia.png" />
+		<label>Croatia</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 22255
+	      </td>
+	      
+	      <td>
+		24 hour  </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Czech_Republic.png" />
+		<label>Czech Republic</label></td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		800 143 313
+	      </td>
+	      
+	      <td>
+		24 hour  </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Denmark.png" />
+		<label>Denmark</label></td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		80 88 17 20
+	      </td>
+	      
+	      <td>
+		24 hour  </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Finland.png" />
+		<label>Finland</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 1 18002</td>
+	      
+	      <td>
+		24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/France.png" />
+		<label>France</label>
+	      </td>
+	      
+	      <td class="lang">
+		French
+	      </td>
+	      
+	      <td class="tel">
+		0800 90 92 62</td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 90 92 62</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Germany.png" />
+		<label>Germany</label>
+	      </td>
+	      
+	      <td class="lang">
+		German
+	      </td>
+	      
+	      <td class="tel">
+		0800 186 07 06</td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST
+	      </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 186 07 06</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Greece.png" />
+		<label>Greece</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		00800 44121891</td>
+	      
+	      <td>
+		24 hour </td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Hungary.png" />
+		<label>Hungary</label>
+	      </td>
+	      
+	      <td class="lang">English</td>
+	      
+	      <td class="tel">
+		06800 16674
+	      </td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Ireland.png" />
+		<label>Ireland</label>
+              </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		1 800 535 661</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+    	      <td class="country">
+		<img src="images/flags/Israel.png" />
+		<label>Israel</label>
+              </td>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		180 924 2003</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Italy.png" />
+		<label>Italy</label>
+	      </td>
+	      
+	      <td class="lang">
+		Italian
+	      </td>
+	      
+	      <td class="tel">
+		800 790046</td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		800 790046</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Netherlands.png" />
+		<label>Netherlands</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 022 8832 </td>
+	      
+	      <td>
+		24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Norway.png" />
+		<label>Norway</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		800 790046</td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Poland.png" />
+		<label>Poland</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		00800 442 1092</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Portugal.png" />
+		<label>Portugal</label></td>
+	      
+	      <td class="lang">
+		Portuguese</td>
+	      
+	      <td class="tel">
+		800 844 125</td>
+	      
+	      <td>
+		9:00am-10:00pm  WEST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English</td>
+	      
+	      <td class="tel">
+		800 844 125</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Russian_Federation.png" />
+		<label>Russia</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		810 800 2251 1044</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Slovenia.png" />
+		<label>Slovenia</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 80297</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/South_Africa.png" />
+		<label>South Africa</label>
+	      </td>
+	      
+	      <td class="lang">
+		English
+	      </td>
+	      
+	      <td class="tel">
+		0800 99 1088</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    <tr>
+	      <td rowspan="2" class="country">
+		<img src="images/flags/Spain.png" />
+		<label>Spain</label></td>
+	      
+	      <td class="lang">
+		Spanish</td>
+	      
+	      <td class="tel">
+		900 93 8926</td>
+	      
+	      <td>
+		9:00am-11:00pm  CEST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		English</td>
+	      
+	      <td class="tel">
+		900 93 8926</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Sweden.png" />
+		<label>Sweden</label></td>
+	      
+	      <td class="lang">
+		English</td>
+	      
+	      <td class="tel">
+		020 794 989</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    <tr>
+	      <td rowspan="4" class="country">
+		<img src="images/flags/Switzerland.png" />
+		<label>Switzerland</label></td>
+	      
+	      <td class="lang">
+		German</td>
+	      
+	      <td class="tel">
+		0800 83 5305</td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		French</td>
+	      
+	      <td class="tel">
+		0800 83 5305</td>
+	      
+	      <td>9:00am-5:30pm  CEST</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="lang">
+		Italian</td>
+	      
+	      <td class="tel">
+		0800 83 5305</td>
+	      
+	      <td>
+		9:00am-5:30pm  CEST
+	      </td>
+	    </tr>
+	    <tr>
+	      <td class="lang">
+		English</td>
+	      
+	      <td class="tel">
+		0800 83 5305</td>
+	      
+	      <td>
+		24 hour
+              </td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/Turkey.png" />
+		<label>Turkey</label></td>
+	      
+	      <td class="lang">
+		English</td>
+	      
+	      <td class="tel">
+		00 800 4491 3617</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    <tr>
+	      <td class="country">
+		<img src="images/flags/United_Kingdom.png" />
+		<label>United Kingdom</label></td>
+	      
+	      <td class="lang">
+		English</td>
+	      
+	      <td class="tel">
+		0800 581111</td>
+	      
+	      <td>24 hour</td>
+	    </tr>
+	    
+	    
+	    
+	  </table>
+	  
+
+	</div>
+	
+    </div>
+
+    <div class="reseller">
+        <img src="images/resellers/qast_logo.png" />
+        <h3><a href="http://www.qast.com/product/1569.html">QAST Software Group</a></h3>
+        <p>Qast Software Group is one of the largest software distribution companies in China.
+	  Their goal is to continuously bring global software and technologies to the growing Chinese market.
+	</p>
+
+	<a href="resellers.html#" onclick="document.querySelector('.qast-contact').style.display = null; return false;">Show Contact Details</a>
+
+	<div class="qast-contact" style="display: none">
+	  <br/>
+	  <br/>
+	  <b>China</b><br/>
+	  Qast Systems Solutions, Inc.<br/>
+	  Add: 2nd Floor, Building 6, No. 1107 Yu Yuan Road<br/>
+	  Shanghai 200050, China<br/>
+	  Tel :+86-21-5240-0198<br/>
+	  Fax: +86-21-5240-0179<br/>
+	  E-mail: info@qast.com<br/>
+	  web: www.qast.com<br/>
+	  <br/>
+	  <br/>
+	  <b>Hong Kong</b><br/>
+	  Qast Systems Solutions, Inc.<br/>
+	  HongKong: Unit 1003-5, 10/F, Westin Centre, 26 Hung To Road, Kwun Tong,<br/>
+	  Kowloon, HongKong<br/>
+	  Tel: (852)-3520-4200<br/>
+	  E-mail: hk@qast.com<br/>
+	  Website: www.qast.com<br/>
+	  <br/>
+	  <br/>
+	  <b>Singapore</b><br/>
+	  Qast Singapore Pte Ltd<br/>
+	  152 Beach Road,Gateway East Level 28,Singapore 189721<br/>
+	  Tel: +65-6221 4010<br/>
+	  Fax: +65-6295 2567<br/>
+	  Web：http://www.qast.com.sg<br/>
+	  Email: sales@qast.com.sg<br/>
+	  <br/>
+	  <br/>
+	  <b>Taiwan</b><br/>
+	  Qast Systems Solutions, Inc.<br/>
+	  Room2, 11th Fl., No.162, Sec.4,<br/>
+	  Roosevelt Rd.,<br/>
+	  Taipei, Taiwan<br/>
+	  Tel: 886-2-27530200<br/>
+	  Web: www.qast.com <br/>
+	  Email: info@qast.com
+	</div>
+    </div>
+</section>
+
+
+
+        <footer>
+    <div class="footer-links">
+        <div class="links-column">
+            <ul>
+                <li ><a href="download.html">Download</a></li>
+                <li ><a href="demos.html">Demos</a></li>
+                <li ><a href="license.html">License</a></li>
+            </ul>
+        </div>
+        <div class="links-column">
+            <ul>
+                <li ><a href="tutorial.html">Tutorials</a></li>
+                <li ><a href="api.html">JointJS API</a></li>
+                <li ><a href="rappid/docs.html">Rappid API</a></li>
+                <li ><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="links-column">
+            <ul>
+                <li ><a href="about-rappid.html">Rappid</a></li>
+                <li><a href="rappid.html">Rappid demo</a></li>
+                <li ><a href="support.html">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="social">
+    <div class="twitter">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-size="medium" data-url="http://www.jointjs.com" data-count="vertical" data-via="jointjs">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div>
+    <div class="facebook">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.jointjs.com&layout=box_count&show_faces=false&width=46&action=like&colorscheme=light&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:48px; height:65px;" allowTransparency="true"></iframe>
+    </div>
+    <div class="g-plusone" data-size="tall" data-annotation="bubble" data-href="http://www.jointjs.com"></div>
+    <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+</div>
+
+    <div class="copyright">
+        Copyright &copy; 2009 - 2014 <b>client IO</b> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+    </div>
+</footer>
+
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <a href="https://github.com/DavidDurman/joint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    </body>
+</html>

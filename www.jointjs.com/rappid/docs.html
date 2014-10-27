@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../index.html"><img class="logo small" src="../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../download.html">Download</a></li>
+            <li ><a href="../demos.html">Demos</a></li>
+            <li ><a href="../license.html">License</a></li>
+            <li ><a href="../tutorial.html">Tutorials</a></li>
+            <li ><a href="../api.html">JointJS API</a></li>
+            <li class="active"><a href="docs.html">Rappid API</a></li>
+            <li ><a href="../support.html">Support</a></li>
+            <li ><a href="../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="docs.html">Home</a></li>
+        <li><a href="docs/ui/stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="docs/ui/stencil.html#installation">Installation</a>
+                <li><a href="docs/ui/stencil.html#loading">Loading with elements</a>
+                <li><a href="docs/ui/stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="docs/ui/stencil.html#searchable">Searchable stencil</a>
+                <li><a href="docs/ui/stencil.html#methods">Other methods</a>
+                <li><a href="docs/ui/stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="docs/ui/halo.html#installation">Installation</a>
+                <li><a href="docs/ui/halo.html#create">Creating a Halo</a>
+                <li><a href="docs/ui/halo.html#configuration">Configuration</a>
+                <li><a href="docs/ui/halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="docs/ui/halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="docs/ui/halo.html#customize">Customizing Halo tools</a>
+                <li><a href="docs/ui/halo.html#halo-api">Halo API</a>
+                <li><a href="docs/ui/halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="docs/ui/freeTransform.html#installation">Installation</a>
+                <li><a href="docs/ui/freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="docs/ui/inspector.html#installation">Installation</a>
+                <li><a href="docs/ui/inspector.html#create">Creating an Inspector</a>
+                <li><a href="docs/ui/inspector.html#configuration">Configuration</a>
+                <li><a href="docs/ui/inspector.html#expressions">Expressions</a>
+                <li><a href="docs/ui/inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="docs/ui/inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="docs/ui/inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="docs/ui/paperScroller.html#installation">Installation</a>
+                <li><a href="docs/ui/paperScroller.html#center">Centering the paper content</a>
+                <li><a href="docs/ui/paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="docs/ui/paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="docs/ui/selectionView.html#installation">Installation</a>
+                <li><a href="docs/ui/selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="docs/ui/selectionView.html#changes">Reacting on changes</a>
+                <li><a href="docs/ui/selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="docs/ui/selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="docs/ui/selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="docs/ui/selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="docs/ui/selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="docs/ui/selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="docs/ui/clipboard.html#installation">Installation</a>
+                <li><a href="docs/ui/clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="docs/ui/tooltip.html#installation">Installation</a>
+                <li><a href="docs/ui/tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="docs/ui/snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="docs/ui/snaplines.html#installation">Installation</a>
+                <li><a href="docs/ui/snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="docs/dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="docs/dia/commandManager.html#installation">Installation</a>
+                <li><a href="docs/dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="docs/dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="docs/dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="docs/dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="docs/dia/validator.html#installation">Installation</a>
+                <li><a href="docs/dia/validator.html#create">Creating a Validator</a>
+                <li><a href="docs/dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="docs/dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="docs/dia/graphUtils.html#installation">Installation</a>
+                <li><a href="docs/dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="docs/com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="docs/com/channel.html#installation">Installation</a>
+                <li><a href="docs/com/channel.html#use">Usage</a>
+                <li><a href="docs/com/channel.html#rooms">Rooms</a>
+                <li><a href="docs/com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="docs/shapes/bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="docs/shapes/bpmn.html#installation">Installation</a>
+                <li><a href="docs/shapes/bpmn.html#activity">Activity</a>
+                <li><a href="docs/shapes/bpmn.html#annotation">Annotation</a>
+                <li><a href="docs/shapes/bpmn.html#choreography">Choreography</a>
+                <li><a href="docs/shapes/bpmn.html#conversation">Conversation</a>
+                <li><a href="docs/shapes/bpmn.html#data-object">Data Object</a>
+                <li><a href="docs/shapes/bpmn.html#event">Event</a>
+                <li><a href="docs/shapes/bpmn.html#flow">Flow</a>
+                <li><a href="docs/shapes/bpmn.html#gateway">Gateway</a>
+                <li><a href="docs/shapes/bpmn.html#group">Group</a>
+                <li><a href="docs/shapes/bpmn.html#message">Message</a>
+                <li><a href="docs/shapes/bpmn.html#pool">Pool</a>
+                <li><a href="docs/shapes/bpmn.html#icons">Icons</a>
+                <li><a href="docs/shapes/bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="docs/shapes/chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="docs/shapes/chart.html#installation">Installation</a>
+                <li><a href="docs/shapes/chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="docs/shapes/chart/plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="docs/shapes/chart/plot.html#create">Basic Chart</a>
+              <li><a href="docs/shapes/chart/plot.html#series-style">Series Styling</a>
+              <li><a href="docs/shapes/chart/plot.html#multiple-series">Multiple Series</a>
+              <li><a href="docs/shapes/chart/plot.html#markings">Markings</a>
+              <li><a href="docs/shapes/chart/plot.html#guidelines">Guidelines</a>
+              <li><a href="docs/shapes/chart/plot.html#tooltips">Tooltips</a>
+              <li><a href="docs/shapes/chart/plot.html#legend">Legend</a>
+              <li><a href="docs/shapes/chart/plot.html#rt">Real-time Data</a>
+              <li><a href="docs/shapes/chart/plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="docs/shapes/chart/plot.html#time-series">Time Series</a>
+              <li><a href="docs/shapes/chart/plot.html#bar-series">Bar Series</a>
+              <li><a href="docs/shapes/chart/plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="docs/shapes/chart/plot.html#chart-options">Chart Options</a>
+              <li><a href="docs/shapes/chart/plot.html#chart-api">Chart API</a>
+              <li><a href="docs/shapes/chart/plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="docs/shapes/chart/pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="docs/shapes/chart/pie.html#create">Basic Chart</a>
+              <li><a href="docs/shapes/chart/pie.html#slices-style">Styling Slices</a>
+              <li><a href="docs/shapes/chart/pie.html#multiple-series">Multiple Series</a>
+              <li><a href="docs/shapes/chart/pie.html#exploding">Exploding Slices</a>
+              <li><a href="docs/shapes/chart/pie.html#donut">Donut Chart</a>
+              <li><a href="docs/shapes/chart/pie.html#tooltips">Tooltips</a>
+              <li><a href="docs/shapes/chart/pie.html#legend">Legend</a>
+              <li><a href="docs/shapes/chart/pie.html#animation">Animation</a>
+              <li><a href="docs/shapes/chart/pie.html#effects">Effects</a>
+              <li><a href="docs/shapes/chart/pie.html#chart-options">Chart Options</a>
+              <li><a href="docs/shapes/chart/pie.html#chart-api">Chart API</a>
+              <li><a href="docs/shapes/chart/pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="docs/shapes/chart/knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="docs/shapes/chart/knob.html#create">Basic Knob</a>
+              <li><a href="docs/shapes/chart/knob.html#knob-style">Styling the Knob</a>
+              <li><a href="docs/shapes/chart/knob.html#multiple-series">Multiple Values</a>
+              <li><a href="docs/shapes/chart/knob.html#tooltips">Tooltips</a>
+              <li><a href="docs/shapes/chart/knob.html#animation">Animation</a>
+              <li><a href="docs/shapes/chart/knob.html#knob-options">Knob Options</a>
+              <li><a href="docs/shapes/chart/knob.html#knob-api">Knob API</a>
+              <li><a href="docs/shapes/chart/knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="docs/format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="docs/format/svg.html#installation">Installation</a>
+                <li><a href="docs/format/svg.html#use">Usage</a>
+                <li><a href="docs/format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="docs/format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="docs/format/raster.html#installation">Installation</a>
+                <li><a href="docs/format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="docs/format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="docs/format/gexf.html#installation">Installation</a>
+                <li><a href="docs/format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="docs/format/print.html">format.Print</a>
+            <ul>
+                <li><a href="docs/format/print.html#installation">Installation</a>
+                <li><a href="docs/format/print.html#use">Usage</a>
+                <li><a href="docs/format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="docs/layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="docs/layout/directedGraph.html#installation">Installation</a>
+                <li><a href="docs/layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="docs/layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="docs/layout/gridLayout.html#installation">Installation</a>
+                <li><a href="docs/layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="docs/layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="docs/layout/forceDirected.html#installation">Installation</a>
+                <li><a href="docs/layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../css/joint.all.min.css" />
+            <script src="../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <div class="rappid-docs-home">
+    <h2>Rappid toolkit - Documentation</h2>
+
+    <p>Rappid is a powerful and modern toolkit for building <b>visual tools</b> of various kinds.
+        This documentation gives you an overview and many examples on how you can use the plugins
+        of the Rappid toolkit to build groundbreaking applications in a fraction of a time.
+    </p>
+
+    <p>If you're looking for a documentation to the <b>core JointJS library</b>, go to the <a href="../api.html">JointJS API reference page</a>.</p>
+
+    <p>For more information about the <b>Rappid toolkit, licensing and online purchase</b>, see the <a href="../about-rappid.html">About Rappid page</a>.</p>
+
+    <p>Browse through the menu on the left to see the documentation to the Rappid plugins.</p>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <img height="150" alt="Rappid toolkit" src="../images/rappid-screenshot.png" />
+    <img height="150" alt="Rappid toolkit: Charts plugin" src="../images/chart-equalizer.png" />
+    <img height="150" alt="Rappid toolkit: BPMN plugin" src="../images/bpmn-diagram.png" />
+    <img height="150" alt="Rappid toolkit: Pie charts" src="../images/pie.png" />
+    <img height="150" alt="Rappid toolkit: Donut charts" src="../images/donut-multilevel.png" />
+    <img height="100" alt="Rappid toolkit: Knobs" src="../images/knobs.png" />
+    <img height="150" alt="Rappid toolkit: BPMN Editor" src="../images/blog/bpmn-editor.png" />
+    <img height="150" alt="Rappid toolkit: Area charts" src="../images/charts-dark.png" />
+</div>
+
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../vendor/prism/prism.css">
+        <script src="../vendor/prism/prism.js"></script>
+
+        <script src="../js/client-search.js"></script>
+        <script src="../js/rappid-docs.js"></script>
+    </body>
+</html>

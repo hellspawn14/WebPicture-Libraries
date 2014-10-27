@@ -1,0 +1,21 @@
+#paper-holder-styling .selection {
+   background-color: red;
+   border: 2px dashed red;
+   opacity: .7;
+}
+#paper-holder-styling .selection.selected {
+   /* clean up when the selection ends */
+   background-color: transparent;
+   border: none;
+   opacity: 1;
+}
+#paper-holder-styling .selection-box {
+   border: 1px solid #8e44ad;
+   margin-top: -4px;
+   margin-left: -4px;
+   box-shadow: 2px 2px 5px #8e44ad;
+}
+#paper-holder-styling .selection-wrapper {
+   border: 1px dotted #8e44ad;
+}
+

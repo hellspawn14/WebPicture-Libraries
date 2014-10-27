@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><img class="logo small" src="../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../download.html">Download</a></li>
+            <li ><a href="../../../demos.html">Demos</a></li>
+            <li ><a href="../../../license.html">License</a></li>
+            <li ><a href="../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../support.html">Support</a></li>
+            <li ><a href="../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../docs.html">Home</a></li>
+        <li><a href="stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="stencil.html#installation">Installation</a>
+                <li><a href="stencil.html#loading">Loading with elements</a>
+                <li><a href="stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="stencil.html#searchable">Searchable stencil</a>
+                <li><a href="stencil.html#methods">Other methods</a>
+                <li><a href="stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="halo.html#installation">Installation</a>
+                <li><a href="halo.html#create">Creating a Halo</a>
+                <li><a href="halo.html#configuration">Configuration</a>
+                <li><a href="halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="halo.html#customize">Customizing Halo tools</a>
+                <li><a href="halo.html#halo-api">Halo API</a>
+                <li><a href="halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="freeTransform.html#installation">Installation</a>
+                <li><a href="freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="inspector.html#installation">Installation</a>
+                <li><a href="inspector.html#create">Creating an Inspector</a>
+                <li><a href="inspector.html#configuration">Configuration</a>
+                <li><a href="inspector.html#expressions">Expressions</a>
+                <li><a href="inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="paperScroller.html#installation">Installation</a>
+                <li><a href="paperScroller.html#center">Centering the paper content</a>
+                <li><a href="paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="selectionView.html#installation">Installation</a>
+                <li><a href="selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="selectionView.html#changes">Reacting on changes</a>
+                <li><a href="selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="clipboard.html#installation">Installation</a>
+                <li><a href="clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="tooltip.html#installation">Installation</a>
+                <li><a href="tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="snaplines.html#installation">Installation</a>
+                <li><a href="snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../dia/validator.html#installation">Installation</a>
+                <li><a href="../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../com/channel.html#installation">Installation</a>
+                <li><a href="../com/channel.html#use">Usage</a>
+                <li><a href="../com/channel.html#rooms">Rooms</a>
+                <li><a href="../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../shapes/bpmn.html#installation">Installation</a>
+                <li><a href="../shapes/bpmn.html#activity">Activity</a>
+                <li><a href="../shapes/bpmn.html#annotation">Annotation</a>
+                <li><a href="../shapes/bpmn.html#choreography">Choreography</a>
+                <li><a href="../shapes/bpmn.html#conversation">Conversation</a>
+                <li><a href="../shapes/bpmn.html#data-object">Data Object</a>
+                <li><a href="../shapes/bpmn.html#event">Event</a>
+                <li><a href="../shapes/bpmn.html#flow">Flow</a>
+                <li><a href="../shapes/bpmn.html#gateway">Gateway</a>
+                <li><a href="../shapes/bpmn.html#group">Group</a>
+                <li><a href="../shapes/bpmn.html#message">Message</a>
+                <li><a href="../shapes/bpmn.html#pool">Pool</a>
+                <li><a href="../shapes/bpmn.html#icons">Icons</a>
+                <li><a href="../shapes/bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../shapes/chart.html#installation">Installation</a>
+                <li><a href="../shapes/chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart/plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="../shapes/chart/plot.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/plot.html#series-style">Series Styling</a>
+              <li><a href="../shapes/chart/plot.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/plot.html#markings">Markings</a>
+              <li><a href="../shapes/chart/plot.html#guidelines">Guidelines</a>
+              <li><a href="../shapes/chart/plot.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/plot.html#legend">Legend</a>
+              <li><a href="../shapes/chart/plot.html#rt">Real-time Data</a>
+              <li><a href="../shapes/chart/plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="../shapes/chart/plot.html#time-series">Time Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-series">Bar Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="../shapes/chart/plot.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/plot.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="../shapes/chart/pie.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/pie.html#slices-style">Styling Slices</a>
+              <li><a href="../shapes/chart/pie.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/pie.html#exploding">Exploding Slices</a>
+              <li><a href="../shapes/chart/pie.html#donut">Donut Chart</a>
+              <li><a href="../shapes/chart/pie.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/pie.html#legend">Legend</a>
+              <li><a href="../shapes/chart/pie.html#animation">Animation</a>
+              <li><a href="../shapes/chart/pie.html#effects">Effects</a>
+              <li><a href="../shapes/chart/pie.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/pie.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="../shapes/chart/knob.html#create">Basic Knob</a>
+              <li><a href="../shapes/chart/knob.html#knob-style">Styling the Knob</a>
+              <li><a href="../shapes/chart/knob.html#multiple-series">Multiple Values</a>
+              <li><a href="../shapes/chart/knob.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/knob.html#animation">Animation</a>
+              <li><a href="../shapes/chart/knob.html#knob-options">Knob Options</a>
+              <li><a href="../shapes/chart/knob.html#knob-api">Knob API</a>
+              <li><a href="../shapes/chart/knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../format/svg.html#installation">Installation</a>
+                <li><a href="../format/svg.html#use">Usage</a>
+                <li><a href="../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../format/raster.html#installation">Installation</a>
+                <li><a href="../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../format/gexf.html#installation">Installation</a>
+                <li><a href="../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../format/print.html#installation">Installation</a>
+                <li><a href="../format/print.html#use">Usage</a>
+                <li><a href="../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../css/joint.all.min.css" />
+            <script src="../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../images/plugins/inspector.png"/>ui.Inspector</h2>
+
+<p>Inspector plugin creates an editor and viewer of a cell model properties. It creates
+a two-way data-binding between the cell model and a generated
+HTML form with input fields. These input fields can be defined in a declarative fashion
+using a plain JavaScript object. Not only visual attributes can be configured for editing in the 
+inspector but also custom data that will be set on the cell model! This all makes the inspector 
+an extremely flexible and useful widget for use in applications.</p>
+
+<h2 id="installation">Install</h2>
+
+<p>Include <code>joint.ui.inspector.css</code> and <code>joint.ui.inspector.js</code> files to your HTML:<p>
+<pre><code>
+&lt;link rel="stylesheet" type="text/css" href="joint.ui.inspector.css" /&gt;
+&lt;script src="joint.ui.inspector.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="create">Create an inspector</h2>
+
+<pre><code>
+var graph = new joint.dia.Graph;
+var paper = new joint.dia.Paper({ el: $('#paper'), width: 500, height: 500, model: graph });
+
+var inspector;
+
+function createInspector(cellView) {
+    
+    // No need to re-render inspector if the cellView didn't change.
+    if (!inspector || inspector.options.cellView !== cellView) {
+    
+        if (inspector) {
+            // Clean up the old inspector if there was one.
+            inspector.remove();
+        }
+
+        inspector = new joint.ui.Inspector({
+            inputs: {
+                myproperty: { type: 'range', min: 0, max: 30, defaultValue: 1, group: 'mydata', index: 1 },
+                attrs: {
+                    text: { 
+                        text: { type: 'textarea', group: 'text', index: 1 },
+                        'font-size': { type: 'number', group: 'text', index: 2 }
+                    }
+                }
+            },
+            groups: {
+                mydata: { label: 'My Data', index: 1 },
+                text: { label: 'Text', index: 2 }
+            },
+            cellView: cellView
+        });
+        $('.inspector-container').html(inspector.render().el);
+    }
+}
+
+paper.on('cell:pointerup', function(cellView) {
+    createInspector(cellView);
+});
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-create" class="paper"></div>
+    <div id="inspector-holder-create"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/inspector-create.js">source code to this demo</a>&nbsp;|&nbsp;
+        <a target="_blank" href="../../../css/docs/inspector-create.css">CSS to this demo</a>
+    </div>
+</div>
+<link rel="stylesheet" href="../../../css/docs/inspector-create.css" />
+<script src="../../../js/docs/inspector-create.js"></script>
+
+
+<h2 id="configuration">Configuration</h2>
+
+<p>The <code>joint.ui.Inspector</code> constructor takes an options object with the following parameters:</p>
+
+<ul>
+    <li><code>cellView</code> - an element or a link view [mandatory]</li>
+    <li><code>cell</code> - an arbitrary Backbone model (including cells: elements and links) [mutually exclusive with cellView]. 
+        Use either <code>cellView</code> or <code>cell</code>. If you use <code>cell</code>, you can take advantange of the Inspector widget for an arbitrary Backbone model.</li>
+    <li><code>inputs</code> - an object that mimics the structure of a cell model. Only instead of the final values, it contains
+        an input type definition. See below for further explanation.</li>
+    <li><code>groups</code> - an object that contains group identifiers
+        as keys and group options as values. These groups define a grouping in the inspector panel. See below for further information.</li>
+    <li><code>live</code> - tells the inspector whether it should update the cell properties as a reaction on the <code>"onchange"</code> event triggered on the form inputs. <code>true</code> by default.
+        However, if you don't want the cell properties to update immediately when the user leaves the input fields but rather update the cell in bulk or as a reaction on user pressing an <i>Update</i> button
+        somewhere in your application, set <code>live</code> to false and call <code>inspector.updateCell()</code> manually when you want to.</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>
+var inputs = {
+    attrs: {
+        text: {
+            'text': { type: 'textarea', group: 'text', index: 1 },
+            'font-family': { 
+                type: 'select', options: ['Arial', 'Helvetica', 'Comic Sans MS'], group: 'text', index: 2 
+            }
+        },
+        rect: {
+            'fill': { type: 'color', group: 'presentation', index: 1 },
+            'stroke-width': { 
+                type: 'range', min: 0, max: 30, defaultValue: 1, unit: 'px', group: 'presentation', index: 2 
+            }
+        }
+    },
+    myname: { type: 'text', group: 'data', index: 1 },
+    mylist: {
+        type: 'list',
+        item: {
+            label: 'My item',
+            type: 'text'
+        }
+    },
+    myobject: {
+        type: 'object',
+        properties: {
+            first: { type: 'number' },
+            second: { type: 'text' }
+        }
+    }
+};
+
+var groups = {
+    text: { label: 'Text fields', index: 1 },
+    presentation: { label: 'Presentation fields', index: 2 },
+    data: { label: 'Custom data', index: 3 }
+};
+
+var inspector = new joint.ui.Inspector({
+    cellView: cellView,
+    inputs: inputs,
+    groups: groups
+});
+</code></pre>
+
+<p>As it was mentioned, <code>inputs</code> is an object that mimics the properties structure of cell models. Only instead of the
+final values, it contains the input definition that tells the inspector how it should render the form input associated with the cell property.
+The options object of inputs can contain the following parameters:</p>
+
+<ul>
+    <li><code>type</code> - a type of the input [mandatory]. The supported types are:
+        <ul>
+            <li><code>number</code> - creates an HTML 5 number input field. Special properties are <code>min</code> and <code>max</code>.</li>
+            <li><code>text</code> - creates a text input field.</li>
+            <li><code>textarea</code> - creates a textarea.</li>
+            <li><code>range</code> - creates an HTML 5 range input field. Special properties are <code>min</code>, <code>max</code>, <code>step</code> and <code>unit</code>.</li>
+            <li><code>color</code> - creates an HTML 5 color input field.</li>
+            <li><code>select</code> - creates a select box. Special properties are <code>options</code> array that contains options for the select box.</li>
+            <li><code>toggle</code> - creates a toggle (checkbox).</li>
+            <li><code>list</code> - creates a widget for adding/removing items from an array.</li>
+            <li><code>object</code> - creates inputs for properties of an object.</li>
+        </ul>
+    </li>
+    <li><code>label</code> - a label for the form input.</li>
+    <li><code>group</code> - a group the input belongs to.</li>
+    <li><code>index</code> - an index of the input within its group.</li>
+    <li><code>defaultValue</code> - a value that will be used in the input field in case the associated cell property is undefined.</li>
+    <li><code>valueRegExp</code> - a regular expression used to extract (and set) a property value on a cell. Use with combination with <code>defaultValue</code> to make sure the inspector does not try to extract something from an undefined value.</li>
+    <li><code>options</code> - an array of options for a select type [specific for the <code>"select"</code> input type]. Can be defined by:
+        <ul>
+            <li>content - <code>['option1', 'option2']</code></li>
+            <li>value/content - <code>[{ value: 'value1', content: 'option1' }, { value: 'value2', content: 'option2' }]</code></li>
+            <li>reference - <code>'path'</code> ( where <code>cell</code> property defined by <code>'path'</code> is an array of options)</li>
+        </ul>
+    </li>
+    <li><code>min</code> - a minimum value of a range input [specific for the <code>"range"</code> input type].</li>
+    <li><code>max</code> - a maximum value of a range input [specific for the <code>"range"</code> input type].</li>
+    <li><code>item</code> - a definition of an item of a list. [specific for the <code>"list"</code> type]</li>
+    <li><code>properties</code> - an object containing definitions of an object properties. [specific for the <code>"object"</code> type]</li>
+    <li><code>attrs</code> - an object of the form <code>[selector] : { [attributeName] : [attributeValue], ... }</code>. This object allows you to set arbitrary HTML attributes on the generated HTML for this input. Useful
+        if you want to <i>mark</i> certain input fields or store some content in them, for example for display in a tooltip.</li>
+    <li><code>when</code> - an object containing conditions that determine if this input should be shown or hidden based on the values of other inputs. For more information see chapter <a href="inspector.html#expressions">expressions</a>.
+<br/>
+<br/>
+<p>Note that the <code>list</code> and <code>object</code> types allows you to create inputs in the Inspector for an arbitrary nested objects.
+For example, If your cell contains an object as a property (<code>cell.set('myobject', { first: 'John', last: 'Good' }))</code>), 
+you can instruct the inspector to use the <code>object</code> type for <code>myobject</code> property and then define
+types for each of the nested properties of that object:
+</p>
+
+<pre><code>
+var inspector = new joint.ui.Inspector({
+    cellView: cellView,
+    inputs: {
+        myobject: {
+            type: 'object',
+            properties: {
+                first: { type: 'text' },
+                last: { type: 'text' }
+            }
+        }
+    },
+    groups: {}
+});
+</code></pre>
+
+
+<p>Each group options object in the <code>groups</code> object can contain the following parameters:</p>
+
+<ul>
+    <li><code>label</code> - a label for the group. This label will be displayed as a header of the group section in the accordion-like inspector.</li>
+    <li><code>index</code> - an index of the group within other groups. Use this to put the groups in a certain order.</li>
+    <li><code>closed</code> - if set to <code>true</code>, the group will be closed by default.</li>
+</ul>
+
+<h2 id="expressions">Expressions</h2>
+
+      <p>The inspector uses expressions to switch the visibility of its inputs (configurable through <code>when</code> parameter) based on the values of other inputs.
+        When an expression is evaluated to <code>false</code> (condition is not met) the input using this <code>when</code> clause will be hidden. Otherwise, this input will be shown.</p>
+
+      <h3 id="expressions-definition">Definition</h2>
+<p>An expression when evaluated in a model context returns a boolean (true/false) based on certain model attributes.
+  The expressions are defined recursively as follows.</p>
+
+<ul>
+  <li><b>{ &lt;primitive&gt; : { &lt;path&gt; : &lt;value&gt; }}</b> is an expression</li>
+  <li><b>{ &lt;unary-operator&gt; : expression }</b> is an expression</li>
+  <li><b>{ &lt;multiary-operator&gt; : [expression-1, expression-2, .. , expression-n] }</b> for <b>n > 0</b> is an expression</li>
+</ul>
+
+<p>where:</p>
+
+<ul>
+
+  <li><b>path</b> is a string determining a property of the model (e.g 'attrs/text/text', 'property')</li>
+
+  <li><b>value</b> is a number, string or an array (e.g 13, 'jointjs', [1,3,5])</li>
+
+  <li><b>primitive</b> can be one of the following:
+    <ul>
+      <li><code>eq</code> - returns <code>true</code> if &lt;value&gt; and the value under &lt;path&gt; equals</li>
+      <li><code>ne</code> - returns <code>true</code> if &lt;value&gt; and the value under &lt;path&gt; don't equal</li>
+      <li><code>regex</code> - returns <code>true</code> if regular expression made of &lt;value&gt; matches the value under &lt;path&gt;</li>
+      <li><code>text</code> - returns <code>true</code> if &lt;value&gt; is a substring of the value under &lt;path&gt;</li>
+      <li><code>lt</code> - returns <code>true</code> if the value under &lt;path&gt; is less than &lt;value&gt;</li>
+      <li><code>lte</code> - return <code>true</code> if the value under &lt;path&gt; is less than or equal to &lt;value&gt;</li>
+      <li><code>gt</code> -  return <code>true</code> if the value under &lt;path&gt; is greater than &lt;value&gt;</li>
+      <li><code>gte</code> -  returns <code>true</code> if the value under &lt;path&gt; is greater than or equal to &lt;value&gt;</li>
+      <li><code>in</code> - returns <code>true</code> if &lt;value&gt; is an array and contains the value under &lt;path&gt;</li>
+      <li><code>nin</code> - returns <code>true</code> if &lt;value&gt; is an array and doesn't contain the value under &lt;path&gt;</li>
+    </ul>
+
+    returns <code>false</code> otherwise.
+
+  </li>
+  <li><b>unary_operator</b> accepts exactly one expression
+    <ul>
+      <li><code>not</code> - returns the negation of an expression</li>
+    </ul>
+  </li>
+  <li><b>multiary_operator</b> accepts at least one expression
+    <ul>
+      <li><code>and</code> - returns a conjunction of all the expressions (i.e. expr1 && exp2)</li>
+      <li><code>or</code> - returns a disjunction of all the expressions (i.e. expr1 || exp2)</li>
+      <li><code>nor</code> - returns the negation of a disjunction of all the expressions (i.e. !(expr1 || exp2))</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="expressions-examples">Examples</h2>
+
+<p>There is an example how some valid expressions could look like.</p>
+
+<pre><code>
+    { eq: { 'size/width': 300 }}
+    { regex: { 'attrs/text/text' : 'JointJS|Rappid' }}
+    { lt: { 'count': 10 }}
+    { in: { 'index': [0,2,4] }}
+    { not: { eq: { 'day': 'Monday' }}}
+    { and: [{ gte: { 'position/x': 100 }}, { lte: { 'position/x': 400 }}]}
+
+</code></pre>
+
+<p>
+  Imagine a scenario where you have a <code>"select"</code> input type with options "email" and "tel". Below that you want to show either a text or a number input field
+  based on the value of the select input. Assuming your cell properties structure is as follows: <code>{ contact_option: "email", contact_email: "", contact_tel: "" }</code>,
+  your inspector could look like this:
+</p>
+
+<pre><code>
+    var inspector = new joint.ui.Inspector({
+        cell: mycell,
+        inputs: {
+            contact_option: { type: 'select', options: ['email', 'tel'] },
+            contact_email: { type: 'text', when: { eq: { 'contact_option': 'email' } } },
+            contact_tel: { type: 'number', when: { eq: { 'contact_option': 'tel' } } }
+        }
+    })
+</code></pre>
+
+<h2 id="inspector-remember-groups-state">Remebering close/open state of groups across renderings</h2>
+
+<p>Applications often require Inspector to remember what groups where open and what groups
+  where closed for a certain cell and when the Inspector is rendered for the very same cell
+  later, groups that where previously open should be open and those that were closed
+  should stay closed. This section describes how to achieve this.</p>
+
+<p>First, we need to store information about what groups where closed for a certain cell.
+  To do this, we create an object mapping a cell ID to an array of group names.</p>
+
+<pre><code>
+var inspectorClosedGroups = {};
+</code></pre>
+
+<p>Second, just before the current inspector is removed and a new one should
+  be created for a new cell, we store an array of the closed groups to our <code>inspectorClosedGroups</code> object
+  for the previous cell:
+</p>
+
+<pre><code>
+
+var inspector;
+paper.on('cell:pointerup', function(cellView) {
+
+    // No need to re-render inspector for a cell that the inspector is already open.
+    if (inspector && inspector.options.cellView === cellView) return;
+
+    if (inspector) {
+        
+        // Map the previous cell ID to a list of names of closed groups for that cell.
+        // Each group is represented by a DOM element with the .group class name.
+        // Closed groups additionally get the .closed class name assigned.
+        inspectorClosedGroups[inspector.options.cellView.model.id] = _.map(inspector.$('.group.closed'), function(g) { 
+            return $(g).attr('data-name');
+        });    
+
+        // Clean-up the inspector as we'll be creating a new one for a different cell below.
+        inspector.remove();
+    }
+
+    inspector = new joint.ui.Inspector(options); // options are you Inspector options
+
+    // Close groups that where previously closed for such a cell.
+    _.each(inspectorClosedGroups[cellView.model.id], inspector.closeGroup, inspector);
+})
+</code></pre>
+
+<p>It is important to note that our <code>inspectorClosedGroups</code> object keeps growing
+with the number of cells for which an inspector was open. In practise, this should
+not be a problem as this object is only kept in memory and gets cleaned-up when
+the page refreshes. Moreover, it is not likely that the user will open tens of thousands
+of inspectors during one session. However, if you wanted to make this more robust, you
+can always listen on the <code>'remove'</code> event on the graph object and 
+delete the associated item from the <code>inspectorClosedGroups</code> object for
+the just removed cell based on its ID.</p>
+
+
+<h2 id="inspector-events">Inspector Events</h2>
+
+<p>The Inspector object triggers events when the user changes its inputs or when the Inspector needs
+  to re-render itself partially. These events can be handled by using the Inspector <code>on()</code> method.</p>
+
+<table>
+    <tr>
+        <th>render</th>
+        <td>Triggered when the Inspector re-renders itself partially. If you're adding
+	  event listeners or your own custom HTML into the inspector, you should always
+	  do it inside the <code>render</code> event handler.
+        </td>
+    </tr>
+    <tr>
+        <th>change:[path to the changed property]</th>
+        <td>
+            Triggered when the user changes a property of a cell through the inspector.
+	    The handler is passed the value under the property path and the input DOM
+	    element as arguments.
+        </td>
+    </tr>
+</table>
+
+<h2 id="inspector-methods">Inspector Methods</h2>
+
+<table>
+    <tr>
+        <th>render()</th>
+        <td>Render the inspector based on the options passed to the constructor function.
+	  Note that this does not add the inspector to the live DOM tree. This must
+	  be done manually by appending the inspector DOM element (stored in the <code>el</code> property)
+	  to a live DOM element on the page.
+        </td>
+    </tr>
+    <tr>
+        <th>updateCell()</th>
+        <td>Manually update the associated celll based on the current values in the inspector.
+	  This is especially useful if you use the inspector with the <code>live</code>
+	  mode disabled. See the <a href="inspector.html#configuration">Configuration</a> section for
+	  more information.
+        </td>
+    </tr>
+    <tr>
+        <th>remove()</th>
+        <td>Remove the inspector from the DOM. This should be called once you're finished
+	  with using the inspector.
+        </td>
+    </tr>
+    <tr>
+        <th>openGroup(name)</th>
+        <td>Open group by <code>name</code>.</td>
+    </tr>
+    <tr>
+        <th>closeGroup(name)</th>
+        <td>Close group by <code>name</code>.</td>
+    </tr>
+    <tr>
+        <th>toggleGroup(name)</th>
+        <td>Toggle group by <code>name</code>.</td>
+    </tr>
+    <tr>
+        <th>openGroups()</th>
+        <td>Open all groups.</td>
+    </tr>
+    <tr>
+        <th>closeGroups()</th>
+        <td>Close all groups.</td>
+    </tr>
+</table>
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../vendor/prism/prism.css">
+        <script src="../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../js/client-search.js"></script>
+        <script src="../../../js/rappid-docs.js"></script>
+    </body>
+</html>

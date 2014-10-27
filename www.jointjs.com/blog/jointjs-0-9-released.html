@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+      
+
+        <link rel="canonical" href="../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. Build modeling tools, visualize graphs, implement visual languages of various kinds." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, graphs" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../css/style.css" />
+
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+        <title>JointJS - the HTML 5 JavaScript diagramming library.</title>
+        
+        
+    </head>
+    <body>
+        <header>
+    <a href="http://jointjs.com"><h1><img class="logo" src="../images/logo-transparent.png" alt="Logo."/><span class="joint">Joint</span><span class="js">JS</span><em>JavaScript diagramming library</em></h1></a>
+    <nav>
+        <ul>
+            <li ><a href="../download.html">Download</a></li>
+            <li ><a href="../demos.html">Demos</a></li>
+            <li ><a href="../license.html">License</a></li>
+            <li ><a href="../tutorial.html">Tutorials</a></li>
+            <li ><a href="../api.html">JointJS API</a></li>
+            <li ><a href="../rappid/docs.html">Rappid API</a></li>
+            <li ><a href="../support.html">Support</a></li>
+            <li ><a href="../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+        
+        <article id="post">
+    <h1>JointJS 0.9 Released  <span class="date">May 13th, 2014</span></h1>
+
+    <p>It's been a good amount of time since inital works on JointJS started. Since then, the core library and
+        its plugin set grew tremendously. Today, we're proudly announcing another iteration of this work with a new release versioned <b>JointJS v0.9</b>.</p>
+
+    <p>Thanks go to the community, JointJS developers, contributors and our clients for pushing
+        us further and giving us great input and contributions. Thank you!
+    </p>
+
+    <p>This time, we've added <b>smart link routing</b> automatically avoiding elements and made our handy <b>Geometry</b>
+        and <b>Vectorizer</b> helper libraries completely standalone, documented and ready to be used even outside JointJS.</p>
+    
+    <h2>New features</h2>
+
+    <h3>Smart link routing</h3>
+
+    <p>We have refactored code responsible for routing and rendering links and made it completely pluggable. We have added
+        two smart routers (<b>manhattan</b> and <b>metro</b>) that automatically avoid elements that are in the way.
+
+        <br/>
+        <br/>
+        <img width="300" alt="JointJS Link Metro Routing" title="JointJS Link Metro Routing" src="../images/blog/link-metro-routing.gif" />
+        <img width="300" alt="JointJS Link Manhattan Routing" title="JointJS Link Manhattan Routing" src="../images/blog/link-manhattan-routing.gif" />
+        <br/>
+        <br/>
+
+        Link routing and rendering is now split in two parts: <b>routers</b> and <b>connectors</b>. <b>routers</b>
+        are responsible for returning a set of vertices that the link should go through. <b>connectors</b> take those
+        vertices and generate SVG path commands for rendering links. We now have three routers (manhattan, metro and orthogonal) and three connectors 
+        (normal, smooth and rounded) to your disposal.
+
+        Read more about routers and connectors in the API reference for <a href="../api.html#joint.dia.Link"><em>joint.dia.Link</em></a> (in the Presentation section).
+        Also, make sure to check out the <a href="../demos/routing.html">demo</a>.
+    </p>
+
+    <h3>Geometry</h3>
+
+    <p>This library has always been part of JointJS but we have extended it with new features and finally documented it. We also made this library completely standalone
+        so that it can be used in other projects as well (it is also <b>compatible with NodeJS</b>). The library contains a set of useful <b>geometry operations</b> on primitives (<b>point, line, rectangle, ellipse</b>) including
+        intersections, angle and length calculations and others. Examples are:
+
+        <br/>
+        <br/>
+        <pre><code>
+mypoint.theta(anotherPoint)
+mypoint.manhattanDistance(anotherPoint)
+point.fromPolar(r, angle, o)
+myline.intersection(anotherLine)
+myrect.sideNearestToPoint(aPoint)
+myrect.containsPoint(aPoint)
+myrect.pointNearestToPoint(aPoint)
+myellipse.intersectionWithLineFromCenterToPoint(aPoint)
+        </code></pre>
+        <br/>
+        <br/>
+
+        More on the Geometry library in the <a href="../api.html#g">API reference</a>. Feel free to download the Geometry library from the <a href="../download.html#geometry">Download page</a>.
+        Note that this library is already packaged with JointJS and exposed via the global variable <b>g</b>.
+    </p>
+
+    <h3>Vectorizer</h3>
+
+    <p>Another small but helpful library that we use internally in JointJS is <b>Vectorizer</b>. You can think of it as of a very <b>lightweight jQuery (or better yet Zepto) for SVG</b>. This
+        library doesn't have any dependencies and can also be used completely standalone. Vectorizer is only 3.5KB minified and gzipped.
+
+        <br/>
+        <br/>
+        <pre><code>
+var svg = V('svg');
+var el = V('&lt;g&gt;&lt;rect/&gt;&lt;text/&gt;&lt;/g&gt;');
+el.findOne('rect').attr({ x: 20, y: 20, width: 100, height: 40, fill: 'blue', stroke: 'black' });
+svg.append(el);
+document.body.appendChild(svg.node);
+el.translate(20, 10);
+el.scale(2);
+el.rotate(45);
+        </code></pre>
+
+        <br/>
+        <img width="200" alt="JointJS Vectorizer library" title="JointJS Vectorizer library" src="../images/blog/vectorizer.png" />
+        <br/>
+
+        <br/>
+        <br/>
+
+        More on the Vectorizer library in the <a href="../api.html#v">API reference</a>. You can download it from the <a href="../download.html#vectorizer">Download page</a>.
+        This library is also already packaged with JointJS and exposed via the global variable <b>V</b>.
+    </p>
+
+    <h2>Go grab it!</h2>
+
+    <p>Download the JointJS code from the <a href="../download.html">Download page</a>. Watch our repository
+        on <a href="https://github.com/DavidDurman/joint">GitHub</a> or file bugs in the <a href="https://github.com/DavidDurman/joint/issues">GitHub issue tracker</a>.
+        Follow us on <a href="https://twitter.com/jointjs">Twitter</a>.
+    </p>
+
+    <br/>
+    <br/>
+
+    <h2>Rappid toolkit update</h2>
+
+    <p>Together with JointJS v0.9, we have also released a new version of our commercial plugin set, the <a href="../about-rappid.html">Rappid diagramming toolkit</a>.
+        This time, we added two brand new plugins: <b>Charts</b> and <b>BPMN shapes</b>.</p>
+
+    <p>The <b>joint.shapes.chart</b> plugin brings flexible line, bar and area interactive
+        charts to JointJS applications. Interestingly enough, charts are just another JointJS elements and so can be manipulated as such (connected with links to other
+        elements, resized, rotated, drag&amp;dropped, event put into <a href="../rappid/docs/ui/stencil.html">Stencil</a> or configured via <a href="../rappid/docs/ui/inspector.html">Inspector</a>!).
+    </p>
+
+    <br/>
+    <img width="370" alt="JointJS Chart plugin: line charts" title="JointJS Chart plugin: line charts" src="../images/blog/line-chart.png" />
+    <img width="370" alt="JointJS Chart plugin: bar charts" title="JointJS Chart plugin: bar charts" src="../images/blog/bar-chart.png" />
+    <img width="370" alt="JointJS Chart plugin: area charts" title="JointJS Chart plugin: area charts" src="../images/blog/area-chart.png" />
+    <br/>    
+
+    <p>The <b>joint.shapes.bpmn</b> plugin is a set of Business Model and Notation (BPMN 2.0) shapes that you can use in your apps. Moreover, 
+        we have created a full-featured <a href="../rappid/bpmn.html">BPMN editor</a> demo application that can be used as a foundation for your applications.
+    </p>
+
+    <br/>
+    <img width="600" alt="JointJS Chart plugin: line charts" title="JointJS Chart plugin: line charts" src="../images/blog/bpmn-editor.png" />
+    <br/>    
+
+    <br/>
+    <br/>
+    <p>Thanks and Enjoy!</p>
+
+    <span class="author" rel="author">David Durman</span>
+</article>
+
+ <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jointjs'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+
+
+        <footer>
+    <div class="footer-links">
+        <div class="links-column">
+            <ul>
+                <li ><a href="../download.html">Download</a></li>
+                <li ><a href="../demos.html">Demos</a></li>
+                <li ><a href="../license.html">License</a></li>
+            </ul>
+        </div>
+        <div class="links-column">
+            <ul>
+                <li ><a href="../tutorial.html">Tutorials</a></li>
+                <li ><a href="../api.html">JointJS API</a></li>
+                <li ><a href="../rappid/docs.html">Rappid API</a></li>
+                <li ><a href="../blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="links-column">
+            <ul>
+                <li ><a href="../about-rappid.html">Rappid</a></li>
+                <li><a href="../rappid.html">Rappid demo</a></li>
+                <li ><a href="../support.html">Support</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="social">
+    <div class="twitter">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-size="medium" data-url="http://www.jointjs.com" data-count="vertical" data-via="jointjs">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    </div>
+    <div class="facebook">
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.jointjs.com&layout=box_count&show_faces=false&width=46&action=like&colorscheme=light&height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:48px; height:65px;" allowTransparency="true"></iframe>
+    </div>
+    <div class="g-plusone" data-size="tall" data-annotation="bubble" data-href="http://www.jointjs.com"></div>
+    <script type="text/javascript">
+        (function() {
+          var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+          po.src = 'https://apis.google.com/js/plusone.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+</div>
+
+    <div class="copyright">
+        Copyright &copy; 2009 - 2014 <b>client IO</b> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+    </div>
+</footer>
+
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <a href="https://github.com/DavidDurman/joint"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    </body>
+</html>

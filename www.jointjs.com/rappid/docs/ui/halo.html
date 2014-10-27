@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><img class="logo small" src="../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../download.html">Download</a></li>
+            <li ><a href="../../../demos.html">Demos</a></li>
+            <li ><a href="../../../license.html">License</a></li>
+            <li ><a href="../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../support.html">Support</a></li>
+            <li ><a href="../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../docs.html">Home</a></li>
+        <li><a href="stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="stencil.html#installation">Installation</a>
+                <li><a href="stencil.html#loading">Loading with elements</a>
+                <li><a href="stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="stencil.html#searchable">Searchable stencil</a>
+                <li><a href="stencil.html#methods">Other methods</a>
+                <li><a href="stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="halo.html#installation">Installation</a>
+                <li><a href="halo.html#create">Creating a Halo</a>
+                <li><a href="halo.html#configuration">Configuration</a>
+                <li><a href="halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="halo.html#customize">Customizing Halo tools</a>
+                <li><a href="halo.html#halo-api">Halo API</a>
+                <li><a href="halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="freeTransform.html#installation">Installation</a>
+                <li><a href="freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="inspector.html#installation">Installation</a>
+                <li><a href="inspector.html#create">Creating an Inspector</a>
+                <li><a href="inspector.html#configuration">Configuration</a>
+                <li><a href="inspector.html#expressions">Expressions</a>
+                <li><a href="inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="paperScroller.html#installation">Installation</a>
+                <li><a href="paperScroller.html#center">Centering the paper content</a>
+                <li><a href="paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="selectionView.html#installation">Installation</a>
+                <li><a href="selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="selectionView.html#changes">Reacting on changes</a>
+                <li><a href="selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="clipboard.html#installation">Installation</a>
+                <li><a href="clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="tooltip.html#installation">Installation</a>
+                <li><a href="tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="snaplines.html#installation">Installation</a>
+                <li><a href="snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../dia/validator.html#installation">Installation</a>
+                <li><a href="../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../com/channel.html#installation">Installation</a>
+                <li><a href="../com/channel.html#use">Usage</a>
+                <li><a href="../com/channel.html#rooms">Rooms</a>
+                <li><a href="../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="../shapes/bpmn.html#installation">Installation</a>
+                <li><a href="../shapes/bpmn.html#activity">Activity</a>
+                <li><a href="../shapes/bpmn.html#annotation">Annotation</a>
+                <li><a href="../shapes/bpmn.html#choreography">Choreography</a>
+                <li><a href="../shapes/bpmn.html#conversation">Conversation</a>
+                <li><a href="../shapes/bpmn.html#data-object">Data Object</a>
+                <li><a href="../shapes/bpmn.html#event">Event</a>
+                <li><a href="../shapes/bpmn.html#flow">Flow</a>
+                <li><a href="../shapes/bpmn.html#gateway">Gateway</a>
+                <li><a href="../shapes/bpmn.html#group">Group</a>
+                <li><a href="../shapes/bpmn.html#message">Message</a>
+                <li><a href="../shapes/bpmn.html#pool">Pool</a>
+                <li><a href="../shapes/bpmn.html#icons">Icons</a>
+                <li><a href="../shapes/bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="../shapes/chart.html#installation">Installation</a>
+                <li><a href="../shapes/chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="../shapes/chart/plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="../shapes/chart/plot.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/plot.html#series-style">Series Styling</a>
+              <li><a href="../shapes/chart/plot.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/plot.html#markings">Markings</a>
+              <li><a href="../shapes/chart/plot.html#guidelines">Guidelines</a>
+              <li><a href="../shapes/chart/plot.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/plot.html#legend">Legend</a>
+              <li><a href="../shapes/chart/plot.html#rt">Real-time Data</a>
+              <li><a href="../shapes/chart/plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="../shapes/chart/plot.html#time-series">Time Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-series">Bar Series</a>
+              <li><a href="../shapes/chart/plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="../shapes/chart/plot.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/plot.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="../shapes/chart/pie.html#create">Basic Chart</a>
+              <li><a href="../shapes/chart/pie.html#slices-style">Styling Slices</a>
+              <li><a href="../shapes/chart/pie.html#multiple-series">Multiple Series</a>
+              <li><a href="../shapes/chart/pie.html#exploding">Exploding Slices</a>
+              <li><a href="../shapes/chart/pie.html#donut">Donut Chart</a>
+              <li><a href="../shapes/chart/pie.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/pie.html#legend">Legend</a>
+              <li><a href="../shapes/chart/pie.html#animation">Animation</a>
+              <li><a href="../shapes/chart/pie.html#effects">Effects</a>
+              <li><a href="../shapes/chart/pie.html#chart-options">Chart Options</a>
+              <li><a href="../shapes/chart/pie.html#chart-api">Chart API</a>
+              <li><a href="../shapes/chart/pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../shapes/chart/knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="../shapes/chart/knob.html#create">Basic Knob</a>
+              <li><a href="../shapes/chart/knob.html#knob-style">Styling the Knob</a>
+              <li><a href="../shapes/chart/knob.html#multiple-series">Multiple Values</a>
+              <li><a href="../shapes/chart/knob.html#tooltips">Tooltips</a>
+              <li><a href="../shapes/chart/knob.html#animation">Animation</a>
+              <li><a href="../shapes/chart/knob.html#knob-options">Knob Options</a>
+              <li><a href="../shapes/chart/knob.html#knob-api">Knob API</a>
+              <li><a href="../shapes/chart/knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../format/svg.html#installation">Installation</a>
+                <li><a href="../format/svg.html#use">Usage</a>
+                <li><a href="../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../format/raster.html#installation">Installation</a>
+                <li><a href="../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../format/gexf.html#installation">Installation</a>
+                <li><a href="../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../format/print.html#installation">Installation</a>
+                <li><a href="../format/print.html#use">Usage</a>
+                <li><a href="../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../css/joint.all.min.css" />
+            <script src="../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../images/plugins/halo.png"/>ui.Halo</h2>
+
+<p>Halo creates a control panel above an element with various tools. This gives the user
+control over your elements with tools located right at hand.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Include <code>joint.ui.halo.css</code> and <code>joint.ui.halo.js</code> files to your HTML:<p>
+<pre><code>
+&lt;link rel="stylesheet" type="text/css" href="joint.ui.halo.css" /&gt;
+&lt;script src="joint.ui.halo.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="create">Creating a Halo</h2>
+
+<pre><code>
+var graph = new joint.dia.Graph;
+var paper = new joint.dia.Paper({ el: $('#paper'), width: 500, height: 500, model: graph });
+
+paper.on('cell:pointerup', function(cellView) {
+    // We don't want a Halo for links.
+    if (cellView.model instanceof joint.dia.Link) return;
+
+    var halo = new joint.ui.Halo({ graph: graph, paper: paper, cellView: cellView });
+    halo.render();
+});
+</code></pre>
+
+<p>The <code>joint.ui.Halo</code> constructor takes a graph and paper objects + it also requires the view of a cell we want to display the halo above.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-create" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/halo-create.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../js/docs/halo-create.js"></script>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>The <code>joint.ui.Halo</code> constructor function takes an options object as an argument. The options
+object can have the following parameters:</p>
+
+<ul>
+    <li><code>graph</code> - the <code>joint.dia.Graph object</code> [mandatory]</li>
+    <li><code>paper</code> - the <code>joint.dia.Paper object</code> [mandatory]</li>
+    <li><code>cellView</code> - an element view [mandatory]</li>
+    <li><code>linkLoopPreferredSide</code> - the preferred side for a self-loop link created from Halo (<code>"top"|"bottom"|"left"|"right"</code>), default is <code>"top"</code></li>
+    <li><code>linkLoopWidth</code> - the self-loop link width in pixels, default is <code>40</code></li>
+    <li><code>rotateAngleGrid</code> - the angle increments the rotate action snaps to, default is <code>15</code></li>
+    <li><code>boxContent(cellView, boxDOMElement)</code> - a function that returns an HTML string with the content that will be used in the information box below the element. Default is x,y,width,height coordinates and dimensions of the element.</li>
+    <li><code>useModelGeometry</code> - if set to <code>true</code>, the model position and dimensions will be used as a basis for the Halo tools position. By default, this is set
+      to <code>false</code> which causes the Halo tools position be based on the bounding box of the element view. Sometimes though, 
+      your shapes can have certain SVG sub elements that <q>stick out</q> of the view and you don't want these sub elements to affect
+      the Halo tools position. In this case, set the <code>useModelGeometry</code> to <code>true</code>.</li>
+</ul>
+
+
+<h2 id="magnets">Halo &amp; magnets</h2>
+
+<p>Halo automatically detects an element's magnets and creates a unique link tool for each of them.
+To control which link tools are created, use the <code>magnetFilter</code> option. 
+The value assigned to this option can be a selector, a function (accepting magnet element as the first parameter), 
+an element or a jquery object (see <a href="http://api.jquery.com/filter/">jQuery.filter</a> signature).</p>
+
+<pre><code>
+    var halo = new joint.ui.Halo({
+        graph: graph,
+        paper: paper,
+        cellView: cellView,
+        magnetFilter: function(magnetEl) { return $.contains(cellView.$('.inPorts')[0], magnetEl); }
+    });
+</code></pre>
+
+<h2 id="disable-tools">Disabling halo tools</h2>
+
+<p>Built-in functions are <code>remove</code>, <code>resize</code>, <code>rotate</code>, 
+<code>clone</code>, <code>fork</code>, <code>link</code> and <code>unlink</code>. 
+To revoke any of these functions you may add a line similar to the following to your css:</p>
+
+<pre><code>
+.halo .handle.clone { display: none; } /* disables the clone tool */
+</pre></code>
+
+<p>Also, the same way you would hide halo tools, as explained above, you can reposition them.
+For example, to reposition the <code>remove</code> icon tool to the bottom left corner, you could do:
+
+<pre><code>
+.halo .handle.remove {
+   left: -25px;
+   bottom: -25px;
+   top: auto;
+   right: auto;
+}
+</pre></code>
+
+Note the <code>auto</code> values for the top/right coordinates are important in order to cancel out the default values defined in the Halo plugin.
+</p>
+
+<p>Another way to remove/reposition tool handles in the Halo is in JavaScript:</p>
+<pre><code>
+halo.removeHandle('clone');
+halo.changeHandle('remove', { position: 'se' });
+</code></pre>
+
+<p>The code above removes the clone tool from the Halo and re-positions the remove tool to the bottom right (south-east).</p>
+
+<p>Each Halo can also be styled in CSS (disabling tools, repositioning, changing icons, ...) based on the type of
+element the Halo is displayed for. The Halo <code>&lt;div&gt;</code> container stores the type of the element in
+its <code>data-type</code> attribute. This makes it easy to target a halo for a certain type of element in your CSS.
+For instance, let's say we want to hide the remove tool only for an element of type <code>"basic.Rect"</code>. We
+can do this:
+
+<pre><code>
+.halo[data-type="basic.Rect"] .remove { display: none; }
+</pre></code>
+</p>
+
+<h2 id="customize">Customizing halo tools</h2>
+
+<p>Halo provides three methods for adding, removing and changing custom tools: <code>addHandle()</code>, <code>removeHandle()</code> and <code>changeHandle()</code>.
+Use the <code>addHandle()</code> method to add new tools to your halo:</p>
+
+<pre><code>
+halo.addHandle({ name: 'myaction', position: 's', icon: 'myaction.png' });
+halo.on('action:myaction:pointerdown', function(evt) {
+    evt.stopPropagation();
+    alert('My custom action.');
+});
+</code></pre>
+
+<p>
+In the example above, we added a new tool named <code>myaction</code>, positioned the tool to the south (bottom-center)
+and used our own icon <code>myaction.png</code>. When the user clicks on our tool, Halo triggers an
+event named <code>action:[name]:pointerdown</code>. We can handle the event by listening 
+on the halo object. Similarly, the Halo triggers <code>action:[name]:pointermove</code> and
+<code>action:[name]:pointerup</code> events. This gives us a high flexibility in implementing
+our own actions.
+</p>
+
+<p>For removing a halo tool, use the <code>removeHandle(name)</code> method:</p>
+
+<pre><code>
+halo.removeHandle('myaction')
+</code></pre>
+
+<p><code>changeHandle()</code> method allows us to change halo tool handles. For instance, if we want to change a position of the clone tool, we could use:
+
+<pre><code>
+halo.changeHandle('clone', { position: 'se' })
+</code></pre>
+
+<div class="docs-demo">
+    <div id="paper-holder-customize" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/halo-customize.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../js/docs/halo-customize.js"></script>
+
+
+<h2 id="halo-api">Halo API</h2>
+
+<table>
+    <tr>
+        <th>addHandle(opt)</th>
+        <td>Add a custom tool to the Halo. <code>opt.name</code> is
+            the name of the custom tool. This name will be also set as a CSS class to the
+            handle DOM element making it easy to select it your CSS stylesheet. <code>opt.position</code>
+            is a string that specifies a position of the tool handle. Possible values are 
+            <code>n</code>, <code>nw</code>, <code>w</code>, <code>sw</code>, <code>s</code>,
+            <code>se</code>, <code>e</code> and <code>ne</code>. <code>opt.icon</code> is 
+            a URL of the icon used to render the tool. This icons is set as a background image on
+            the tool handle DOM element.
+        </td>
+    </tr>
+    <tr>
+        <th>removeHandle(name)</th>
+        <td>Remove a tool handle named <code>name</code> from the Halo.
+        </td>
+    </tr>
+    <tr>
+        <th>changeHandle(name, opt)</th>
+        <td>Change a tool handle named <code>name</code> in the Halo. The <code>opt</code> object can contain the
+            same parameters as with the <code>addHandle()</code> method except of the <code>name</code> property.
+            <code>opt</code> parameters will be merged with those defined previously.
+        </td>
+    </tr>
+    <tr>
+        <th>render()</th>
+        <td>Render the Halo. This must be called after the Halo object is instantiated.
+        </td>
+    </tr>
+    <tr>
+        <th>on(event, callback)</th>
+        <td>Register a handler (<code>callback</code>) for an <code>event</code> See
+            the <a href="halo.html#halo-events">Halo Events</a> section for the list of events
+            the Halo object triggers.
+        </td>
+    </tr>
+    <tr>
+        <th>joint.ui.Halo.clear(paper)</th>
+        <td>Remove all the Halo panels (without having to have a reference to a particular halo object)
+            from the <code>paper</code>. Note that this is a static function in the <code>joint.ui.Halo</code>
+            namespace rather than a method of a halo object.
+        </td>
+    </tr>
+</table>
+
+<h2 id="halo-events">Halo Events</h2>
+
+<p>The Halo object triggers events when the user manipulates its tools. These events can
+be handled by using the Halo <code>on()</code> method.</p>
+
+<table>
+    <tr>
+        <th>action:[name]:pointerdown</th>
+        <td>Triggered when the user clicks (touches) on a tool handle named <coce>[name]</code>.
+        </td>
+    </tr>
+    <tr>
+        <th>action:[name]:pointermove</th>
+        <td>
+            Triggered when the user moves with mouse cursor after a tool handle named <coce>[name]</code>
+            was mousedowned (touched).
+        </td>
+    </tr>
+    <tr>
+        <th>action:[name]:pointerup</th>
+        <td>
+            Triggered when the user releases his mouse cursor after a tool handle named <coce>[name]</code>
+            was mousedowned (touched).
+        </td>
+    </tr>
+</table>
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../vendor/prism/prism.css">
+        <script src="../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../js/client-search.js"></script>
+        <script src="../../../js/rappid-docs.js"></script>
+    </body>
+</html>

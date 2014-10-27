@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <link rel="canonical" href="../../../index.html" />
+        <meta name="description" content="Create interactive diagrams in JavaScript easily. JointJS plugins for ERD, Org chart, FSA, UML, PN, DEVS, LDM diagrams are ready to use." />
+        <meta name="keywords" content="JointJS, JavaScript, diagrams, diagramming library, UML, charts" />
+
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="../../../css/style.css" />
+
+        <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+        <title>Rappid toolkit - Documentation</title>
+        
+    </head>
+    <body>
+        <header>
+    <nav>
+        <ul>
+            <li><a href="../../../index.html"><img class="logo small" src="../../../images/logo.png" alt="Logo."/>JointJS</a></li>
+            <li ><a href="../../../download.html">Download</a></li>
+            <li ><a href="../../../demos.html">Demos</a></li>
+            <li ><a href="../../../license.html">License</a></li>
+            <li ><a href="../../../tutorial.html">Tutorials</a></li>
+            <li ><a href="../../../api.html">JointJS API</a></li>
+            <li class="active"><a href="../../docs.html">Rappid API</a></li>
+            <li ><a href="../../../support.html">Support</a></li>
+            <li ><a href="../../../about-rappid.html">Rappid</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+        <section id="rappid-docs">
+            <div class="content-sidebar">
+  <input id="api-search" type="search" placeholder="e.g. chart"/>
+    <ul class="searchable">
+        <li><a href="../../docs.html">Home</a></li>
+        <li><a href="../ui/stencil.html">ui.Stencil</a>
+            <ul>
+                <li><a href="../ui/stencil.html#installation">Installation</a>
+                <li><a href="../ui/stencil.html#loading">Loading with elements</a>
+                <li><a href="../ui/stencil.html#groups">Groups (Accordion)</a>
+                <li><a href="../ui/stencil.html#searchable">Searchable stencil</a>
+                <li><a href="../ui/stencil.html#methods">Other methods</a>
+                <li><a href="../ui/stencil.html#added-elements">React on added elements</a>
+            </ul>
+        </li>
+        <li><a href="../ui/halo.html">ui.Halo</a>
+            <ul>
+                <li><a href="../ui/halo.html#installation">Installation</a>
+                <li><a href="../ui/halo.html#create">Creating a Halo</a>
+                <li><a href="../ui/halo.html#configuration">Configuration</a>
+                <li><a href="../ui/halo.html#magnets">Halo &amp; magnets</a>
+                <li><a href="../ui/halo.html#disable-tools">Disabling Halo tools</a>
+                <li><a href="../ui/halo.html#customize">Customizing Halo tools</a>
+                <li><a href="../ui/halo.html#halo-api">Halo API</a>
+                <li><a href="../ui/halo.html#halo-events">Halo Events</a>
+            </ul>
+        </li>
+        <li><a href="../ui/freeTransform.html">ui.FreeTransform</a>
+            <ul>
+                <li><a href="../ui/freeTransform.html#installation">Installation</a>
+                <li><a href="../ui/freeTransform.html#create">Creating a FreeTransform</a>
+            </ul>
+        </li>
+        <li><a href="../ui/inspector.html">ui.Inspector</a>
+            <ul>
+                <li><a href="../ui/inspector.html#installation">Installation</a>
+                <li><a href="../ui/inspector.html#create">Creating an Inspector</a>
+                <li><a href="../ui/inspector.html#configuration">Configuration</a>
+                <li><a href="../ui/inspector.html#expressions">Expressions</a>
+                <li><a href="../ui/inspector.html#inspector-remember-groups-state">Remember groups state</a>
+                <li><a href="../ui/inspector.html#inspector-events">Inspector Events</a>
+                <li><a href="../ui/inspector.html#inspector-methods">Inspector Methods</a>
+            </ul>
+        </li>
+        <li><a href="../ui/paperScroller.html">ui.PaperScroller</a>
+            <ul>
+                <li><a href="../ui/paperScroller.html#installation">Installation</a>
+                <li><a href="../ui/paperScroller.html#center">Centering the paper content</a>
+                <li><a href="../ui/paperScroller.html#zoom">Zooming the paper</a>
+                <li><a href="../ui/paperScroller.html#auto-resize">Paper auto-resize/shrink</a>
+            </ul>
+        </li>
+        <li><a href="../ui/selectionView.html">ui.SelectionView</a>
+            <ul>
+                <li><a href="../ui/selectionView.html#installation">Installation</a>
+                <li><a href="../ui/selectionView.html#create">Initializing SelectionView</a>
+                <li><a href="../ui/selectionView.html#changes">Reacting on changes</a>
+                <li><a href="../ui/selectionView.html#customization">Custmozing the look of SelectionView</a>
+                <li><a href="../ui/selectionView.html#disable-tools">Disabling Tools</a>
+                <li><a href="../ui/selectionView.html#customize-tools">Customizing tools</a>
+                <li><a href="../ui/selectionView.html#selection-api">SelectionView API</a>
+                <li><a href="../ui/selectionView.html#selection-events">SelectionView events</a>
+                <li><a href="../ui/selectionView.html#common-setup">Common Setup</a>
+            </ul>
+        </li>
+        <li><a href="../ui/clipboard.html">ui.Clipboard</a>
+            <ul>
+                <li><a href="../ui/clipboard.html#installation">Installation</a>
+                <li><a href="../ui/clipboard.html#create">Creating a Clipboard</a>
+            </ul>
+        </li>
+        <li><a href="../ui/tooltip.html">ui.Tooltip</a>
+            <ul>
+                <li><a href="../ui/tooltip.html#installation">Installation</a>
+                <li><a href="../ui/tooltip.html#create">Creating a Tooltip</a>
+            </ul>
+        </li>
+        <li><a href="../ui/snaplines.html">ui.Snaplines</a>
+            <ul>
+                <li><a href="../ui/snaplines.html#installation">Installation</a>
+                <li><a href="../ui/snaplines.html#enable">Enabling Snaplines</a>
+            </ul>
+        </li>
+        <li><a href="../dia/commandManager.html">dia.CommandManager</a>
+            <ul>
+                <li><a href="../dia/commandManager.html#installation">Installation</a>
+                <li><a href="../dia/commandManager.html#create">Creating a CommandManager</a>
+                <li><a href="../dia/commandManager.html#howitworks">How CommandManager works</a>
+                <li><a href="../dia/commandManager.html#methods">CommandManager API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/validator.html">dia.Validator</a>
+            <ul>
+                <li><a href="../dia/validator.html#installation">Installation</a>
+                <li><a href="../dia/validator.html#create">Creating a Validator</a>
+                <li><a href="../dia/validator.html#methods">Validator API</a>
+            </ul>
+        </li>
+        <li><a href="../dia/graphUtils.html">dia.GraphUtils</a>
+            <ul>
+                <li><a href="../dia/graphUtils.html#installation">Installation</a>
+                <li><a href="../dia/graphUtils.html#methods">Methods</a>
+            </ul>
+        </li>
+        <li><a href="../com/channel.html">com.Channel</a>
+            <ul>
+                <li><a href="../com/channel.html#installation">Installation</a>
+                <li><a href="../com/channel.html#use">Usage</a>
+                <li><a href="../com/channel.html#rooms">Rooms</a>
+                <li><a href="../com/channel.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="bpmn.html">shapes.BPMN</a>
+            <ul>
+                <li><a href="bpmn.html#installation">Installation</a>
+                <li><a href="bpmn.html#activity">Activity</a>
+                <li><a href="bpmn.html#annotation">Annotation</a>
+                <li><a href="bpmn.html#choreography">Choreography</a>
+                <li><a href="bpmn.html#conversation">Conversation</a>
+                <li><a href="bpmn.html#data-object">Data Object</a>
+                <li><a href="bpmn.html#event">Event</a>
+                <li><a href="bpmn.html#flow">Flow</a>
+                <li><a href="bpmn.html#gateway">Gateway</a>
+                <li><a href="bpmn.html#group">Group</a>
+                <li><a href="bpmn.html#message">Message</a>
+                <li><a href="bpmn.html#pool">Pool</a>
+                <li><a href="bpmn.html#icons">Icons</a>
+                <li><a href="bpmn.html#sub-process">Sub-process handling</a>
+            </ul>
+        </li>
+        <li><a href="chart.html">shapes.Chart</a>
+            <ul>
+                <li><a href="chart.html#installation">Installation</a>
+                <li><a href="chart.html#types">Chart Types</a>
+            </ul>
+        </li>
+        <li><a href="chart/plot.html">shapes.chart.Plot</a>
+            <ul>
+              <li><a href="chart/plot.html#create">Basic Chart</a>
+              <li><a href="chart/plot.html#series-style">Series Styling</a>
+              <li><a href="chart/plot.html#multiple-series">Multiple Series</a>
+              <li><a href="chart/plot.html#markings">Markings</a>
+              <li><a href="chart/plot.html#guidelines">Guidelines</a>
+              <li><a href="chart/plot.html#tooltips">Tooltips</a>
+              <li><a href="chart/plot.html#legend">Legend</a>
+              <li><a href="chart/plot.html#rt">Real-time Data</a>
+              <li><a href="chart/plot.html#fixed-axis">Fixed Axis</a>
+              <li><a href="chart/plot.html#time-series">Time Series</a>
+              <li><a href="chart/plot.html#bar-series">Bar Series</a>
+              <li><a href="chart/plot.html#bar-line-series">Bar &amp; Line Series</a>
+              <li><a href="chart/plot.html#chart-options">Chart Options</a>
+              <li><a href="chart/plot.html#chart-api">Chart API</a>
+              <li><a href="chart/plot.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="chart/pie.html">shapes.chart.Pie</a>
+            <ul>
+              <li><a href="chart/pie.html#create">Basic Chart</a>
+              <li><a href="chart/pie.html#slices-style">Styling Slices</a>
+              <li><a href="chart/pie.html#multiple-series">Multiple Series</a>
+              <li><a href="chart/pie.html#exploding">Exploding Slices</a>
+              <li><a href="chart/pie.html#donut">Donut Chart</a>
+              <li><a href="chart/pie.html#tooltips">Tooltips</a>
+              <li><a href="chart/pie.html#legend">Legend</a>
+              <li><a href="chart/pie.html#animation">Animation</a>
+              <li><a href="chart/pie.html#effects">Effects</a>
+              <li><a href="chart/pie.html#chart-options">Chart Options</a>
+              <li><a href="chart/pie.html#chart-api">Chart API</a>
+              <li><a href="chart/pie.html#chart-structure">Chart SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="chart/knob.html">shapes.chart.Knob</a>
+            <ul>
+              <li><a href="chart/knob.html#create">Basic Knob</a>
+              <li><a href="chart/knob.html#knob-style">Styling the Knob</a>
+              <li><a href="chart/knob.html#multiple-series">Multiple Values</a>
+              <li><a href="chart/knob.html#tooltips">Tooltips</a>
+              <li><a href="chart/knob.html#animation">Animation</a>
+              <li><a href="chart/knob.html#knob-options">Knob Options</a>
+              <li><a href="chart/knob.html#knob-api">Knob API</a>
+              <li><a href="chart/knob.html#knob-structure">Knob SVG Structure</a>
+	    </ul>
+	</li>
+        <li><a href="../format/svg.html">format.SVG</a>
+            <ul>
+                <li><a href="../format/svg.html#installation">Installation</a>
+                <li><a href="../format/svg.html#use">Usage</a>
+                <li><a href="../format/svg.html#configuration">Configuration</a>
+            </ul>
+        </li>
+        <li><a href="../format/raster.html">format.Raster</a>
+            <ul>
+                <li><a href="../format/raster.html#installation">Installation</a>
+                <li><a href="../format/raster.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/gexf.html">format.GEXF</a>
+            <ul>
+                <li><a href="../format/gexf.html#installation">Installation</a>
+                <li><a href="../format/gexf.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../format/print.html">format.Print</a>
+            <ul>
+                <li><a href="../format/print.html#installation">Installation</a>
+                <li><a href="../format/print.html#use">Usage</a>
+                <li><a href="../format/print.html#logo">Custom logo</a>
+            </ul>
+        </li>
+        <li><a href="../layout/directedGraph.html">layout.DirectedGraph</a>
+            <ul>
+                <li><a href="../layout/directedGraph.html#installation">Installation</a>
+                <li><a href="../layout/directedGraph.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/gridLayout.html">layout.GridLayout</a>
+            <ul>
+                <li><a href="../layout/gridLayout.html#installation">Installation</a>
+                <li><a href="../layout/gridLayout.html#use">Usage</a>
+            </ul>
+        </li>
+        <li><a href="../layout/forceDirected.html">layout.ForceDirected</a>
+            <ul>
+                <li><a href="../layout/forceDirected.html#installation">Installation</a>
+                <li><a href="../layout/forceDirected.html#use">Usage</a>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+            
+            <link rel="stylesheet" href="../../../css/joint.all.min.css" />
+            <script src="../../../js/joint.all.min.js"></script>
+
+            <div class="content-container">
+                <h2><img src="../../../images/plugins/bpmn.png"/>shapes.BPMN</h2>
+
+<p>The BPMN plugin provides you with set of  <b>Business Process Model and Notation 2.0</b> shapes. They are designed to be easily configurable with the <a href="../ui/inspector.html">ui.Inspector</a> plugin.</p>
+<p>The plugin consists of flow objects (Activities, Events, Gateways), connection objects (Flows), swim lanes (Pools) and artifacts (DataObjects, Groups, Annotation). It also covers models introduced in version 2.0 as Conversations, Choreographies and Messages.</p>
+
+<div class="docs-demo">
+    <div id="paper-holder-overview" class="paper"></div>
+    <div class="code-link">
+        <a target="_blank" href="../../../js/docs/bpmn.js">source code to this demo</a>
+    </div>
+</div>
+<script src="../../../js/docs/bpmn.js"></script>
+
+<h2 id="installation">Install</h2>
+
+<p>Include <code>joint.shapes.bpmn.js</code> file to your HTML:<p>
+<pre><code>
+&lt;script src="joint.shapes.bpmn.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="activity">joint.shapes.bpmn.Activity</h2>
+
+<p>The Activity attributes:</p>
+
+<table>
+  <tr>
+    <th>activityType</th>
+    <td>Changes the type of the shape.<br><code>'task'</code> | <code>'transaction'</code> | <code>'event-sub-process'</code> | <code>'call-activity'</code></td>
+  </tr>
+  <tr>
+    <th>content</th>
+    <td>A text inside the element (i.e 'My Content').</td>
+  </tr>
+  <tr>
+    <th>icon</th>
+    <td>An icon name (<a href="bpmn.html#icons">list of icons</a>).</td>
+  </tr>
+  <tr>
+    <th>subProcess</th>
+    <td>Any truthy value makes the sub-process icon visible (<a href="bpmn.html#sub-process">sub-process handling</a>).</td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (rect),  <code>'.label'</code> (text)
+    </td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var activity = new joint.shapes.bpmn.Activity({
+    attrs: {
+        '.body': { fill: 'gold', stroke: 'black' },
+        '.label': { text: 'My Activity' }
+    },
+    content: 'A content of the Activity',
+    activityType: 'transaction'
+});
+</code>
+</pre>
+
+<h2 id="annotation">joint.shapes.bpmn.Annotation</h2>
+
+<p>The Annotation attributes:</p>
+
+<table>
+  <tr>
+    <th>content</th>
+    <td>A text inside the element (i.e 'My Content').</td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (rect), <code>'.stroke'</code> (path)
+    </td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var annotation = new joint.shapes.bpmn.Annotation({
+    attrs: {
+        '.body': { fill: 'gold' },
+        '.stroke': { stroke: 'silver' }
+    },
+    content: 'A content of the Annotation'
+});
+</code>
+</pre>
+
+
+<h2 id="choreography">joint.shapes.bpmn.Choreography</h2>
+
+<p>The Choreography attributes:</p>
+
+<table>
+  <tr>
+    <th>content</th>
+    <td>A text inside the element (i.e 'My Content').</td>
+  </tr>
+  <tr>
+    <th>initiatingParticipant</th>
+    <td>An index or name of the participant (case-sensitive). ( i.e <code>'participant 1'</code> )</td>
+  </tr>
+  <tr>
+    <th>participants</th>
+    <td>An array of participant names ( i.e <code>['participant 1','participant 2']</code> ).</td>
+  </tr>
+  <tr>
+    <th>subProcess</th>
+    <td>Any truthy value makes the sub-process icon visible (<a href="bpmn.html#sub-process">sub-process handling</a>).</td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (rect), <code>'.label'</code> (text), <code>'.participant-rect'</code> (rect), <code>'.participant-label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var choreography = new joint.shapes.bpmn.Choreography({
+    attrs: {
+        '.body': { fill: 'gold', stroke: 'black' },
+        '.label': { fill: 'gray', text: 'My Choreography' },
+        '.participant-rect': { fill: 'silver' }
+    },
+    participants: ['partic1', 'partic2', 'partic3'],
+    initiatingParticipant: 2, // ='partic3',
+    content: 'A content of the Choreography'
+});
+</code>
+</pre>
+
+<h2 id="conversation">joint.shapes.bpmn.Conversation</h2>
+
+<p>The Conversation attributes:</p>
+
+<table>
+  <tr>
+    <th>conversationType</th>
+    <td>Changes the type of the shape.<br><code>'conversation'</code> | <code>'call-conversation'</code></td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (rect), <code>'.label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var conversation = new joint.shapes.bpmn.Conversation({
+    attrs: {
+        '.body': { fill: 'gold', stroke: 'black' },
+        '.label': { fill: 'gray', text: 'My Conversation' }
+    },
+    conversationType: 'call-conversation'
+});
+</code>
+</pre>
+
+<h2 id="data-object">joint.shapes.bpmn.DataObject</h2>
+
+<p>The Data Object attributes:</p>
+
+<table>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (rect), <code>'.label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var dataObject = new joint.shapes.bpmn.DataObject({
+    attrs: {
+        '.body': { fill: 'gold', stroke: 'black' },
+        '.label': { fill: 'gray', text: 'My Data Object' }
+    }
+});
+</code>
+</pre>
+
+
+<h2 id="event">joint.shapes.bpmn.Event</h2>
+
+<p>The Event attributes:</p>
+
+<table>
+  <tr>
+    <th>eventType</th>
+    <td>Changes the type of the shape.<br><code>'start'</code> | <code>'end'</code> | <code>'intermediate'</code></td>
+  </tr>
+  <tr>
+    <th>icon</th>
+    <td>An icon name (<a href="bpmn.html#icons">list of icons</a>).</td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (circle), <code>'.label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var event = new joint.shapes.bpmn.Event({
+    attrs: {
+        '.body': { fill: 'gold', stroke: 'black' },
+        '.label': { fill: 'gray', text: 'My Event' }
+    },
+    icon: 'message',
+    eventType: 'end'
+});
+</code>
+</pre>
+
+
+<h2 id="flow">joint.shapes.bpmn.Flow</h2>
+
+<p>The Flow as the only one inherits from <code>joint.dia.Link</code>.</p>
+<p>The Annotation attributes:</p>
+
+<table>
+  <tr>
+    <th>flowType</th>
+    <td>Changes the type of the link.<br><code>'default'</code> | <code>'conditional'</code> | <code>'normal'</code> | <code>'association'</code> | <code>'conversation'</code> | <code>'message'</code></td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var flow = new joint.shapes.bpmn.Flow({
+    source: { id: task.id },
+    target: { id: annotation.id },
+    flowType: 'association'
+});
+</code>
+</pre>
+
+
+<h2 id="gateway">joint.shapes.bpmn.Gateway</h2>
+
+<p>The Gateway attributes:</p>
+
+<table>
+  <tr>
+    <th>icon</th>
+    <td>An icon name (<a href="bpmn.html#icons">list of icons</a>).</td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (polygon), <code>'.label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var gateway = new joint.shapes.bpmn.Gateway({
+    attrs: {
+        '.body': { fill: 'gold', stroke: 'black' },
+        '.label': { fill: 'gray', text: 'My Gateway' }
+    },
+    icon: 'cross'
+});
+</code>
+</pre>
+
+<h2 id="group">joint.shapes.bpmn.Group</h2>
+
+<p>The Group attributes:</p>
+
+<table>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code>, <code>'.label'</code>, <code>'.label-rect'</code></td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var group = new joint.shapes.bpmn.Group({
+    attrs: {
+        '.label-rect': { fill: 'gold', stroke: 'black' },
+        '.label': { fill: 'gray' }
+    }
+});
+</code>
+</pre>
+
+<h2 id="message">joint.shapes.bpmn.Message</h2>
+
+<p>The Message attributes:</p>
+
+<table>
+  <tr>
+    <th>attrs</th>
+    <td><code>'.body'</code> (polygon), <code>'.label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var message = new joint.shapes.bpmn.Message({
+    attrs: {
+        '.body': { fill:'gold', stroke: 'black' },
+        '.label': { fill: 'gray' }
+    }
+});
+</code>
+</pre>
+
+<h2 id="pool">joint.shapes.bpmn.Pool</h2>
+
+<p>The Pool attributes:</p>
+
+<table>
+  <tr>
+    <th>lanes</th>
+    <td>An object consist of a <b>label</b> and an array of <b>sublanes</b> (optional).<br>A <b>sublane</b> is an object consist of a label, a <b>name</b> (optional) and an array of sublanes (optional).</td>
+  </tr>
+  <tr>
+    <th>attrs</th>
+    <td>Allows to apply custom SVG attributes (fill, stroke, opacity, etc.)<br><code>'.body'</code> (rect), <code>'.header'</code> (rect), <code>'.lane-body'</code> (rect), <code>'.lane-header'</code> (rect), <code>'.blackbox-label'</code> (text)</td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+<code>
+var pool = new joint.shapes.bpmn.Pool({
+    attrs: {
+        '.header': { fill:'gold' },
+        '.lane-header': { fill:'silver' },
+        '.myClass .lane-body': { fill: 'goldenrod' } // customize a specific lane body color
+    },
+    lanes: {
+        label: 'My Pool',
+        sublanes: [
+            {
+                label: 'lane 1',
+                name: 'myClass' // this lane has an unique css class and therefore can be targeted
+                                // in attrs above
+            },
+            {
+                label: 'lane 2',
+                sublanes: [] // it may consist of another sublanes
+            }
+        ]
+    }
+});
+</code>
+</pre>
+
+<h2 id="icons">joint.shapes.bpmn.icons</h2>
+
+<p>The <code>joint.shapes.bpmn.icons</code> namespace includes several icons that can be used within the shapes.</p>
+
+<table>
+  <tr>
+    <th>none</th>
+    <td>No image.</td>
+  </tr>
+  <tr>
+    <th>message</th>
+    <td><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik00NzkuOTk4LDY0SDMyQzE0LjMyOSw2NCwwLDc4LjMxMiwwLDk2djMyMGMwLDE3LjY4OCwxNC4zMjksMzIsMzIsMzJoNDQ3Ljk5OEM0OTcuNjcxLDQ0OCw1MTIsNDMzLjY4OCw1MTIsNDE2Vjk2ICBDNTEyLDc4LjMxMiw0OTcuNjcxLDY0LDQ3OS45OTgsNjR6IE00MTYsMTI4TDI1NiwyNTZMOTYsMTI4SDQxNnogTTQ0OCwzODRINjRWMTYwbDE5MiwxNjBsMTkyLTE2MFYzODR6Ii8+PC9zdmc+" width="30" height="30"/></td>
+  </tr>
+  <tr>
+    <th>user</th>
+    <td><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIyLDIwLjk5OGgtMWMwLDAtMSwwLTEtMVYxNy41YzAtMC4yNzctMC4yMjQtMC41LTAuNS0wLjVTMTksMTcuMjIzLDE5LDE3LjUgIGwtMC4wMDgsNC4yOTVjMCwwLjYwOS0yLjAxLDIuMjA1LTYuNDkyLDIuMjA1cy02LjQ5Mi0xLjU5Ni02LjQ5Mi0yLjIwNUw2LDE3LjVDNiwxNy4yMjMsNS43NzYsMTcsNS41LDE3UzUsMTcuMjIzLDUsMTcuNXYyLjQ5OCAgYzAsMS0xLDEtMSwxSDNjMCwwLTEsMC0xLTFWMTUuNzVjMC0yLjkyMiwyLjg5Mi01LjQwMSw2LjkzLTYuMzQxYzAsMCwxLjIzNCwxLjEwNywzLjU3LDEuMTA3czMuNTctMS4xMDcsMy41Ny0xLjEwNyAgYzQuMDM4LDAuOTQsNi45MywzLjQxOSw2LjkzLDYuMzQxdjQuMjQ4QzIzLDIwLjk5OCwyMiwyMC45OTgsMjIsMjAuOTk4eiBNMTIuNDc3LDljLTIuNDg1LDAtNC41LTIuMDE1LTQuNS00LjVTOS45OTEsMCwxMi40NzcsMCAgczQuNSwyLjAxNSw0LjUsNC41UzE0Ljk2Miw5LDEyLjQ3Nyw5eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" width="30" height="30"/></td>
+  </tr>
+  <tr>
+    <th>plus</th>
+    <td><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIyLjUsMTRIMTR2OC41YzAsMC4yNzYtMC4yMjQsMC41LTAuNSwwLjVoLTRDOS4yMjQsMjMsOSwyMi43NzYsOSwyMi41VjE0SDAuNSAgQzAuMjI0LDE0LDAsMTMuNzc2LDAsMTMuNXYtNEMwLDkuMjI0LDAuMjI0LDksMC41LDlIOVYwLjVDOSwwLjIyNCw5LjIyNCwwLDkuNSwwaDRDMTMuNzc2LDAsMTQsMC4yMjQsMTQsMC41VjloOC41ICBDMjIuNzc2LDksMjMsOS4yMjQsMjMsOS41djRDMjMsMTMuNzc2LDIyLjc3NiwxNCwyMi41LDE0eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" width="30" height="30"/></td>
+  </tr>
+  <tr>
+    <th>cross</th>
+    <td><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yMi4yNDUsNC4wMTVjMC4zMTMsMC4zMTMsMC4zMTMsMC44MjYsMCwxLjEzOWwtNi4yNzYsNi4yN2MtMC4zMTMsMC4zMTItMC4zMTMsMC44MjYsMCwxLjE0bDYuMjczLDYuMjcyICBjMC4zMTMsMC4zMTMsMC4zMTMsMC44MjYsMCwxLjE0bC0yLjI4NSwyLjI3N2MtMC4zMTQsMC4zMTItMC44MjgsMC4zMTItMS4xNDIsMGwtNi4yNzEtNi4yNzFjLTAuMzEzLTAuMzEzLTAuODI4LTAuMzEzLTEuMTQxLDAgIGwtNi4yNzYsNi4yNjdjLTAuMzEzLDAuMzEzLTAuODI4LDAuMzEzLTEuMTQxLDBsLTIuMjgyLTIuMjhjLTAuMzEzLTAuMzEzLTAuMzEzLTAuODI2LDAtMS4xNGw2LjI3OC02LjI2OSAgYzAuMzEzLTAuMzEyLDAuMzEzLTAuODI2LDAtMS4xNEwxLjcwOSw1LjE0N2MtMC4zMTQtMC4zMTMtMC4zMTQtMC44MjcsMC0xLjE0bDIuMjg0LTIuMjc4QzQuMzA4LDEuNDE3LDQuODIxLDEuNDE3LDUuMTM1LDEuNzMgIEwxMS40MDUsOGMwLjMxNCwwLjMxNCwwLjgyOCwwLjMxNCwxLjE0MSwwLjAwMWw2LjI3Ni02LjI2N2MwLjMxMi0wLjMxMiwwLjgyNi0wLjMxMiwxLjE0MSwwTDIyLjI0NSw0LjAxNXoiLz48L3N2Zz4=" width="30" height="30"/></td>
+  </tr>
+  <tr>
+    <th>circle</th>
+    <td><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gULEBE3DEP64QAAAwlJREFUaN7dmktrU0EUx38ZmmBbfEIL2hSjkYKC1EW6EDFudC+404/gE6WKSvGxERQfIH4AX1T9EOKrCrYurVrbgsZWoaBVixDbpC6ci+Fyz9ybZG478cBs7syc+Z+5c86c+c8ksCPrgW1ADtgEbARafG1+AW+AYWAIGADGWUTZAJwHxoD5GssocA7ILiTwLcADoFQHcH8pAfeB7jiBtwO3gLJF4P5S1mO02wa/C5iMEbi/TAI7bYE/Y3m5VLOs+sLAJULqrgKHIxhZBp4DT4FX2jkLGoinq1M7fg7YDmwFVATd14CjFboiy5UIs/QBOAmka/izaeCU1hE2zuVqlZ8IUfgVOAA0WViiTcBBrdM0Zm9UhTuAOYOiRzXOeJh0Ak8M484B+TAlK4BPBiU3gWSMoTqpw6g0fgFYblJww9D5dojT25IEcMeA47rUsdsQLp9FmPmURSNSOqpJS2lzUKd+ocN3IBNx5mz+oXXADwHTXX/jjMFxjy1iwtgrYJoF1lY27BMafozZaaMspYKA7XRlw7f1xt4Y5biA7bXXIGv4TW0OGNCmsQRhzCidlwTJADDlgAFTwAuhLq+AHqHyMe6IhKVHAV1C5ZBDBkhYupThPPreIQNGJTJBGXKLLw4Z8NmQu/Fb8PCkQwakBIxFRWPLvAJmhMpWh4AuFb7PKGBaqFzjkAGrhe/TSjNrQZJ1yAAJy5gCRoTKnEMGSFhGFDBoOBu7IhKWQe8wLRFLHQ6A7zCcFNNK59vvAjoqYK8DBuwTCLBhTUD8Hweahj9S2jjU297VqzrU26BVmi2yEjXRKg1PbHnpqYla7AeWxAi+GbhHHdSit2mYyN2XQQ5kQTJ6Y6qL3PUkCr2+H7v0+jcs0eueRLngGNeKa9mxY73g8JzpEtHusorAQ/7e+e7WUWIl//jSVTrK7QEu6KgW9d7tYr3B44iBWPJfkZZ8pZ4r2VngkC0HywMTLNwN5YSBcKtZWoGzernEBbyox2iJc6Np2KcGfnHisYet1CDouc2yCjbhp07MrD+3+QNxi4JkAscRswAAAABJRU5ErkJggg==" width="30" height="30"/></td>
+  </tr>
+</table>
+
+<p>Usage:</p>
+
+<pre>
+  <code>
+    gateway.set('icon', 'circle');
+    var task = new joint.shapes.bpmn.Activity({ icon: 'user' });
+  </code>
+</pre>
+
+<p>Adding custom icons can be made by inserting them into the <code>joint.shapes.bpmn.icons</code> namespace.</p>
+
+<pre>
+  <code>
+    joint.shapes.bpmn.icons['myIcon'] = 'pathToImage'; // or data URI
+
+    // later on in the code
+    gateway.set('icon', 'myIcon');
+
+  </code>
+</pre>
+
+<h2 id="sub-process">Sub-process handling</h2>
+
+<p>The <code>subProcess</code> value is stored as a data attribute on the sub-process icon (SVG path) element. An interaction with the sub-process icon can be therefore catched and handled on the <code>joint.dia.Paper</code>. In the example bellow the model's <code>subProcess</code> value is shown after an user doubleclicks the icon.</p>
+
+<pre>
+<code>
+conversation.set('subProcess', 'My sub-process ID');
+
+paper.on('cell:pointerdblclick', function(cellView, evt) {
+
+    var subProcess = $(evt.target).data('sub-process');
+
+    if (subProcess) {
+        alert(subProcess);
+    }
+});
+
+// a doubleclick on conversation's sub-process icon will alert 'My sub-process ID'
+</code>
+</pre>
+
+
+                <br/>
+                <br/>
+                <br/>
+                <hr/>
+                Copyright &copy; 2009 - 2014 <strong>client IO</strong> (<a href="http://client.io">http://client.io</a>, <a href="mailto:org@client.io">org@client.io</a>)
+            </div>
+        </section>
+
+        <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5029684-2']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+
+        <link rel="stylesheet" href="../../../vendor/prism/prism.css">
+        <script src="../../../vendor/prism/prism.js"></script>
+
+        <script src="../../../js/client-search.js"></script>
+        <script src="../../../js/rappid-docs.js"></script>
+    </body>
+</html>

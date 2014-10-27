@@ -1,0 +1,14 @@
+#inspector-holder-create {
+   position: absolute;
+   top: 0;
+   left: 401px;
+   bottom: 0;
+   width: 240px;
+   height: 458px;
+   background-color: #333;
+   color: #bcbcbc;
+}
+
+#inspector-holder-create .group-label {
+   padding: 0 5px;
+}
