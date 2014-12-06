@@ -28,7 +28,15 @@ var rect = joint.shapes.basic.Rect;
 var path = joint.shapes.basic.Path;
 var circle = joint.shapes.basic.Circle;
 var text = joint.shapes.basic.Text;
+
 var link = joint.dia.Link;
+
+var Image7f31245a = new joint.shapes.basic.Image({
+  position: { x: 70, y: 10 },
+  size: { width: 50, height: 50 },
+  attrs: { magnet: true, type: 'EClass', text: { text: 'cosplay' }, image: { 'xlink:href': 'http://img-9gag-lol.9cache.com/photo/a1ZPj9R_700b.jpg', width: 50, height: 50} }
+}).addTo(graph);;
+
 
 function title(x, y, s) {
     graph.addCell(new text({
@@ -71,6 +79,20 @@ var o7 = (new path({ position: { x: 150, y: 370 }, attrs: { text: { text: 'path'
 var o8 = (new rect({ position: { x: 300, y: 380 }, size: { width: 60, height: 30 } })).addTo(graph);
 var linko7o8 = (new link({ source: { id: o7.id, selector: 'path' }, target: { id: o8.id } })).addTo(graph);
 
+var XImagShape5e481248 = function(x, y, rank, name, image, background, border) {
+  var cell = new joint.shapes.org.Member({
+    position: { x: x, y: y },
+    attrs: {
+      '.card': { fill: background, stroke: border},
+      image: { 'xlink:href': image },'.rank': { text: rank }, '.name': { text: name },
+      magnet: true, type: 'EClass'
+    }
+  });
+  return cell;
+};
+var ImagShape5e481248= new XImagShape5e481248(100,100,'Test', '', 'http://img-9gag-lol.9cache.com/photo/aXEPjW9_700b.jpg', '#E8860D', '#6618F4').addTo(graph);
+
+
 paper.on('cell:pointerdown', function(cellView, evt, x, y) {
     if (cellView.model.id === o7.id) {
 	o7.attr('path/d', _.shuffle(icons)[0]);
@@ -94,7 +116,7 @@ function intersection(node, ref) {
 
 
     while (dist > 1) {
-	
+
 	spot = spot.move(center, -1);
 	dist = spot.distance(center);
 	//console.log(dist);
@@ -130,7 +152,7 @@ function showPoint(x, y, radius, fill) {
         y = x.y;
         x = x.x;
     }
-    
+
     radius = radius || 2;
     fill = fill || 'red';
 

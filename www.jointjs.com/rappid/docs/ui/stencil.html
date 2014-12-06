@@ -12,9 +12,9 @@
 
         <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
         <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
-
+        <script type="text/javascript" src="../downloads/joint.shapes.devs.min.js"></script>
         <title>Rappid toolkit - Documentation</title>
-        
+
     </head>
     <body>
         <header>
@@ -264,14 +264,14 @@
     </ul>
 </div>
 
-            
+
             <link rel="stylesheet" href="../../../css/joint.all.min.css" />
             <script src="../../../js/joint.all.min.js"></script>
 
             <div class="content-container">
                 <h2><img src="../../../images/plugins/stencil.png"/>ui.Stencil</h2>
 
-<p>Stencil plugin implements a palette of JointJS elements. These elements can be 
+<p>Stencil plugin implements a palette of JointJS elements. These elements can be
 dragged onto a paper.</p>
 
 <h3 id="installation">Installation</h3>
@@ -294,8 +294,8 @@ var paper = new joint.dia.Paper({
    model: graph
 });
 
-var stencil = new joint.ui.Stencil({ 
-   graph: graph, 
+var stencil = new joint.ui.Stencil({
+   graph: graph,
    paper: paper,
    width: 200,
    height: 300
@@ -312,17 +312,17 @@ $('#stencil-holder').append(stencil.render().el);
 <h3 id="loading">Populating Stencil with elements</h3>
 
 <pre><code>
-var r = new joint.shapes.basic.Rect({ 
-    position: { x: 10, y: 10 }, size: { width: 50, height: 30 } 
+var r = new joint.shapes.basic.Rect({
+    position: { x: 10, y: 10 }, size: { width: 50, height: 30 }
 });
-var c = new joint.shapes.basic.Circle({ 
-    position: { x: 70, y: 10 }, size: { width: 50, height: 30 } 
+var c = new joint.shapes.basic.Circle({
+    position: { x: 70, y: 10 }, size: { width: 50, height: 30 }
 });
 
 stencil.load([r, c]);
 </code></pre>
 
-<p>As you can see, there is no surprises with populating the stencil with elements. The 
+<p>As you can see, there is no surprises with populating the stencil with elements. The
 <code>stencil.load()</code> method takes an array of elements as an argument and renders
 those elements into the stencil.</p>
 
@@ -352,8 +352,8 @@ to the configuration of the particular group. Each group configuration object co
 </ul>
 
 <pre><code>
-var stencil = new joint.ui.Stencil({ 
-   graph: graph, 
+var stencil = new joint.ui.Stencil({
+   graph: graph,
    paper: paper,
    width: 200,
    groups: {

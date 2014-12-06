@@ -15,7 +15,7 @@
     });
     var rect2 = rect.clone();
     rect2.translate(300);
-    
+
     var link = new joint.dia.Link({
         source: { id: rect.id },
         target: { id: rect2.id }
@@ -51,7 +51,7 @@
     });
     paperSmall.scale(.5);
     paperSmall.$el.css('pointer-events', 'none');
-    
+
     var rect = new joint.shapes.basic.Rect({
         position: { x: 100, y: 30 },
         size: { width: 100, height: 30 },
@@ -59,7 +59,7 @@
     });
     var rect2 = rect.clone();
     rect2.translate(300);
-    
+
     var link = new joint.dia.Link({
         source: { id: rect.id },
         target: { id: rect2.id }
@@ -92,7 +92,7 @@
     rect4.translate(120);
     var rect5 = rect4.clone();
     rect5.translate(120);
-    
+
     rect.attr({
         rect: { fill: '#2C3E50', rx: 5, ry: 5, 'stroke-width': 2, stroke: 'black' },
         text: {
@@ -104,7 +104,7 @@
     rect2.attr({
         rect: { fill: '#E74C3C', rx: 20, ry: 20, 'stroke-width': 0 },
         text: {
-            text: 'my label', fill: '#ECF0F1',
+            text: 'my', fill: '#ECF0F1',
             'font-size': 11, 'font-weight': 'normal', 'font-variant': 'small-caps', 'text-transform': 'capitalize'
         }
     });
@@ -133,7 +133,7 @@
             style: { 'text-shadow': '1px 1px 1px black' }
         }
     });
-    
+
     graph.addCell(rect).addCell(rect2).addCell(rect3).addCell(rect4).addCell(rect5);
 
 }());
@@ -174,12 +174,7 @@
         '.marker-target': { stroke: '#E74C3C', fill: '#E74C3C', d: 'M 10 0 L 0 5 L 10 10 z' }
     });
 
-    var link3 = new joint.dia.Link({
-        source: { x: 10, y: 100 },
-        target: { x: 250, y: 100 },
-        attrs: {}
-    });
-
+    w
     link3.attr({
         '.connection': { stroke: '#3498DB', 'stroke-width': 3, 'stroke-dasharray': '5 2' },
         '.marker-source': { stroke: '#3498DB', fill: '#3498DB', d: 'M5.5,15.499,15.8,21.447,15.8,15.846,25.5,21.447,25.5,9.552,15.8,15.152,15.8,9.552z' },
@@ -212,7 +207,7 @@
         '.marker-source': { stroke: '#9B59B6', fill: '#9B59B6', d: 'M24.316,5.318,9.833,13.682,9.833,5.5,5.5,5.5,5.5,25.5,9.833,25.5,9.833,17.318,24.316,25.682z' },
         '.marker-target': { stroke: '#F39C12', fill: '#F39C12', d: 'M14.615,4.928c0.487-0.986,1.284-0.986,1.771,0l2.249,4.554c0.486,0.986,1.775,1.923,2.864,2.081l5.024,0.73c1.089,0.158,1.335,0.916,0.547,1.684l-3.636,3.544c-0.788,0.769-1.28,2.283-1.095,3.368l0.859,5.004c0.186,1.085-0.459,1.553-1.433,1.041l-4.495-2.363c-0.974-0.512-2.567-0.512-3.541,0l-4.495,2.363c-0.974,0.512-1.618,0.044-1.432-1.041l0.858-5.004c0.186-1.085-0.307-2.6-1.094-3.368L3.93,13.977c-0.788-0.768-0.542-1.525,0.547-1.684l5.026-0.73c1.088-0.158,2.377-1.095,2.864-2.081L14.615,4.928z' }
     });
-    
+
     graph.addCell(link).addCell(link2).addCell(link3).addCell(link4).addCell(link5);
-    
+
 }());

@@ -9,7 +9,7 @@ var m1 = new joint.shapes.devs.Model({
     inPorts: ['in1','in2'],
     outPorts: ['out'],
     attrs: {
-        '.label': { text: 'Model', 'ref-x': .4, 'ref-y': .2 },
+        '.label': { text: 'Ola ke ase', 'ref-x': .4, 'ref-y': .2 },
         rect: { fill: '#2ECC71' },
         '.inPorts circle': { fill: '#16A085' },
         '.outPorts circle': { fill: '#E74C3C' }
@@ -33,7 +33,7 @@ graph.on('change:source change:target', function(link) {
         '</b> is connected to port <b>' + targetPort,
         '</b> of elemnt with ID <b>' + targetId + '</b>'
     ].join('');
-    
+
     out(m);
 });
 

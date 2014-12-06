@@ -1,10 +1,3 @@
-/*! JointJS v0.9.2 - JavaScript diagramming library  2014-09-17 
-
-
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at http://mozilla.org/MPL/2.0/.
- */
 if (typeof exports === 'object') {
 
     var joint = {
@@ -31,7 +24,7 @@ joint.shapes.devs.Model = joint.shapes.basic.Generic.extend(_.extend({}, joint.s
 
         type: 'devs.Model',
         size: { width: 1, height: 1 },
-        
+
         inPorts: [],
         outPorts: [],
 
@@ -68,13 +61,32 @@ joint.shapes.devs.Model = joint.shapes.basic.Generic.extend(_.extend({}, joint.s
 
         attrs[portLabelSelector] = { text: portName };
         attrs[portBodySelector] = { port: { id: portName || _.uniqueId(type) , type: type } };
-        attrs[portSelector] = { ref: '.body', 'ref-y': (index + 0.5) * (1 / total) };
+        attrs[portSelector] = { ref: '.body', 'ref-x': (index + 0.5) * (1 / total) };
 
-        if (selector === '.outPorts') { attrs[portSelector]['ref-dx'] = 0; }
+        if (selector === '.outPorts') { attrs[portSelector]['ref-dy'] = 0; }
 
         return attrs;
     }
+
 }));
+
+joint.shapes.devs.Circle = joint.shapes.devs.Model.extend({
+
+    defaults: joint.util.deepSupplement({
+
+        type: 'devs.Circle',
+        size: { width: 80, height: 80 },
+        attrs: {
+            '.body': { fill: '#FF4118', rx:1000 , ry:1000 },
+            '.label': { text: 'Ola ke ase' },
+            '.inPorts .port-body': { fill: 'PaleGreen' },
+            '.outPorts .port-body': { fill: 'Tomato' }
+
+        }
+
+    }, joint.shapes.devs.Model.prototype.defaults)
+
+});
 
 
 joint.shapes.devs.Atomic = joint.shapes.devs.Model.extend({
@@ -85,7 +97,7 @@ joint.shapes.devs.Atomic = joint.shapes.devs.Model.extend({
         size: { width: 80, height: 80 },
         attrs: {
             '.body': { fill: 'salmon' },
-            '.label': { text: 'Atomic' },
+            '.label': { text: 'Ola ke ase s' },
             '.inPorts .port-body': { fill: 'PaleGreen' },
             '.outPorts .port-body': { fill: 'Tomato' }
         }
@@ -121,6 +133,7 @@ joint.shapes.devs.Link = joint.dia.Link.extend({
 joint.shapes.devs.ModelView = joint.dia.ElementView.extend(joint.shapes.basic.PortsViewInterface);
 joint.shapes.devs.AtomicView = joint.shapes.devs.ModelView;
 joint.shapes.devs.CoupledView = joint.shapes.devs.ModelView;
+joint.shapes.devs.CircleView = joint.shapes.devs.ModelView;
 
 
 if (typeof exports === 'object') {

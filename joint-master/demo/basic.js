@@ -30,20 +30,18 @@ var cb = new joint.shapes.basic.Circle({
 });
 graph.addCell(cb);
 
-var ib = new joint.shapes.basic.Image({
-    position: { x: 450, y: 50 },
-    size: { width: 40, height: 40 },
-    attrs: {
-        text: { text: 'basic.Image' },
-        image: { 'xlink:href': 'https://cdn3.iconfinder.com/data/icons/betelgeuse/96/224386-folder-image-48.png', width: 48, height: 48 }
-    }
+
+var Image7f31245a = new joint.shapes.basic.Image({
+    position: { x: 50, y: 150 },
+    size: { width: 100, height: 100 },
+    attrs: { text: { text: 'null' }, image: { 'xlink:href': 'http://img-9gag-lol.9cache.com/photo/a1ZPj9R_700b.jpg', width: 100, height: 100} }
 });
-graph.addCell(ib);
 
 var pb = new joint.shapes.basic.Path({
     position: { x: 50, y: 150 },
     size: { width: 40, height: 40 },
     attrs: {
+        fill: '#2D2BF4',
         path: { d: 'M25.979,12.896 19.312,12.896 19.312,6.229 12.647,6.229 12.647,12.896 5.979,12.896 5.979,19.562 12.647,19.562 12.647,26.229 19.312,26.229 19.312,19.562 25.979,19.562z' },
         text: { text: 'basic.Path' }
     }
@@ -70,7 +68,6 @@ graph.addCell(tbl);
 var MyElementWithPorts = joint.shapes.basic.Generic.extend({
 
    defaults: joint.util.deepSupplement({
-
        markup: [
            '<g class="rotatable">',
            '<g class="scalable">',
@@ -86,7 +83,7 @@ var MyElementWithPorts = joint.shapes.basic.Generic.extend({
            '</g>',
            '</g>'
        ].join(''),
-   
+
        type: 'basic.Generic',
        attrs: {
            '.': { magnet: false },
@@ -109,7 +106,7 @@ var MyElementWithPorts = joint.shapes.basic.Generic.extend({
            '.inPorts circle': { fill: 'PaleGreen' },
            '.outPorts circle': { fill: 'Tomato' }
        }
-       
+
    }, joint.shapes.basic.Generic.prototype.defaults)
 });
 
@@ -124,11 +121,26 @@ var d = new MyElementWithPorts({
         '.port1': { ref: 'rect', 'ref-y': .2 },
         '.port2': { ref: 'rect', 'ref-y': .4 },
         '.port3': { ref: 'rect', 'ref-y': .2, 'ref-dx': 0 },
-        '.port4': { ref: 'rect', 'ref-y': .4, 'ref-dx': 0 }        
+        '.port4': { ref: 'rect', 'ref-y': .4, 'ref-dx': 0 }
     }
 });
 
+var d1 = new MyElementWithPorts({
+    position: { x: 250, y: 150 },
+    size: { width: 80, height: 80 },
+    attrs: {
+        '.port1 text': { text: 'port1' },
+        '.port2 text': { text: 'port2' },
+        '.port3 text': { text: 'port3' },
+        '.port4 text': { text: 'port4' },
+        '.port1': { ref: 'rect', 'ref-y': .2 },
+        '.port2': { ref: 'rect', 'ref-y': .4 },
+        '.port3': { ref: 'rect', 'ref-y': .2, 'ref-dx': 0 },
+        '.port4': { ref: 'rect', 'ref-y': .4, 'ref-dx': 0 }
+    }
+});
 graph.addCell(d);
+graph.addCell(d1);
 
 
 // An example showing auto-resize of the joint.shapes.basic.Rect element based on the size of the text in it:
@@ -162,7 +174,6 @@ rb.on('change:attrs', function(element) {
     var height = lines.length * (fontSize * 1.2);
 
     V(svgDocument).remove();
-    
+
     element.resize(width + 10, height);
 });
-

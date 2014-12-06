@@ -9,8 +9,8 @@
         model: graph
     });
 
-    var stencil = new joint.ui.Stencil({ 
-        graph: graph, 
+    var stencil = new joint.ui.Stencil({
+        graph: graph,
         paper: paper,
         width: 200,
         height: 300,
@@ -22,11 +22,11 @@
     });
     $('#stencil-holder-groups').append(stencil.render().el);
 
-    var r = new joint.shapes.basic.Rect({ 
+    var r = new joint.shapes.basic.Rect({
         position: { x: 10, y: 10 }, size: { width: 50, height: 30 },
         attrs: { rect: { fill: '#2ECC71' }, text: { text: 'rect', fill: 'black' } }
     });
-    var c = new joint.shapes.basic.Circle({ 
+    var c = new joint.shapes.basic.Circle({
         position: { x: 70, y: 10 }, size: { width: 50, height: 30 },
         attrs: { circle: { fill: '#9B59B6' }, text: { text: 'circle', fill: 'white' } }
     });
@@ -51,6 +51,6 @@
 
     stencil.load([r, c], 'simple');
     stencil.load([t], 'text');
-    stencil.load([p, i], 'advanced');
-    
-}())
+    stencil.load([p, i], 'advanced').toString();
+
+}());
