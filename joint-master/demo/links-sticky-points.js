@@ -75,7 +75,7 @@ var palm = 'M14.296,27.885v-2.013c0,0-0.402-1.408-1.073-2.013c-0.671-0.604-1.274
 var icons = [cross, star, umbrella, music, thunder, palm];
 
 var d = star;
-var o7 = (new path({ position: { x: 150, y: 370 }, attrs: { text: { text: 'path' }, path: { magnet: true, d: d }}})).addTo(graph);
+var o7 = (new path({ position: { x: 150, y: 370 }, attrs: { text: { text: 'path x' }, path: { magnet: true, d: d }}})).addTo(graph);
 var o8 = (new rect({ position: { x: 300, y: 380 }, size: { width: 60, height: 30 } })).addTo(graph);
 var linko7o8 = (new link({ source: { id: o7.id, selector: 'path' }, target: { id: o8.id } })).addTo(graph);
 
@@ -94,9 +94,7 @@ var ImagShape5e481248= new XImagShape5e481248(100,100,'Test', '', 'http://img-9g
 
 
 paper.on('cell:pointerdown', function(cellView, evt, x, y) {
-    if (cellView.model.id === o7.id) {
-	o7.attr('path/d', _.shuffle(icons)[0]);
-    }
+
 });
 
 function intersection(node, ref) {

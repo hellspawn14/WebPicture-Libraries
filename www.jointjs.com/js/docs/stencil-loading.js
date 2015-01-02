@@ -9,9 +9,9 @@
         model: graph,
 
         validateConnection: function(cellViewS, magnetS, cellViewT, magnetT, end, linkView) {
-            //var X1 = (magnetT && magnetT.getAttribute('type') === 'out');
-            //var X2 = (magnetS && magnetS.getAttribute('type') === 'no');
-            return true;
+            var X1 = (magnetT && magnetT.getAttribute('type') === 'out');
+            var X2 = (magnetS && magnetS.getAttribute('type') === 'no');
+            return X1 && X2;
         }
     });
 
@@ -33,12 +33,12 @@
 
     var c = new joint.shapes.basic.Circle({
         position: { x: 150, y: 150 }, size: { width: 100, height: 100 },
-        attrs: { circle: { fill: '#9B59B6', magnet: true, type: 'out'}, text: { text: 'circle', fill: 'white' }}
+        attrs: { circle: { fill: '#9B59B6', magnet: true, type: 'out'}, text: { text: 'circle trg', fill: 'white' }}
     });
 
 var cx = new joint.shapes.basic.Circle({
     position: { x: 10, y: 150 }, size: { width: 100, height: 100 },
-    attrs: { circle: { fill: '#2ECC71', magnet: true, type: 'no'}, text: { text: 'circle', fill: 'white' }}
+    attrs: { circle: { fill: '#2ECC71', magnet: true, type: 'no'}, text: { text: 'circle src', fill: 'white' }}
 });
 
 
@@ -101,7 +101,7 @@ attrs: { rect: { width: 100, height: 100, fill: '#2D2BF4', rx: 0, ry: 0, 'stroke
 });
 
     var circle = joint.shapes.basic.Circle;
-    var o5 = (new circle({ position: { x: 70, y: 70 }, size: { width: 100, height: 100 }, attrs: { text: { text: 'circle' }, circle: { magnet: true }, type: 'out'}}));
+    var o5 = (new circle({ position: { x: 70, y: 70 }, size: { width: 100, height: 100 }, attrs: { text: { text: 'circle src' }, circle: { magnet: true, type: 'no' },}}));
     stencil.load([r, o5, c, Rect5e481248]);
 
 }())

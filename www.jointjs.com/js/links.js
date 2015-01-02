@@ -90,7 +90,7 @@ var link7 = new joint.dia.Link({
         '.marker-target': { d: 'M 10 0 L 0 5 L 10 10 z' }
     },
     labels: [
-        { position: .5, attrs: { text: { text: 'fancy label', fill: 'white', 'font-family': 'sans-serif' }, rect: { stroke: '#F39C12', 'stroke-width': 20, rx: 5, ry: 5 } }}
+        { position: .5, attrs: { text: { text: '', fill: 'white', 'font-family': 'sans-serif' }, rect: { stroke: '#F39C12', 'stroke-width': 20, rx: 5, ry: 5 } }}
     ]
 });
 
@@ -113,4 +113,3 @@ var link8 = new joint.dia.Link({
 
 
 graph.addCell([link, link2, link3, link4, link5, link6, link7, link8]);
-
